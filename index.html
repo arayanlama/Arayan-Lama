@@ -146,7 +146,25 @@ a:focus-visible,button:focus-visible{outline:3px solid #268b66;outline-offset:3p
 @media(max-width:850px){header{align-items:flex-start;gap:14px}header nav{gap:12px}header nav a{font-size:11px}}
 @media(max-width:520px){header{position:relative;flex-direction:column}header nav{justify-content:flex-start;gap:10px 14px}.hero h1{font-size:clamp(3.8rem,17vw,7rem)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head><body>
+</style>
+<style>
+/* Subtle blue accent — preserve the existing sage/teal identity */
+:root{--blue-accent:#547fbd;--blue-wash:#edf3fb;--blue-line:#d6e1f1}
+.hero{background:radial-gradient(ellipse at 88% 18%,rgba(177,202,239,.22) 0,transparent 40%),radial-gradient(ellipse at 8% 90%,#e2f0e9 0,transparent 42%),#f5faf7}
+nav a:hover,.links a:hover,#journal>a{color:var(--blue-accent)}
+a:focus-visible,button:focus-visible{outline-color:var(--blue-accent)}
+::selection{background:#dce8f8;color:#172019}
+.gallery-controls button{border-color:#cbd8e9}
+.gallery-controls button[aria-pressed=true]{background:#547fbd;color:#fff}
+.media-card .media-art{background:linear-gradient(145deg,#dbe7f7,#e1ebdf)}
+.media-card:nth-child(2n) .media-art{background:linear-gradient(145deg,#e4ecf8,#d3e3d7)}
+.tile a:hover,.feature:hover,.service-card:hover{box-shadow:0 10px 30px rgba(45,83,139,.08)}
+#contact .links a{border-bottom-color:#9bb7df}
+#contact .links a:hover{color:#bcd4fa}
+.services-cta{background:#234f45}
+@media(prefers-reduced-motion:reduce){.tile a{transition:none}}
+</style>
+</head><body>
 <a class="skip-link" href="#work">Skip to content</a>
 <header><a href="#top" aria-label="Arayan Lama home">AL®</a><nav><a href="#work">WORK</a><a href="#music">MUSIC</a><a href="#gallery">GALLERY</a><a href="#portfolio">PORTFOLIO</a><a href="#services">SERVICES</a><a href="#films">FILM</a><a href="#about">ABOUT</a><a href="journal.html">JOURNAL</a><a href="#contact">CONTACT</a></nav></header>
 <main id="top"><div class="hero"><div class="eyebrow">Independent artist &amp; creative practitioner</div><h1><span>ARAYAN</span><span>LAMA.</span></h1><div class="hero-bottom"><div><div class="credit">MUSIC PRODUCER / SOUND ENGINEER / FILMMAKER</div><p class="intro">Music, sound and moving images — made with intention.</p></div><div class="links"><a href="https://www.youtube.com/@arayanlama" target="_blank" rel="noopener noreferrer">YOUTUBE ↗</a><a href="https://open.spotify.com/artist/5Lxkv06fEr2q5EHzOMXZ8C" target="_blank" rel="noopener noreferrer">SPOTIFY ↗</a><a href="https://music.apple.com/in/artist/arayan-lama/1679886009" target="_blank" rel="noopener noreferrer">APPLE MUSIC ↗</a></div></div></div>
