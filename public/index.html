@@ -77,6 +77,13 @@ header nav .nav-hire{background:#171816!important;color:#fff!important;border-co
 .hero-video-only .billboard-controls{display:none!important}
 @media(max-width:900px){.hero-video-only .billboard-stage{aspect-ratio:5/4!important}.hero-video-only .video-only-title{font-size:clamp(52px,9vw,94px)!important}}
 @media(max-width:600px){.hero.hero-portfolio.hero-video-only{padding:10px!important}.hero-video-only .billboard-stage{aspect-ratio:4/5!important}.hero-video-only .video-only-title{left:23px!important;top:48%!important;font-size:clamp(43px,11.5vw,68px)!important;letter-spacing:-.075em!important}.hero-video-only .fashion-hero-label,.hero-video-only .fashion-hero-index{left:23px!important;letter-spacing:.13em!important;font-size:9px!important}.hero-video-only .fashion-hero-label{top:26px!important}.hero-video-only .fashion-hero-index{bottom:25px!important}}
+</style><style id="film-smooth-playback-fix">
+/* Prevent the YouTube player startup screen from flashing over the hero. */
+.hero-video-only .billboard-player-slot{opacity:0!important;transition:opacity .85s ease!important}
+.hero-video-only .portfolio-billboard.film-frame-ready .billboard-player-slot{opacity:1!important}
+.hero-video-only .billboard-slide img{z-index:0!important}
+.hero-video-only .billboard-player-slot{z-index:1!important}
+@media(prefers-reduced-motion:reduce){.hero-video-only .billboard-player-slot{display:none!important}}
 </style></head><body>
 <a class="skip-link" href="#gallery">Skip to content</a>
 <header><a href="#top" aria-label="Arayan Lama home">AL®</a><nav aria-label="Main navigation"><a href="#gallery">WORK</a><a href="#services">SERVICES</a><a href="#about">ABOUT</a><a href="#contact" class="nav-hire">START A PROJECT ↗</a></nav></header>
@@ -103,31 +110,30 @@ header nav .nav-hire{background:#171816!important;color:#fff!important;border-co
 (function(){
  const root=document.querySelector('.hero-video-only .portfolio-billboard');if(!root)return;
  const slides=Array.from(root.querySelectorAll('.billboard-slide'));
- const ids=['-DFW8CKMvQo','y7Yft2SFBBQ','ZTT1i3NKgPI'];
  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  const lowData=navigator.connection&&navigator.connection.saveData;
- let index=0,timer=null,started=false,visible=true;
- function clearFrames(){slides.forEach(slide=>{const slot=slide.querySelector('.billboard-player-slot');if(slot)slot.replaceChildren()})}
- function show(n){
-  index=(n+slides.length)%slides.length;
-  clearFrames();
-  slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===index);slide.setAttribute('aria-hidden',String(i!==index))});
-  const counter=root.querySelector('.billboard-counter');if(counter)counter.textContent=String(index+1).padStart(2,'0')+' / 03';
-  if(!started||reduced||lowData||document.hidden||!visible)return;
-  const frame=document.createElement('iframe');
-  frame.className='mall-video-iframe';frame.title='Creative work video '+(index+1);
-  frame.src='https://www.youtube-nocookie.com/embed/'+ids[index]+'?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&loop=1&playlist='+ids[index];
+ // A single persistent YouTube embed avoids reloading YouTube chrome every 18 seconds.
+ const primary=slides[0],slot=primary&&primary.querySelector('.billboard-player-slot');
+ if(!slot)return;
+ slides.forEach((slide,i)=>{slide.classList.toggle('is-active',i===0);slide.setAttribute('aria-hidden',String(i!==0))});
+ const counter=root.querySelector('.billboard-counter');if(counter)counter.textContent='01 / 01';
+ let frame=null,observer=null;
+ function mount(){
+  if(frame||reduced||lowData||document.hidden)return;
+  frame=document.createElement('iframe');
+  frame.className='mall-video-iframe';
+  frame.title='Arayan Lama selected film';
+  frame.src='https://www.youtube-nocookie.com/embed/-DFW8CKMvQo?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&loop=1&playlist=-DFW8CKMvQo&iv_load_policy=3&disablekb=1';
   frame.allow='autoplay; encrypted-media; picture-in-picture';
   frame.referrerPolicy='strict-origin-when-cross-origin';
   frame.setAttribute('allowfullscreen','');
-  const slot=slides[index].querySelector('.billboard-player-slot');if(slot)slot.appendChild(frame);
+  frame.addEventListener('load',()=>{setTimeout(()=>root.classList.add('film-frame-ready'),1100)},{once:true});
+  slot.appendChild(frame);
  }
- function schedule(){clearInterval(timer);if(started&&!reduced&&!lowData&&!document.hidden&&visible)timer=setInterval(()=>show(index+1),18000)}
- function activate(){if(started)return;started=true;show(index);schedule()}
- document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInterval(timer);clearFrames()}else{show(index);schedule()}});
- if('IntersectionObserver'in window){new IntersectionObserver(entries=>{const v=entries[0].isIntersecting;if(visible===v)return;visible=v;if(!v){clearInterval(timer);clearFrames()}else{show(index);schedule()}},{threshold:.05}).observe(root)}
- slides.forEach((slide,i)=>{const img=slide.querySelector('img');if(img){img.loading=i===0?'eager':'lazy';img.decoding='async';if(i===0)img.setAttribute('fetchpriority','high')}})
- show(0);
- if(!reduced&&!lowData){const start=()=>{if('requestIdleCallback' in window)requestIdleCallback(activate,{timeout:2200});else setTimeout(activate,1100)};if(document.readyState==='complete')start();else window.addEventListener('load',start,{once:true})}
+ function unmount(){if(frame){frame.remove();frame=null}root.classList.remove('film-frame-ready')}
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)unmount();else mount()});
+ if('IntersectionObserver'in window){observer=new IntersectionObserver(entries=>{if(entries[0].isIntersecting)mount();else unmount()},{rootMargin:'100px'});observer.observe(root)}
+ const start=()=>{if(!observer)mount()};
+ if(document.readyState==='complete')start();else window.addEventListener('load',start,{once:true});
 })();
 </script></body></html>
