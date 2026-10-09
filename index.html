@@ -203,6 +203,22 @@ a:focus-visible,button:focus-visible{outline-color:#587f83}
 .feature:hover,.service-card:hover{box-shadow:0 8px 24px rgba(40,75,65,.06)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile a{transition:none}}
 </style>
+<style>
+/* Slightly bluer gradients — airy, restrained, and still grounded in sage */
+:root{--blue-green:#527f91;--blue-soft:#eaf2f8;--green-soft:#edf3eb}
+.hero{background:radial-gradient(ellipse at 86% 14%,rgba(166,202,232,.34) 0,transparent 43%),radial-gradient(ellipse at 12% 88%,rgba(197,220,203,.22) 0,transparent 42%),linear-gradient(120deg,#f8faf8 0%,#f2f7fa 58%,#f5f8f3 100%)}
+.hero-gallery .tile:nth-child(1) a{background:linear-gradient(145deg,#dcebf3,#e2eee8)}
+.hero-gallery .tile:nth-child(2) a{background:linear-gradient(145deg,#e7f0f5,#e4eee8)}
+.hero-gallery .tile:nth-child(3) a{background:linear-gradient(145deg,#d7e7f1,#e4eee5)}
+.tile a,.hero-gallery .tile:nth-child(1) a,.hero-gallery .tile:nth-child(2) a,.hero-gallery .tile:nth-child(3) a{background:linear-gradient(145deg,#f0f5f7 0%,#edf3ee 100%)}
+.tile a:hover{background:linear-gradient(145deg,#e7f0f7,#e8f0e9)}
+.media-art,.media-card .media-art{background:linear-gradient(135deg,#d7e8f5 0%,#e4eee8 100%)}
+.media-card:nth-child(2n) .media-art{background:linear-gradient(135deg,#e0ebf5 0%,#dce9df 100%)}
+.artist-tuck-music{background:linear-gradient(120deg,#e6eff3 0%,#e4eee6 100%)}
+.feature,.portfolio-item,.platform,.service-card{background:linear-gradient(145deg,#f5f8f7 0%,#eef4ef 100%)}
+.gallery-controls button[aria-pressed=true]{background:#527f91}
+#contact{background:linear-gradient(125deg,#24443d 0%,#284b54 100%)}
+</style>
 </head><body>
 <a class="skip-link" href="#work">Skip to content</a>
 <header><a href="#top" aria-label="Arayan Lama home">AL®</a><nav><a href="#work">WORK</a><a href="#music">MUSIC</a><a href="#gallery">GALLERY</a><a href="#portfolio">PORTFOLIO</a><a href="#services">SERVICES</a><a href="#films">FILM</a><a href="#about">ABOUT</a><a href="journal.html">JOURNAL</a><a href="#contact">CONTACT</a></nav></header>
