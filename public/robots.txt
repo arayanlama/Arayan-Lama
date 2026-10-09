@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://arayan-lama.arayanlama19.workers.dev/sitemap.xml
