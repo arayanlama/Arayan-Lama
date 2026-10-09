@@ -219,6 +219,19 @@ a:focus-visible,button:focus-visible{outline-color:#587f83}
 .gallery-controls button[aria-pressed=true]{background:#527f91}
 #contact{background:linear-gradient(125deg,#24443d 0%,#284b54 100%)}
 </style>
+<style>
+/* A restrained cobalt hint over the approved blue-green gradients */
+:root{--cobalt-hint:#496bd6}
+.hero{background:radial-gradient(ellipse at 84% 12%,rgba(112,143,232,.20) 0,transparent 38%),radial-gradient(ellipse at 12% 88%,rgba(197,220,203,.20) 0,transparent 42%),linear-gradient(120deg,#f8faf8 0%,#f1f6fb 58%,#f5f8f3 100%)}
+nav a:hover,.links a:hover,#journal>a{color:var(--cobalt-hint)}
+a:focus-visible,button:focus-visible{outline-color:var(--cobalt-hint)}
+.gallery-controls button{border-color:#ccd7ec}
+.gallery-controls button[aria-pressed=true]{background:var(--cobalt-hint);color:#fff}
+.hero-gallery .tile:nth-child(3) a{background:linear-gradient(145deg,#dbe6f7 0%,#e4eee5 100%)}
+.media-card:nth-child(2n) .media-art{background:linear-gradient(135deg,#e0e8fa 0%,#dce9df 100%)}
+#contact{background:linear-gradient(125deg,#24443d 0%,#2c4567 100%)}
+#contact .links a:hover{color:#cbd7ff}
+</style>
 </head><body>
 <a class="skip-link" href="#work">Skip to content</a>
 <header><a href="#top" aria-label="Arayan Lama home">AL®</a><nav><a href="#work">WORK</a><a href="#music">MUSIC</a><a href="#gallery">GALLERY</a><a href="#portfolio">PORTFOLIO</a><a href="#services">SERVICES</a><a href="#films">FILM</a><a href="#about">ABOUT</a><a href="journal.html">JOURNAL</a><a href="#contact">CONTACT</a></nav></header>
