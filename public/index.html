@@ -629,6 +629,12 @@ footer{background:#f4f5ef!important}
 .hero-video-only .video-only-title{left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:95%!important;font-family:Arial,Helvetica,sans-serif!important;font-size:clamp(48px,10vw,185px)!important;line-height:.85!important;letter-spacing:-.09em!important;font-weight:900!important;text-align:center!important;color:#fff!important;text-shadow:0 5px 30px rgba(0,0,0,.22)!important}
 .hero-video-only .video-only-title span{color:#fff!important}
 @media(max-width:700px){.hero.hero-portfolio.hero-video-only{padding:12px!important}.hero-video-only .portfolio-billboard{border-width:5px!important;border-radius:9px!important}.hero-video-only .billboard-stage{aspect-ratio:4/5!important;min-height:0!important;height:auto!important}.hero-video-only .video-only-title{font-size:clamp(52px,13vw,95px)!important}}
+</style><style id="video-playback-reliability">
+/* Posters stay visible until YouTube loads; API replaces its slot with an iframe. */
+.hero-video-only .billboard-slide img{z-index:0!important}
+.hero-video-only .billboard-player-slot,.hero-video-only iframe.billboard-player-slot{z-index:1!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;border:0!important;pointer-events:none!important}
+.hero-video-only .billboard-shade{z-index:2!important}
+.hero-video-only .video-only-title{z-index:5!important}
 </style></head><body>
 <a class="skip-link" href="#gallery">Skip to content</a>
 <header><a href="#top" aria-label="Arayan Lama home">AL®</a><nav aria-label="Main navigation"><a href="#gallery">WORK</a><a href="#services">SERVICES</a><a href="#about">ABOUT</a><a href="#contact" class="nav-hire">START A PROJECT ↗</a></nav></header>
