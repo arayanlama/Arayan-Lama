@@ -146,6 +146,18 @@ a:focus-visible,button:focus-visible{outline:3px solid #268b66;outline-offset:3p
 @media(max-width:850px){header{align-items:flex-start;gap:14px}header nav{gap:12px}header nav a{font-size:11px}}
 @media(max-width:520px){header{position:relative;flex-direction:column}header nav{justify-content:flex-start;gap:10px 14px}.hero h1{font-size:clamp(3.8rem,17vw,7rem)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style><style id="ui-accessibility-fixes">
+/* Keep navigation usable at tablet widths without overflowing the viewport. */
+header{gap:20px}
+header nav{min-width:0}
+header nav a{white-space:nowrap}
+@media(max-width:1100px){header{align-items:flex-start;flex-direction:column}header nav{justify-content:flex-start;gap:12px 20px;width:100%}}
+@media(max-width:520px){header nav{gap:12px 15px}header nav a{font-size:11px}}
+/* Hidden is a functional state: card layout styles must not override it. */
+.media-card[hidden],.entry[hidden]{display:none!important}
+.gallery-controls button:hover{background:#d0e9dc}
+.gallery-controls button[aria-pressed="true"]:hover{background:#155b43}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style></head><body>
 <a class="skip-link" href="#work">Skip to content</a>
 <header><a href="#top" aria-label="Arayan Lama home">AL®</a><nav><a href="#work">WORK</a><a href="#music">MUSIC</a><a href="#gallery">GALLERY</a><a href="#portfolio">PORTFOLIO</a><a href="#services">SERVICES</a><a href="#films">FILM</a><a href="#about">ABOUT</a><a href="journal.html">JOURNAL</a><a href="#contact">CONTACT</a></nav></header>
