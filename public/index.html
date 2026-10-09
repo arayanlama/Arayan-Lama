@@ -635,6 +635,12 @@ footer{background:#f4f5ef!important}
 .hero-video-only .billboard-player-slot,.hero-video-only iframe.billboard-player-slot{z-index:1!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;border:0!important;pointer-events:none!important}
 .hero-video-only .billboard-shade{z-index:2!important}
 .hero-video-only .video-only-title{z-index:5!important}
+</style><style id="mall-video-direct-embed-fix">
+.hero-video-only .billboard-player-slot{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;z-index:1!important;overflow:hidden!important;pointer-events:none!important}
+.hero-video-only .mall-video-iframe{position:absolute!important;top:50%!important;left:50%!important;width:100%!important;height:100%!important;min-width:177.78vh!important;min-height:56.25vw!important;transform:translate(-50%,-50%) scale(1.04)!important;border:0!important;pointer-events:none!important}
+.hero-video-only .billboard-slide img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;z-index:0!important}
+.hero-video-only .billboard-shade{position:absolute!important;inset:0!important;z-index:2!important}
+@media(max-width:700px){.hero-video-only .mall-video-iframe{width:240%!important;min-width:0!important;height:100%!important;min-height:0!important}}
 </style></head><body>
 <a class="skip-link" href="#gallery">Skip to content</a>
 <header><a href="#top" aria-label="Arayan Lama home">AL®</a><nav aria-label="Main navigation"><a href="#gallery">WORK</a><a href="#services">SERVICES</a><a href="#about">ABOUT</a><a href="#contact" class="nav-hire">START A PROJECT ↗</a></nav></header>
@@ -659,23 +665,36 @@ footer{background:#f4f5ef!important}
 (()=>{'use strict';const launch=document.getElementById('chat-launch'),panel=document.getElementById('chat-panel'),close=document.getElementById('chat-close'),log=document.getElementById('chat-log'),input=document.getElementById('chat-input');const answers={music:'Music production is estimated at ₹6,000–₹8,000 per track. Arrangement and creative development depend on the project. See the Services section for details.',mix:'Mixing & mastering is estimated at ₹5,000–₹12,000 depending on track count and complexity.',podcast:'Podcast editing is estimated at ₹2,000–₹5,000 per episode, including dialogue cleanup and editing as agreed.',film:'Filmmaking & editing has an indicative starting price of ₹5,000 per project. The final scope and quote are agreed first.',contact:'To discuss your project, use the Instagram or other contact links in the Contact section. This assistant cannot receive enquiries or book projects.',community:'TUCK is the music community, Arayan Lama is the producer, Cool School Productions is the independent record label, and Tuck Studios is the creative workspace.',terms:'All prices are indicative in INR. Scope, revisions, delivery, taxes (if applicable), payment and rights are agreed in writing before work begins.'};function add(message,who){const el=document.createElement('div');el.className='chat-message '+who;el.textContent=message;log.appendChild(el);log.scrollTop=log.scrollHeight}function answer(q){const t=q.toLowerCase();if(/(hello|hi|hey)\b/.test(t))return 'Hi! Ask me about music production, mixing, podcasts, filmmaking, pricing or how to get in touch.';if(/(price|cost|rate|budget|payment|revision|terms|refund)/.test(t))return answers.terms+' Music ₹6,000–₹8,000/track; mixing ₹5,000–₹12,000; podcasts ₹2,000–₹5,000/episode; film from ₹5,000/project.';if(/(tuck|label|studio|community|cool school)/.test(t))return answers.community;if(/(contact|hire|book|enquir|email|instagram|reach)/.test(t))return answers.contact;if(/(mix|master)/.test(t))return answers.mix;if(/(podcast|episode|audio edit)/.test(t))return answers.podcast;if(/(film|video|visual)/.test(t))return answers.film;if(/(music|song|produce|production|track)/.test(t))return answers.music;return 'I can answer questions about services, estimated rates, TUCK Music Community and contacting Arayan. For anything specific, please reach out via the Contact section.'}function send(q){const value=q.trim();if(!value)return;add(value,'user');add(answer(value),'bot')}function toggle(open){panel.hidden=!open;launch.setAttribute('aria-expanded',String(open));if(open)input.focus();else launch.focus()}launch.addEventListener('click',()=>toggle(panel.hidden));close.addEventListener('click',()=>toggle(false));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)toggle(false)});document.getElementById('chat-form').addEventListener('submit',e=>{e.preventDefault();send(input.value);input.value='';input.focus()});document.querySelectorAll('[data-chat]').forEach(b=>b.addEventListener('click',()=>send(b.textContent)))})();
 </script><script id="billboard-rotation-script">
 (function(){
- const root=document.querySelector('.portfolio-billboard');if(!root)return;
- const slides=[...root.querySelectorAll('.billboard-slide')],counter=root.querySelector('.billboard-counter'),bar=root.querySelector('.billboard-progress span'),toggle=root.querySelector('.billboard-toggle');
- const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const root=document.querySelector('.hero-video-only .portfolio-billboard');if(!root)return;
+ const slides=Array.from(root.querySelectorAll('.billboard-slide'));
  const ids=['-DFW8CKMvQo','y7Yft2SFBBQ','ZTT1i3NKgPI'];
- let index=0,paused=reduce,timer=null,player=null,playerIndex=-1,ready=false;
- function clear(){if(timer){clearTimeout(timer);timer=null;}}
- function removePlayer(){if(player){try{player.destroy()}catch(e){}player=null;}slides.forEach(s=>s.querySelector('.billboard-player-slot').replaceChildren());playerIndex=-1;}
- function setProgress(){bar.style.transition='none';bar.style.width='0%';if(!paused&&!document.hidden){void bar.offsetWidth;bar.style.transition='width 9s linear';bar.style.width='100%';}}
- function playActive(){if(!ready||paused||document.hidden||playerIndex===index)return;removePlayer();const slot=slides[index].querySelector('.billboard-player-slot');playerIndex=index;player=new YT.Player(slot,{videoId:ids[index],playerVars:{autoplay:1,mute:1,controls:0,playsinline:1,rel:0,modestbranding:1,iv_load_policy:3,disablekb:1,loop:0,origin:location.origin},events:{onReady:e=>{if(!paused&&playerIndex===index){e.target.mute();e.target.playVideo();}},onStateChange:e=>{if(e.data===YT.PlayerState.ENDED&&!paused)move(1);}}});}
- function render(){slides.forEach((slide,i)=>{const active=i===index;slide.classList.toggle('is-active',active);slide.setAttribute('aria-hidden',String(!active));slide.querySelectorAll('a').forEach(a=>a.tabIndex=active?0:-1);});counter.textContent=String(index+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');setProgress();}
- function schedule(){clear();if(paused||document.hidden)return;timer=setTimeout(()=>move(1),9000);}
- function move(delta){removePlayer();index=(index+delta+slides.length)%slides.length;render();playActive();schedule();}
- function setPaused(value){paused=value;toggle.textContent=paused?'▶':'Ⅱ';toggle.setAttribute('aria-label',paused?'Resume automatic playback':'Pause automatic playback');toggle.setAttribute('aria-pressed',String(paused));if(paused){clear();setProgress();if(player)try{player.pauseVideo()}catch(e){}}else{if(player)try{player.playVideo()}catch(e){}else playActive();setProgress();schedule();}}
- root.querySelector('.billboard-prev').addEventListener('click',()=>move(-1));root.querySelector('.billboard-next').addEventListener('click',()=>move(1));toggle.addEventListener('click',()=>setPaused(!paused));
- document.addEventListener('visibilitychange',()=>{if(document.hidden){clear();if(player)try{player.pauseVideo()}catch(e){}}else if(!paused){if(player)try{player.playVideo()}catch(e){}else playActive();schedule();}});
- window.onYouTubeIframeAPIReady=function(){ready=true;playActive();};
- if(window.YT&&window.YT.Player){ready=true;}else{const script=document.createElement('script');script.src='https://www.youtube.com/iframe_api';script.async=true;document.head.appendChild(script);}
- render();if(!reduce){playActive();schedule();}
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let index=0,timer=null;
+ function show(n){
+   index=(n+slides.length)%slides.length;
+   slides.forEach((slide,i)=>{
+     const active=i===index;
+     slide.classList.toggle('is-active',active);
+     slide.setAttribute('aria-hidden',String(!active));
+     const slot=slide.querySelector('.billboard-player-slot');
+     if(slot)slot.replaceChildren();
+   });
+   const counter=root.querySelector('.billboard-counter');if(counter)counter.textContent=String(index+1).padStart(2,'0')+' / 03';
+   if(!reduced&&!document.hidden){
+     const frame=document.createElement('iframe');
+     frame.className='mall-video-iframe';
+     frame.title='Creative work video '+(index+1);
+     frame.src='https://www.youtube.com/embed/'+ids[index]+'?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&loop=1&playlist='+ids[index];
+     frame.allow='autoplay; encrypted-media; picture-in-picture';
+     frame.referrerPolicy='strict-origin-when-cross-origin';
+     frame.setAttribute('allowfullscreen','');
+     const slot=slides[index].querySelector('.billboard-player-slot');
+     if(slot)slot.appendChild(frame);
+   }
+ }
+ function next(){show(index+1)}
+ function schedule(){clearInterval(timer);if(!reduced&&!document.hidden)timer=setInterval(next,18000)}
+ document.addEventListener('visibilitychange',()=>{if(document.hidden){clearInterval(timer);slides.forEach(slide=>{const slot=slide.querySelector('.billboard-player-slot');if(slot)slot.replaceChildren()})}else{show(index);schedule()}});
+ show(0);schedule();
 })();
 </script></body></html>
