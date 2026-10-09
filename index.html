@@ -164,6 +164,45 @@ a:focus-visible,button:focus-visible{outline-color:var(--blue-accent)}
 .services-cta{background:#234f45}
 @media(prefers-reduced-motion:reduce){.tile a{transition:none}}
 </style>
+<style>
+/* Quiet blue-green balance: natural, editorial, and restrained */
+:root{--bg:#f7f9f6;--fg:#192b27;--muted:#64736d;--line:#dfe7e1;--blue-green:#587f83;--blue-soft:#eaf1f1;--green-soft:#eaf1e9}
+body{background:var(--bg);color:var(--fg)}
+header{background:rgba(247,249,246,.97);border-color:var(--line)}
+section,footer{border-color:var(--line)}
+.hero{background:radial-gradient(ellipse at 88% 16%,rgba(185,210,219,.28) 0,transparent 43%),radial-gradient(ellipse at 10% 85%,rgba(201,221,201,.24) 0,transparent 44%),var(--bg)}
+.hero h1{color:#203b39}
+.hero .eyebrow,.eyebrow,.credit{color:#607a74}
+.hero .intro{color:#3e5b55}
+nav a:hover,.links a:hover,#journal>a{color:var(--blue-green)}
+a:focus-visible,button:focus-visible{outline-color:#587f83}
+::selection{background:#dbe8e4;color:#192b27}
+.hero-gallery .tile:nth-child(1) a{background:#dce9e6;color:#203b39}
+.hero-gallery .tile:nth-child(2) a{background:#e4ece8;color:#203b39}
+.hero-gallery .tile:nth-child(3) a{background:#dce6ed;color:#203b39}
+.tile,.feature,.service-card{background:#f0f4ef;border-color:#dfe7e1}
+.tile a,.hero-gallery .tile:nth-child(1) a,.hero-gallery .tile:nth-child(2) a,.hero-gallery .tile:nth-child(3) a{background:#eef3ef;color:#203b39}
+.tile a:hover{background:#e7efeb;box-shadow:none}
+.feature-grid,.portfolio-grid{background:#dfe7e1;border-color:#dfe7e1}
+.feature,.portfolio-item{background:#f1f5f0}
+.platforms{background:#dfe7e1;border-color:#dfe7e1}
+.platform{background:#f2f5f2}
+.media-card{background:#eef3ef;border-color:#dfe7e1}
+.media-art,.media-card .media-art{background:linear-gradient(145deg,#dce9e6,#e8eee7)}
+.media-card:nth-child(2n) .media-art{background:linear-gradient(145deg,#dce6ed,#e4ece5)}
+.gallery-controls button{border-color:#c9d9d3}
+.gallery-controls button[aria-pressed=true]{background:#587f83;color:#fff}
+.artist-tuck-music{background:#e4eee8}
+.artist-tuck-grid>a,.artist-tuck-grid>div{border-color:#cbdcd3;color:#25463d}
+.artist-tuck-grid a:hover{background:#d7e7df}
+#contact{background:#24443d;color:#f5f8f4}
+#contact h2,#contact .eyebrow,#contact .section-note,#contact .links a{color:#f5f8f4}
+#contact .links a{border-bottom-color:#a9c8bd}
+#contact .links a:hover{color:#c9dfe9}
+.services-cta{background:#3d6e67}
+.feature:hover,.service-card:hover{box-shadow:0 8px 24px rgba(40,75,65,.06)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile a{transition:none}}
+</style>
 </head><body>
 <a class="skip-link" href="#work">Skip to content</a>
 <header><a href="#top" aria-label="Arayan Lama home">AL®</a><nav><a href="#work">WORK</a><a href="#music">MUSIC</a><a href="#gallery">GALLERY</a><a href="#portfolio">PORTFOLIO</a><a href="#services">SERVICES</a><a href="#films">FILM</a><a href="#about">ABOUT</a><a href="journal.html">JOURNAL</a><a href="#contact">CONTACT</a></nav></header>
