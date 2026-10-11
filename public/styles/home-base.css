@@ -188,3 +188,119 @@ header,.portfolio-intro,.tuck-studios-feature,.creative-media,.studio-footer{box
  .tuck-studios-layout{gap:28px}
  .creative-media-content{border-radius:16px}
 }
+
+
+/* === HOME PAGE LAYOUT & RESPONSIVE OVERRIDES (previously home-layout.css) === */
+/* Homepage composition: one predictable responsive layer. */
+:root{--page-space:clamp(48px,6vw,88px)}
+.portfolio-intro{background:transparent}
+.portfolio-intro:before{opacity:.065}
+.portfolio-intro .hero-stage{padding-bottom:clamp(28px,4vw,55px)}
+.hero-copy .hero-description{color:#597465}
+.hero-actions a{box-shadow:none}
+.hero-actions a:hover{transform:translateY(-1px)}
+.hero-media-main,.hero-films-rotator,.hero-blogs-link{box-shadow:none}
+.tuck-studios-feature,.creative-media{padding-top:var(--page-space);padding-bottom:var(--page-space)}
+.creative-media-intro{margin-bottom:clamp(22px,3vw,38px)}
+.creative-media-content{box-shadow:none;border:1px solid var(--shell-line,#c3d8cc);background:rgba(255,255,255,.25);border-radius:16px}
+.creative-media-content .spotify-feature,.creative-media-content .youtube-feature{padding:clamp(24px,3.5vw,48px)}
+.creative-media-content .youtube-feature{border-top:1px solid var(--shell-line,#c3d8cc)}
+@media(max-width:700px){
+ :root{--page-space:44px;--site-gutter:20px}
+ .portfolio-intro{background:transparent;padding:22px 20px 34px}
+ .portfolio-intro .hero-stage{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;padding:20px 0 22px}
+ .portfolio-intro .hero-copy h1{font-size:clamp(61px,14vw,91px);line-height:.86;letter-spacing:-.105em;margin:20px 0 24px}
+ .portfolio-intro .hero-description{max-width:43ch}
+ .portfolio-intro .hero-actions{display:flex;flex-direction:row;flex-wrap:wrap;gap:10px}
+ .portfolio-intro .hero-actions a{flex:0 1 auto;min-height:44px}
+ .portfolio-intro .hero-media{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);grid-template-rows:auto auto;gap:10px;min-width:0}
+ .portfolio-intro .hero-reel-kicker{grid-column:1/-1}
+ .portfolio-intro .hero-media-main{grid-column:1/-1;grid-row:auto;aspect-ratio:16/10;min-height:0;height:auto}
+ .portfolio-intro .hero-films-rotator{grid-column:1;grid-row:auto;min-width:0;min-height:145px;aspect-ratio:auto}
+ .portfolio-intro .hero-blogs-link{grid-column:2;grid-row:auto;min-width:0;min-height:145px}
+ .portfolio-intro .intro-bottom{margin-top:18px}
+ .tuck-studios-feature,.creative-media{padding:48px 20px}
+ .tuck-studios-top{display:flex;justify-content:space-between;gap:12px}
+ .tuck-studios-top span:last-child{display:inline}
+ .tuck-studios-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:26px}
+ .tuck-studios-copy h2{margin-bottom:22px}
+ .tuck-studios-art{min-height:300px}
+ .creative-media-intro h2{font-size:clamp(36px,9vw,52px)}
+ .creative-media-content .spotify-feature,.creative-media-content .youtube-feature{padding:22px}
+){
+ .portfolio-intro .hero-stage{gap:26px}
+ .portfolio-intro .hero-copy h1{margin-top:14px;margin-bottom:20px}
+ .portfolio-intro .hero-actions{gap:9px}
+ .portfolio-intro .hero-actions a{font-size:10px;letter-spacing:.06em;padding:12px 16px}
+ .portfolio-intro .hero-social-icons{margin-top:17px}
+ .portfolio-intro .hero-media{gap:12px}
+ .portfolio-intro .hero-reel-kicker{margin-bottom:0}
+ .portfolio-intro .hero-media-main{aspect-ratio:16/9}
+ .portfolio-intro .hero-reel-slide iframe{pointer-events:none;opacity:0}
+ .portfolio-intro .hero-reel-slide .hero-reel-poster{display:block;z-index:2}
+ .portfolio-intro .hero-reel-slide .hero-reel-open{z-index:3}
+ .portfolio-intro .hero-films-rotator,.portfolio-intro .hero-blogs-link{min-height:0;aspect-ratio:1.16}
+ .portfolio-intro .hero-blogs-link{padding:clamp(12px,3vw,22px)}
+ .portfolio-intro .hero-blogs-link strong{font-size:clamp(16px,4.3vw,24px);line-height:1.06}
+
+}
+@media(max-width:380px){
+ .portfolio-intro .hero-media{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .portfolio-intro .hero-films-rotator,.portfolio-intro .hero-blogs-link{min-height:120px}
+ .tuck-studios-top span:last-child{font-size:9px}
+}
+
+
+/* Hero parity: same visual language at every width, with mobile-native media previews. */
+.portfolio-intro .hero-media-main,.portfolio-intro .hero-films-rotator,.portfolio-intro .hero-blogs-link{border-radius:14px;overflow:hidden}
+.portfolio-intro .hero-reel-poster{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;cursor:pointer;background:transparent}
+.portfolio-intro .hero-reel-poster img{width:100%;height:100%;object-fit:cover}
+
+/* Shared portfolio shell: navigation, footer, spacing and responsive behavior. */
+:root{--shell-bg:#f5f8f3;--shell-ink:#244b40;--shell-green:#327e60;--shell-line:#c3d8cc;--shell-gutter:clamp(20px,5vw,80px)}
+body{background-color:var(--shell-bg);color:var(--shell-ink)}
+header{width:100%;max-width:1500px;margin-inline:auto;padding:22px var(--shell-gutter);border-bottom:1px solid var(--shell-line)}
+header>a,header>a.brand{font:800 22px/1.2 Manrope,Arial,sans-serif;letter-spacing:-.06em;text-decoration:none;color:var(--shell-ink)}
+header nav{display:flex;align-items:center;gap:clamp(12px,2vw,25px)}
+header nav a{font:800 10px/1.4 Manrope,Arial,sans-serif;letter-spacing:.1em;text-decoration:none;color:var(--shell-ink)}
+header nav a:hover{color:var(--shell-green)}
+.studio-footer{width:100%;max-width:1500px;margin:0 auto;padding:34px var(--shell-gutter) 24px;border-top:1px solid var(--shell-line);background:transparent;color:var(--shell-ink)}
+.studio-footer .studio-footer-main{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 0 25px;border:0}
+.studio-footer .studio-footer-main strong{font:800 clamp(22px,3vw,34px)/1 Manrope,Arial,sans-serif;letter-spacing:-.07em}
+.studio-footer .studio-footer-main a{font:800 10px/1.4 Manrope,Arial,sans-serif;letter-spacing:.1em;color:var(--shell-green);text-decoration:none}
+.studio-footer .studio-footer-legal{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;padding-top:16px;border-top:1px solid var(--shell-line);font:700 9px/1.5 Manrope,Arial,sans-serif;letter-spacing:.09em;color:#64816d}
+@media(max-width:700px){header{padding:16px 20px 12px}header>a,header>a.brand{display:inline-block;margin-bottom:14px;font-size:20px}header nav{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:18px;padding:0 0 4px;scrollbar-width:none;white-space:nowrap}header nav::-webkit-scrollbar{display:none}header nav a{flex:0 0 auto;font-size:10px}.studio-footer{padding:28px 20px 24px}.studio-footer .studio-footer-main{padding-bottom:22px}.studio-footer .studio-footer-legal{flex-wrap:wrap;font-size:8px}}
+
+
+/* On mobile, reveal the real player only after the user starts playback. */
+@media(max-width:700px){
+ .portfolio-intro .hero-reel-slide.is-playing iframe{opacity:1;pointer-events:auto;z-index:3}
+ .portfolio-intro .hero-reel-slide.is-playing .hero-reel-poster{opacity:0;pointer-events:none}
+ .portfolio-intro .hero-reel-slide.is-playing .hero-reel-open{z-index:4}
+}
+
+
+/* Editorial cleanup: quieter details, consistent card geometry and readable spacing. */
+:root{--site-card-radius:14px;--site-section-gap:clamp(48px,6vw,88px)}
+.portfolio-intro .hero-kinetic-orbit{display:none}
+.portfolio-intro .hero-media-main,
+.portfolio-intro .hero-films-rotator,
+.portfolio-intro .hero-blogs-link,
+.creative-media-content{border-radius:var(--site-card-radius)}
+.portfolio-intro .hero-actions a,
+.tuck-studios-cta,
+.spotify-feature-link{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.portfolio-intro .hero-actions a:hover{transform:none}
+.portfolio-intro .hero-reel-kicker i{animation:none}
+.tuck-studios-feature,.creative-media{scroll-margin-top:32px}
+.creative-media-content{overflow:hidden}
+.studio-footer .studio-footer-main a:hover{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){
+ .portfolio-intro .hero-actions a{max-width:100%}
+ .portfolio-intro .hero-media-main,.portfolio-intro .hero-films-rotator,.portfolio-intro .hero-blogs-link{border-radius:var(--site-card-radius)}
+ .portfolio-intro .hero-media{align-items:stretch}
+ .creative-media-content{overflow:hidden}
+}
+@media(prefers-reduced-motion:reduce){
+ .portfolio-intro .hero-actions a,.tuck-studios-cta,.spotify-feature-link{transition:none}
+}
