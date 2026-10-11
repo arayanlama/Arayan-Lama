@@ -201,21 +201,8 @@ header,.portfolio-intro,.tuck-studios-feature,.creative-media,.studio-footer{box
  .creative-media-content{border-radius:16px}
 }
 
-/* Restrained, uncluttered footer shared with the homepage visual language. */
-.studio-footer{max-width:1500px;margin:0 auto;padding:34px clamp(22px,5vw,80px) 24px;border-top:1px solid #c3d8cc;background:transparent}
-.studio-footer .studio-footer-main{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 0 26px;border:0}
-.studio-footer .studio-footer-main strong{font:800 clamp(22px,3vw,34px)/1 Manrope,Arial,sans-serif;letter-spacing:-.07em;color:#244b40}
-.studio-footer .studio-footer-main a{font:800 10px Manrope,Arial,sans-serif;letter-spacing:.12em;color:#327e60;text-decoration:none;white-space:nowrap}
-.studio-footer .studio-footer-legal{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:16px;border-top:1px solid #c3d8cc;font:700 9px Manrope,Arial,sans-serif;letter-spacing:.1em;color:#64816d}
-@media(max-width:600px){.studio-footer{padding:28px 20px 24px}.studio-footer .studio-footer-main{padding-bottom:22px}.studio-footer .studio-footer-legal{flex-wrap:wrap;gap:8px 16px;font-size:8px}}
-
-/* Final editorial cleanup: fewer competing elements, consistent rhythm. */
+/* Homepage composition: one predictable responsive layer. */
 :root{--page-space:clamp(48px,6vw,88px)}
-body{background:#f5f8f3;color:#244b40}
-header{background:transparent;border-bottom:1px solid #d3e0d7}
-header nav{align-items:center}
-header nav a{text-decoration:none;transition:color .2s ease}
-header nav a:hover{color:#327e60}
 .portfolio-intro{background:transparent}
 .portfolio-intro:before{opacity:.065}
 .portfolio-intro .hero-stage{padding-bottom:clamp(28px,4vw,55px)}
@@ -223,28 +210,13 @@ header nav a:hover{color:#327e60}
 .hero-actions a{box-shadow:none}
 .hero-actions a:hover{transform:translateY(-1px)}
 .hero-media-main,.hero-films-rotator,.hero-blogs-link{box-shadow:none}
-.tuck-studios-feature{padding-top:var(--page-space);padding-bottom:var(--page-space)}
-.creative-media{padding-top:var(--page-space);padding-bottom:var(--page-space)}
+.tuck-studios-feature,.creative-media{padding-top:var(--page-space);padding-bottom:var(--page-space)}
 .creative-media-intro{margin-bottom:clamp(22px,3vw,38px)}
-.creative-media-content{box-shadow:none;border:1px solid #d3e0d7;background:rgba(255,255,255,.25)}
+.creative-media-content{box-shadow:none;border:1px solid var(--shell-line,#c3d8cc);background:rgba(255,255,255,.25);border-radius:16px}
 .creative-media-content .spotify-feature,.creative-media-content .youtube-feature{padding:clamp(24px,3.5vw,48px)}
-.creative-media-content .youtube-feature{border-top:1px solid #d3e0d7}
-.studio-footer{margin-top:0}
+.creative-media-content .youtube-feature{border-top:1px solid var(--shell-line,#c3d8cc)}
 @media(max-width:700px){
- :root{--page-space:44px}
- header nav{justify-content:flex-start}
- .portfolio-intro .hero-stage{padding-bottom:24px}
- .creative-media-content .spotify-feature,.creative-media-content .youtube-feature{padding:20px}
- .creative-media-intro h2{font-size:clamp(36px,9vw,52px)}
- .studio-footer .studio-footer-main strong{font-size:23px}
-}
-
-/* Desktop-to-phone parity: preserve the same compositions and visual hierarchy. */
-@media(max-width:700px){
- body{background:#f5f8f3}
- header{padding:18px 20px 14px}
- header>a{margin-bottom:14px}
- header nav{gap:clamp(10px,3vw,20px);padding-bottom:0}
+ :root{--page-space:44px;--site-gutter:20px}
  .portfolio-intro{background:transparent;padding:22px 20px 34px}
  .portfolio-intro .hero-stage{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;padding:20px 0 22px}
  .portfolio-intro .hero-copy h1{font-size:clamp(61px,14vw,91px);line-height:.86;letter-spacing:-.105em;margin:20px 0 24px}
@@ -257,22 +229,19 @@ header nav a:hover{color:#327e60}
  .portfolio-intro .hero-films-rotator{grid-column:1;grid-row:auto;min-width:0;min-height:145px;aspect-ratio:auto}
  .portfolio-intro .hero-blogs-link{grid-column:2;grid-row:auto;min-width:0;min-height:145px}
  .portfolio-intro .intro-bottom{margin-top:18px}
- .tuck-studios-feature{padding:48px 20px}
+ .tuck-studios-feature,.creative-media{padding:48px 20px}
  .tuck-studios-top{display:flex;justify-content:space-between;gap:12px}
  .tuck-studios-top span:last-child{display:inline}
  .tuck-studios-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:26px}
  .tuck-studios-copy h2{margin-bottom:22px}
  .tuck-studios-art{min-height:300px}
- .creative-media{padding:48px 20px}
- .creative-media-content{border-radius:16px}
+ .creative-media-intro h2{font-size:clamp(36px,9vw,52px)}
  .creative-media-content .spotify-feature,.creative-media-content .youtube-feature{padding:22px}
- .studio-footer{padding:30px 20px 24px}
 }
 @media(max-width:380px){
- .portfolio-intro .hero-media{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
- .portfolio-intro .hero-films-rotator{grid-column:1;grid-row:auto;min-height:120px}
- .portfolio-intro .hero-blogs-link{grid-column:2;grid-row:auto;min-height:120px}
- .tuck-studios-top span:last-child{display:inline;font-size:9px}
+ .portfolio-intro .hero-media{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .portfolio-intro .hero-films-rotator,.portfolio-intro .hero-blogs-link{min-height:120px}
+ .tuck-studios-top span:last-child{font-size:9px}
 }
 
 /* Shared portfolio shell: navigation, footer, spacing and responsive behavior. */
