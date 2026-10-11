@@ -1,0 +1,44 @@
+name: CSS Refactor Checks
+on:
+  push:
+    branches: [css-refactor-2026-10]
+  pull_request:
+    paths:
+      - 'public/**'
+      - '.github/workflows/css-refactor-checks.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate CSS and JavaScript syntax
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts css-tree acorn
+          node <<'NODE'
+          const fs = require('node:fs');
+          const csstree = require('css-tree');
+          const acorn = require('acorn');
+          const files = ['public/styles/home-base.css','public/styles/home-layout.css'];
+          let errors = 0;
+          for (const file of files) {
+            const css = fs.readFileSync(file,'utf8');
+            csstree.parse(css,{positions:true,onParseError(error){console.error(file,error.message);errors++;}});
+            console.log(file,'parsed');
+          }
+          for(const file of ['public/index.html','public/music.html','public/videos.html','public/blog.html']){
+            const html=fs.readFileSync(file,'utf8');
+            for(const match of html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/g)){
+              if(!match[1].trim())continue;
+              try{acorn.parse(match[1],{ecmaVersion:'latest',sourceType:'script'});}
+              catch(e){console.error(file,e.message);errors++;}
+            }
+            console.log(file,'scripts checked');
+          }
+          if(errors)process.exit(1);
+          NODE
