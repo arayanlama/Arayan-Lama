@@ -104,9 +104,7 @@ header nav a:hover{color:var(--shell-green)}
 .studio-footer .studio-footer-main a:hover{text-decoration:underline;text-underline-offset:4px}
 @media(max-width:700px){
  .portfolio-intro .hero-actions a{max-width:100%}
- .portfolio-intro .hero-media-main,.portfolio-intro .hero-films-rotator,.portfolio-intro .hero-blogs-link{border-radius:var(--site-card-radius)}
  .portfolio-intro .hero-media{align-items:stretch}
- .creative-media-content{overflow:hidden}
 }
 @media(prefers-reduced-motion:reduce){
  .portfolio-intro .hero-actions a,.tuck-studios-cta,.spotify-feature-link{transition:none}
