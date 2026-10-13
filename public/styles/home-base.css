@@ -304,3 +304,27 @@ header nav a:hover{color:var(--shell-green)}
 @media(prefers-reduced-motion:reduce){
  .portfolio-intro .hero-actions a,.tuck-studios-cta,.spotify-feature-link{transition:none}
 }
+
+/* Fluid responsive safeguards: preserve established desktop and mobile compositions. */
+:root{--fluid-gutter:clamp(16px,4vw,80px);--fluid-gap:clamp(12px,2.5vw,32px)}
+html{max-width:100%;overflow-x:clip}
+body{min-width:0;max-width:100%;overflow-x:clip}
+main,section,header,footer{min-width:0}
+img,video,svg{max-width:100%}
+iframe{max-width:100%}
+.hero-stage>*,.hero-media>*,.tuck-studios-layout>*,.creative-media-content>*{min-width:0}
+.hero-copy h1,.tuck-studios-feature h2,.creative-media h2{overflow-wrap:break-word}
+@media(min-width:701px) and (max-width:1100px){
+ .portfolio-intro .hero-stage,.tuck-studios-layout{gap:clamp(18px,3vw,42px)}
+ .portfolio-intro .hero-copy h1{font-size:clamp(60px,7.5vw,116px)}
+}
+@media(max-width:700px){
+ .portfolio-intro .hero-stage,.tuck-studios-layout{min-width:0}
+ .portfolio-intro .hero-copy h1{max-width:100%}
+ .portfolio-intro .hero-media iframe,.films-player-wrap iframe{max-width:100%}
+}
+@media(max-width:380px){
+ header nav{gap:clamp(10px,3vw,18px)}
+ .portfolio-intro .hero-copy h1{font-size:clamp(48px,13.5vw,62px)}
+ .portfolio-intro .hero-actions a{max-width:100%}
+}
