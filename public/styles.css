@@ -13,3 +13,5 @@
 html{overflow-x:clip}body{min-width:0;overflow-wrap:break-word}.hero h1,.studio h2,.services h2{overflow-wrap:normal;word-break:normal}.hero h1{font-size:clamp(64px,15.2vw,240px)}.studio h2,.services h2{font-size:clamp(60px,8.5vw,145px)}.hero-bottom>*{min-width:0}.hero-bottom p{flex:1}.hero-bottom .cta-button{flex-shrink:0}.studio-grid>*{min-width:0}.studio-art-bottom{gap:12px;flex-wrap:wrap}.site-header nav{flex-wrap:wrap;justify-content:flex-end}.service>*{min-width:0}
 @media(max-width:700px){.hero h1{font-size:clamp(57px,16.5vw,116px)}.studio h2,.services h2{font-size:clamp(53px,13vw,95px)}.hero-main{padding:50px 0 36px}.hero{min-height:calc(100svh - 72px)}.hero-bottom{margin-top:35px}.site-header nav{gap:10px}.studio-grid{gap:24px}}
 @media(max-width:380px){.site-header nav{font-size:9px;gap:8px}.hero h1{font-size:16vw}.studio h2,.services h2{font-size:12vw}.hero-footer{gap:8px}.hero-footer span:last-child{white-space:nowrap}.service{grid-template-columns:24px minmax(0,1fr) 18px}.service h3{font-size:23px}.eyebrow{font-size:10px}}
+
+.service .service-price{color:var(--ink);font-size:15px;font-weight:700;letter-spacing:.03em;margin:0 0 10px}
