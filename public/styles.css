@@ -177,3 +177,20 @@ body{background:var(--bg);color:var(--ink)}
 @media(prefers-reduced-motion:no-preference){.hero-note{animation:enter-up .85s .3s ease both}.hero-note-star{animation:none}}
 @media(max-width:700px){.hero-note{top:10px;right:0;font-size:10px;max-width:220px;gap:8px}.hero-note-star{font-size:26px}.hero-bottom p{font-size:clamp(18px,4.5vw,22px)}}
 @media(max-width:380px){.hero-note{font-size:9px;max-width:175px}}
+
+/* Friendly-neighbourhood comic energy, with editorial restraint */
+.hero{overflow:hidden}
+.hero:after{content:"";position:absolute;z-index:-1;pointer-events:none;width:clamp(190px,31vw,480px);height:clamp(190px,31vw,480px);right:-7%;top:13%;opacity:.21;background:repeating-radial-gradient(circle at center,transparent 0 27px,#477088 28px 29px,transparent 30px 55px),repeating-conic-gradient(from 0deg at center,transparent 0deg 28deg,#477088 29deg 30deg,transparent 31deg 45deg);border-radius:50%;mask-image:radial-gradient(circle,#000 12%,transparent 75%)}
+.hero-comic-tag{position:absolute;top:4px;left:0;display:inline-block;background:#b94d43;color:#fff8ec;padding:9px 12px;font-size:10px;font-weight:700;letter-spacing:.1em;transform:rotate(-3deg);box-shadow:3px 3px 0 #2f5771}
+.hero-note-star{color:#b94d43}
+.hero .period{color:#b94d43}
+.hero h1{position:relative;text-shadow:2px 2px 0 rgba(47,87,113,.08)}
+.hero .cta-button{background:#2f5771;box-shadow:4px 4px 0 #b94d43}
+.hero .cta-button:hover{background:#b94d43;box-shadow:2px 2px 0 #2f5771}
+.hero-footer{border-top:2px solid #2f5771}
+@media(prefers-reduced-motion:no-preference){.hero-comic-tag{animation:comic-tag-in .8s .2s both}.hero:after{animation:comic-web-drift 18s ease-in-out infinite alternate}}
+@keyframes comic-tag-in{from{opacity:0;transform:translateY(-12px) rotate(-3deg)}to{opacity:1;transform:translateY(0) rotate(-3deg)}}
+@keyframes comic-web-drift{to{transform:rotate(9deg) scale(1.06)}}
+@media(max-width:700px){.hero-comic-tag{font-size:8px;top:3px;padding:7px 9px;max-width:58%;line-height:1.5}.hero-note{top:12px}.hero:after{right:-22%;top:23%;opacity:.13}}
+@media(max-width:380px){.hero-comic-tag{max-width:60%;font-size:7px}}
+@media(prefers-reduced-motion:reduce){.hero-comic-tag,.hero:after{animation:none!important}}
