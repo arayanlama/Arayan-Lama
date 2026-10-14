@@ -167,3 +167,13 @@ body{background:var(--bg);color:var(--ink)}
 @media(max-width:700px){.hero-main{padding-top:95px}.hero-note{right:3%;top:12px;max-width:225px;font-size:14px}.hero-note-star{font-size:37px}.hero-bottom:before{top:-18px}.hero-footer span:last-child{font-size:9px}}
 @media(max-width:380px){.hero-note{max-width:185px;font-size:12px;gap:7px}.hero-main{padding-top:85px}.hero-footer{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.hero-note,.hero-note-star,.hero-heart{animation:none!important}}
+
+/* Professional indie refinement */
+.hero-note{transform:none;right:0;top:20px;gap:12px;max-width:320px;font-family:'DM Sans',Arial,sans-serif;font-size:12px;font-weight:600;font-style:normal;letter-spacing:.06em;line-height:1.55;text-transform:uppercase;color:#657165}
+.hero-note-star{font-size:34px;color:#a16e52}
+.hero-bottom p{font-size:clamp(19px,2vw,26px);line-height:1.45;max-width:620px}
+.hero-bottom:before{width:44px;transform:none}
+.hero-footer{font-weight:600}
+@media(prefers-reduced-motion:no-preference){.hero-note{animation:enter-up .85s .3s ease both}.hero-note-star{animation:none}}
+@media(max-width:700px){.hero-note{top:10px;right:0;font-size:10px;max-width:220px;gap:8px}.hero-note-star{font-size:26px}.hero-bottom p{font-size:clamp(18px,4.5vw,22px)}}
+@media(max-width:380px){.hero-note{font-size:9px;max-width:175px}}
