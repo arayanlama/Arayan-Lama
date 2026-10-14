@@ -130,3 +130,25 @@ body{background:var(--bg);color:var(--ink)}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:24px;border-top:1px solid #bfc5b5;padding-top:24px;font-size:10px;letter-spacing:.1em}
 .footer-links{display:flex;flex-wrap:wrap;gap:clamp(12px,2.5vw,35px)}
 @media(max-width:700px){.site-footer{padding-top:45px;padding-bottom:28px}.footer-top{display:block;padding-bottom:48px}.footer-title{font-size:clamp(48px,12vw,90px)}.footer-email{margin-top:30px}.footer-bottom{align-items:flex-start;flex-direction:column;gap:18px}.site-footer .footer-bottom span:nth-child(2){display:inline}.footer-links{gap:18px}}
+
+/* Subtle editorial motion */
+@keyframes enter-up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes drift-wave{from{transform:rotate(-14deg) translate3d(-12px,0,0) scale(1)}to{transform:rotate(-10deg) translate3d(16px,-12px,0) scale(1.06)}}
+@keyframes gentle-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media(prefers-reduced-motion:no-preference){
+ .hero .intro{animation:enter-up .8s ease both}
+ .hero h1{animation:enter-up 1s .12s ease both}
+ .hero-bottom{animation:enter-up .9s .3s ease both}
+ .hero-footer{animation:enter-up .8s .45s ease both}
+ .studio .wave{animation:drift-wave 14s ease-in-out infinite alternate;will-change:transform}
+ .hero .period{display:inline-block;animation:gentle-float 5s ease-in-out infinite}
+ .service{transition:padding-left .3s ease,background-color .3s ease}
+ .service:hover{padding-left:12px;background-color:rgba(204,233,221,.24)}
+ .service-mark{transition:transform .3s ease}
+ .service:hover .service-mark{transform:translate(4px,-4px)}
+ .text-link span,.cta-button span{display:inline-block;transition:transform .25s ease}
+ .text-link:hover span,.cta-button:hover span{transform:translate(3px,-3px)}
+ .studio-art{transition:filter .5s ease}
+ .studio-art:hover{filter:brightness(1.12)}
+}
+@media(prefers-reduced-motion:reduce){.hero .intro,.hero h1,.hero-bottom,.hero-footer,.studio .wave,.hero .period{animation:none!important}.service,.service-mark,.text-link span,.cta-button span,.studio-art{transition:none!important}}
