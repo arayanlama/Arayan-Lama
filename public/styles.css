@@ -40,3 +40,22 @@ html{overflow-x:clip}body{min-width:0;overflow-wrap:break-word}.hero h1,.studio 
 
 /* Studio audio submission CTA */
 .studio-actions{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin:26px 0 18px}.studio-actions .text-link{margin:0}.studio-copy .studio-submit-note{font-size:12px;line-height:1.65;color:#52746a;margin:0;max-width:470px}.studio-copy .studio-actions .cta-button{font-size:11px;letter-spacing:.075em}@media(max-width:700px){.studio-actions{align-items:flex-start;flex-direction:column;gap:20px}.studio-actions .cta-button{width:100%;max-width:360px}}
+
+/* Clean editorial finish — restrained light teal, no heavy dark blocks */
+:root{--bg:#f6faf8;--ink:#1c4540;--muted:#617a74;--line:#d7e5df;--accent:#e2f1eb;--deep:#285f55}
+.site-header{background:rgba(246,250,248,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);position:relative;z-index:2}
+.hero{background:linear-gradient(135deg,#f8fbf9,#eef7f3);min-height:min(790px,calc(100svh - 88px))}
+.studio{background:#eaf4ef}
+.studio-art{background:linear-gradient(125deg,#d6eae1,#c7e4df 65%,#dbeef0);color:#285f55;min-height:270px;border:1px solid rgba(255,255,255,.85)}
+.wave{background:repeating-radial-gradient(ellipse at 55% 55%,transparent 0,transparent 19px,rgba(50,123,107,.17) 20px,rgba(50,123,107,.17) 21px,transparent 22px,transparent 38px)}
+.services{background:#f6faf8}
+.services-heading{padding:45px 0 45px}
+.service-list{gap:12px}
+.service{grid-template-columns:30px minmax(0,1fr);min-height:210px;padding:28px;background:rgba(255,255,255,.7);box-shadow:none;border:1px solid #d9e9e2!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.service:last-child{border-bottom:1px solid #d9e9e2!important}
+.service:hover{box-shadow:0 10px 25px rgba(35,100,91,.07)}
+.service .service-price{background:#e5f2eb;border-radius:3px}
+.contact-row{margin-top:45px}
+.cta-button{background:#28695e}
+.site-footer{background:#e8f3ee;color:#315d53;border-top:1px solid #d3e5dd}
+@media(max-width:760px){.hero{min-height:calc(100svh - 72px)}.service{grid-template-columns:24px minmax(0,1fr);min-height:0;padding:23px}.studio-art{min-height:220px}.services-heading{padding:32px 0}}
