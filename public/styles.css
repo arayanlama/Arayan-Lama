@@ -62,3 +62,16 @@ html{overflow-x:clip}body{min-width:0;overflow-wrap:break-word}.hero h1,.studio 
 
 /* Hero typography: distinct, contemporary LAMA wordmark */
 .hero h1 em{font-family:'DM Sans',Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:-.105em;line-height:.85}
+
+/* Responsive and accessibility fixes */
+.hero h1{max-width:100%;line-height:.9}
+.hero h1 em{display:inline-block;max-width:100%}
+.hero-bottom{flex-wrap:wrap}
+.studio-grid,.services-heading,.contact-row{min-width:0}
+.studio-copy,.service>div{min-width:0}
+.service-price{overflow-wrap:anywhere}
+.site-header nav a,.text-link,.cta-button{touch-action:manipulation}
+@media(max-width:700px){.hero{min-height:auto;min-height:max(620px,calc(100svh - 72px))}.hero-main{padding:48px 0 38px}.hero h1{font-size:clamp(56px,15vw,105px);letter-spacing:-.075em}.hero h1 em{letter-spacing:-.085em}.hero-bottom{gap:22px}.hero-footer{flex-wrap:wrap}.services-heading p{margin-top:24px}.studio-copy .lead{overflow-wrap:normal}.contact-row .cta-button{max-width:100%}}
+@media(max-width:420px){.site-header{gap:12px}.site-header nav{gap:10px}.site-header nav a{font-size:10px}.hero h1{font-size:14.5vw}.studio h2,.services h2{font-size:12vw}.studio-art-bottom span{display:block}.service{gap:9px}.service h3{overflow-wrap:break-word}}
+@media(hover:none){.service:hover,.cta-button:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
