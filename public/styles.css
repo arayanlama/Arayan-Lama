@@ -135,3 +135,49 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .contact-row{margin-top:24px;padding-top:22px}
 .footer-top{padding-bottom:30px}
 }
+
+/* Expressive indie editorial art direction */
+:root{--bg:#f4efe5;--ink:#20362d;--rust:#bd573d}
+.site-header{position:relative;z-index:2;border-bottom:2px solid var(--ink)}
+.wordmark{font-size:31px;letter-spacing:-.12em}
+.site-header nav a:last-child{border-bottom:2px solid var(--rust);padding-bottom:4px}
+.hero{background:#f4efe5}
+.hero::after{content:"STUDIO / 001";position:absolute;right:clamp(22px,5vw,88px);top:75px;color:var(--rust);font:700 10px "DM Sans",sans-serif;letter-spacing:.18em;transform:rotate(90deg) translateX(100%);transform-origin:right top;pointer-events:none}
+.hero h1{letter-spacing:-.115em;line-height:.82;text-transform:uppercase}
+.hero h1 em{font-family:"DM Serif Display",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.075em}
+.hero .period{color:#bd573d}
+.hero-bottom p{max-width:520px}
+.hero-footer{border-top:2px solid var(--ink)}
+.work{background:#20362d!important;color:#f5f0e7}
+.work .section-head{border-color:#607266}
+.work .work-intro{align-items:end}
+.work-intro h2{font-size:clamp(58px,8.8vw,142px);letter-spacing:-.09em}
+.work-intro h2 em{color:#e7b08e}
+.work-intro p{color:#cbd6c8}
+.work-grid{grid-template-columns:1.25fr .75fr;align-items:start;gap:clamp(16px,3vw,45px)}
+.work-card:nth-child(2){margin-top:clamp(0px,5vw,75px)}
+.work-card .work-frame{border:1px solid #6b8071;box-shadow:10px 10px 0 #314d3e;transition:transform .25s ease,box-shadow .25s ease}
+.work-card:hover .work-frame{transform:translate(-3px,-3px);box-shadow:14px 14px 0 #314d3e}
+.work-card .eyebrow{display:block;padding-top:10px;color:#d1d8c9}
+.work-more{color:#f1c0a5}
+.studio{background:#e3e7d9}
+.studio h2 em{color:#a65e40}
+.studio-gallery img{filter:saturate(.85);transition:filter .3s ease}
+.studio-gallery img:hover{filter:saturate(1.1)}
+.services{background:#f4efe5}
+.services h2 em{color:#bd573d}
+.service{transition:background .2s ease,transform .2s ease}
+.service:hover{transform:translateX(5px)}
+.conversion{background:#d2ddc9!important}
+.conversion h2 em{color:#a65e40}
+.cta-button{background:#263c32;box-shadow:4px 4px 0 #b87759}
+@media(max-width:760px){
+.hero::after{display:none}
+.hero h1{font-size:clamp(56px,14.5vw,110px);line-height:.9}
+.work-grid{grid-template-columns:1fr}
+.work-card:nth-child(2){margin-top:12px}
+.work-card .work-frame{box-shadow:6px 6px 0 #314d3e}
+.work-intro h2{font-size:clamp(50px,11vw,86px)}
+.service:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){.work-card .work-frame,.studio-gallery img{transition:none}}
