@@ -181,3 +181,17 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .service:hover{transform:none}
 }
 @media(prefers-reduced-motion:reduce){.work-card .work-frame,.studio-gallery img{transition:none}}
+
+/* Project enquiry form */
+.enquiry-form{background:#f6f2e9;border:2px solid #263c32;padding:clamp(20px,3vw,40px);display:grid;gap:16px;align-self:start;box-shadow:8px 8px 0 #a6b9a2;min-width:0}
+.enquiry-form h3{font-size:clamp(24px,3vw,38px);line-height:1.05;margin:0 0 8px;letter-spacing:-.045em}
+.enquiry-field{display:grid;gap:7px;min-width:0}
+.enquiry-field label{font-size:12px;font-weight:700;letter-spacing:.045em}
+.enquiry-field input,.enquiry-field select,.enquiry-field textarea{width:100%;min-width:0;box-sizing:border-box;background:#fffdf8;color:#20362d;border:1px solid #829287;border-radius:0;padding:12px 13px;font:inherit;font-size:15px;line-height:1.4}
+.enquiry-field textarea{resize:vertical}
+.enquiry-field input:focus-visible,.enquiry-field select:focus-visible,.enquiry-field textarea:focus-visible{outline:3px solid #bd573d;outline-offset:2px}
+.enquiry-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.enquiry-form .cta-button{border:0;cursor:pointer;justify-self:start;font:inherit;font-weight:700}
+.enquiry-note{font-size:12px;line-height:1.5;margin:0;color:#46594e}
+#enquiry-status:empty{display:none}
+@media(max-width:760px){.enquiry-pair{grid-template-columns:1fr}.enquiry-form{box-shadow:5px 5px 0 #a6b9a2}}
