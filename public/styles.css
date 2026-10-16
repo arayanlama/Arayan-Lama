@@ -263,3 +263,12 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .work .work-card .work-frame{box-shadow:none;transform:none}
 .work .work-card .eyebrow{font-size:11px;line-height:1.5}
 @media(max-width:760px){.csp-collection-head,.csp-press{align-items:flex-start;flex-direction:column}.csp-release-grid,.work .work-grid{grid-template-columns:1fr}.csp-collection{margin-bottom:30px}.csp-press{gap:12px}}
+
+/* Embedded Spotify artist library */
+.spotify-library{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);align-items:center;gap:clamp(20px,4vw,64px);padding:clamp(32px,5vw,76px) clamp(22px,5vw,88px);background:#e6ebdf;color:#263c32;border-bottom:1px solid #aab7a8}
+.spotify-library-copy .eyebrow{display:block;margin-bottom:16px}
+.spotify-library-copy h2{font-size:clamp(42px,6vw,90px);line-height:.95;letter-spacing:-.075em;margin:0 0 18px}
+.spotify-library-copy p{line-height:1.6;margin:0 0 18px}
+.spotify-library-copy a{color:inherit;text-decoration:underline;text-underline-offset:5px;font-weight:700}
+.spotify-library iframe{display:block;width:100%;height:352px;border:0;border-radius:12px;background:#243b31}
+@media(max-width:760px){.spotify-library{grid-template-columns:1fr}.spotify-library iframe{height:352px}}
