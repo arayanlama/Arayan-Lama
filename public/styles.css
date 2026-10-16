@@ -420,3 +420,20 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .discography .discography-count{white-space:normal;text-align:right}
 .discography .discography-release-list:focus-visible{outline:2px solid #8c654f;outline-offset:3px}
 @media(max-width:700px){.discography .discography-release-list{grid-auto-columns:minmax(245px,84%);gap:16px}.discography .discography-release{gap:12px}.discography .discography-cover{width:100%;aspect-ratio:16/10}.discography .discography-release-info h3{font-size:clamp(25px,7vw,34px)}.discography .discography-play{grid-column:auto;grid-row:auto}.discography .discography-count{font-size:9px;max-width:135px}}
+
+/* Compact, quiet hero: let records and services lead */
+.hero.hero-compact{min-height:0;height:auto;display:block;padding-top:clamp(25px,3vw,42px);padding-bottom:clamp(38px,5vw,70px)}
+.hero.hero-compact::before{opacity:.1}
+.hero.hero-compact .hero-main{padding:clamp(48px,7vw,95px) 0 0}
+.hero.hero-compact h1{font-size:clamp(60px,10.2vw,150px);line-height:.9;letter-spacing:-.095em}
+.hero.hero-compact h1 em{letter-spacing:-.09em}
+.hero.hero-compact .hero-bottom{align-items:center;margin-top:clamp(25px,3vw,42px);gap:20px}
+.hero.hero-compact .hero-bottom::before{display:none}
+.hero.hero-compact .hero-bottom p{font-size:clamp(15px,1.5vw,19px);max-width:460px;line-height:1.5}
+.hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.hero-secondary-link{font-size:13px;font-weight:700;color:inherit;text-underline-offset:5px;white-space:nowrap}
+.hero.hero-compact .cta-button{white-space:nowrap}
+.discography{padding-top:clamp(75px,9vw,135px);padding-bottom:clamp(85px,9vw,140px)}
+.services{padding-top:clamp(85px,9vw,140px);padding-bottom:clamp(95px,10vw,150px)}
+.services .service{min-height:260px}
+@media(max-width:700px){.hero.hero-compact{padding-top:22px;padding-bottom:44px}.hero.hero-compact .hero-main{padding:52px 0 0}.hero.hero-compact h1{font-size:clamp(52px,11vw,88px);overflow-wrap:anywhere}.hero.hero-compact .hero-bottom{align-items:flex-start;flex-direction:column;margin-top:26px}.hero-actions{gap:18px}.services .service{min-height:0}.discography{padding-top:75px;padding-bottom:85px}.services{padding-top:80px;padding-bottom:90px}}
