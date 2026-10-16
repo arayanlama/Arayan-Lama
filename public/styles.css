@@ -231,3 +231,12 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .csp-second-release{border-top:1px solid rgba(255,255,255,.25);margin:34px 0 26px;padding-top:26px}
 .csp-second-release h4{font-size:clamp(26px,3vw,44px);letter-spacing:-.045em;margin:12px 0}
 .csp-second-release p{font-size:14px;margin:0 0 15px}
+
+/* Consistent alignment for portfolio/CSP subheadings */
+.work .section-head,.csp-feature-meta{align-items:baseline}
+.csp-feature-body>div:first-child{min-width:0}
+.csp-feature .csp-second-release{margin-top:36px;padding-top:28px}
+.csp-feature .csp-second-release>.eyebrow{display:block;margin:0 0 12px;letter-spacing:.12em;line-height:1.5}
+.csp-feature .csp-second-release h4{margin:0 0 12px;line-height:1.1}
+.csp-feature .csp-second-release p{margin:0 0 18px;line-height:1.6}
+@media(max-width:760px){.work .section-head,.csp-feature-meta{align-items:flex-start}.csp-feature .csp-second-release{margin-top:28px;padding-top:24px}}
