@@ -195,3 +195,9 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .enquiry-note{font-size:12px;line-height:1.5;margin:0;color:#46594e}
 #enquiry-status:empty{display:none}
 @media(max-width:760px){.enquiry-pair{grid-template-columns:1fr}.enquiry-form{box-shadow:5px 5px 0 #a6b9a2}}
+
+/* Spotify artist link directly after hero */
+.spotify-strip{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px clamp(22px,5vw,88px);background:#dbe5d5;color:#20362d;border-top:1px solid #20362d;border-bottom:2px solid #20362d}
+.spotify-strip a{color:inherit;font-weight:800;font-size:clamp(17px,2.2vw,28px);letter-spacing:-.035em;text-decoration:underline;text-decoration-color:#bd573d;text-underline-offset:5px}
+.spotify-strip a:hover{color:#a34b36}
+@media(max-width:700px){.spotify-strip{align-items:flex-start;flex-direction:column;gap:8px;padding:18px 22px}}
