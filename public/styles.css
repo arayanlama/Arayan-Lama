@@ -409,3 +409,14 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .spotify-library-copy h2,.discography-intro h2{overflow-wrap:normal;word-break:normal}
 @media(max-width:850px){.spotify-library-copy{grid-template-columns:1fr;gap:16px}.spotify-library-copy>.eyebrow,.spotify-library-copy h2,.spotify-library-copy p,.spotify-library-copy>a{grid-column:1;grid-row:auto;margin:0}.spotify-library-copy>a{margin-top:2px}.spotify-library-content{grid-template-columns:1fr}.spotify-library-panel:not(.spotify-library-credits)>iframe,.spotify-library-credits>iframe{height:380px}.spotify-library-copy h2{font-size:clamp(54px,11vw,100px)}}
 @media(max-width:480px){.spotify-library,.discography{padding-inline:20px}.spotify-library-copy h2{font-size:clamp(49px,12vw,74px)}.spotify-library-panel:not(.spotify-library-credits)>iframe,.spotify-library-credits>iframe{height:352px}.spotify-library-panel{padding:18px}.spotify-library-content{gap:18px}}
+
+/* Three featured records — horizontally scrollable gallery */
+.discography .discography-release-list{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,calc((100% - 40px)/2.15));gap:20px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scroll-padding-inline:2px;padding:12px 2px 24px;scrollbar-width:thin;scrollbar-color:#7f9786 transparent;border-top:1px solid #b4bcb0}
+.discography .discography-release{display:flex;flex-direction:column;align-items:stretch;gap:15px;min-width:0;padding:0 0 18px;border-bottom:1px solid #b4bcb0;scroll-snap-align:start}
+.discography .discography-cover{width:100%;aspect-ratio:16/10}
+.discography .discography-release-info{flex:1}
+.discography .discography-release-info h3{font-size:clamp(28px,3.2vw,44px)}
+.discography .discography-play{align-self:flex-start;padding:8px 0}
+.discography .discography-count{white-space:normal;text-align:right}
+.discography .discography-release-list:focus-visible{outline:2px solid #8c654f;outline-offset:3px}
+@media(max-width:700px){.discography .discography-release-list{grid-auto-columns:minmax(245px,84%);gap:16px}.discography .discography-release{gap:12px}.discography .discography-cover{width:100%;aspect-ratio:16/10}.discography .discography-release-info h3{font-size:clamp(25px,7vw,34px)}.discography .discography-play{grid-column:auto;grid-row:auto}.discography .discography-count{font-size:9px;max-width:135px}}
