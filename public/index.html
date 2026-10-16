@@ -39,7 +39,21 @@
         <article class="service"><span class="service-no">03</span><div><h3>Music Production</h3><p class="service-price" data-min="6000" data-max="12000">₹6,000 – ₹12,000</p><p>From demo to finished track: arrangement, sound design and production shaped around your song.</p></div></article>
       </div>
       <p class="services-note">Prices are based in INR. Currency conversions are estimates. Your final quote depends on the project scope and deliverables.</p></section>
-<section class="conversion section" id="contact" aria-labelledby="contact-title"><div class="section-head"><span class="eyebrow">03 / START A PROJECT</span><span class="eyebrow">TUCK STUDIOS / SILIGURI</span></div><div class="conversion-grid"><div><h2 id="contact-title">LET’S MAKE<br><em>IT HAPPEN.</em></h2><p>Tell me about your podcast, recording or song. Include your budget, deadline and an audio link if you have one. I’ll reply with the next steps.</p><a class="cta-button" href="mailto:arayanlama19@gmail.com?subject=Let%27s%20work%20%E2%80%94%20Project%20enquiry&body=Hi%20Arayan%2C%0A%0AMy%20name%3A%0AWhat%20I%27m%20making%3A%0AService%20needed%3A%0ABudget%20range%3A%0ADeadline%3A%0ALink%20to%20demo%20or%20references%3A%0A%0AThanks!">Request a project quote <span aria-hidden="true">↗</span></a></div><div class="conversion-aside"><span class="eyebrow">SIMPLE PROCESS</span><p><strong>01 / Share</strong><br>Email your brief, references and budget.</p><p><strong>02 / Plan</strong><br>We agree on the work, deadline and price.</p><p><strong>03 / Create</strong><br>I get to work once we’ve agreed on the details.</p><a href="https://www.instagram.com/arayan_lama_/" target="_blank" rel="noopener noreferrer">Ask a question on Instagram ↗</a></div></div></section>
+<section class="conversion section" id="contact" aria-labelledby="contact-title">
+<div class="section-head"><span class="eyebrow">03 / START A PROJECT</span><span class="eyebrow">TUCK STUDIOS / SILIGURI</span></div>
+<div class="conversion-grid"><div><h2 id="contact-title">LET’S MAKE<br><em>IT HAPPEN.</em></h2><p>Tell me what you’re making. A few details help me understand the project and prepare a useful quote.</p><div class="conversion-aside"><span class="eyebrow">WHAT HAPPENS NEXT</span><p><strong>01 / Enquire</strong><br>Share your project, budget and timeline.</p><p><strong>02 / Discuss</strong><br>We confirm the scope, deliverables and price.</p><p><strong>03 / Create</strong><br>Work begins once we agree on the details.</p><a href="https://www.instagram.com/arayan_lama_/" target="_blank" rel="noopener noreferrer">Prefer Instagram? Message me ↗</a></div></div>
+<form id="project-enquiry" class="enquiry-form" aria-label="Project enquiry form">
+<h3>Tell me about your project.</h3>
+<div class="enquiry-field"><label for="enquiry-name">Your name *</label><input id="enquiry-name" name="name" autocomplete="name" required maxlength="120" placeholder="Your name"></div>
+<div class="enquiry-field"><label for="enquiry-email">Email address *</label><input id="enquiry-email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></div>
+<div class="enquiry-field"><label for="enquiry-service">What do you need? *</label><select id="enquiry-service" name="service" required><option value="">Select a service</option><option>Podcast Editing</option><option>Audio Mixing &amp; Mastering</option><option>Music Production</option></select></div>
+<div class="enquiry-pair"><div class="enquiry-field"><label for="enquiry-budget">Budget (INR)</label><input id="enquiry-budget" name="budget" maxlength="80" placeholder="e.g. ₹5,000"></div><div class="enquiry-field"><label for="enquiry-deadline">Deadline</label><input id="enquiry-deadline" name="deadline" maxlength="80" placeholder="e.g. Next month"></div></div>
+<div class="enquiry-field"><label for="enquiry-link">Audio or reference link</label><input id="enquiry-link" name="audioLink" type="url" maxlength="1500" placeholder="https://..."></div>
+<div class="enquiry-field"><label for="enquiry-details">Project details *</label><textarea id="enquiry-details" name="details" rows="4" required maxlength="3000" placeholder="Tell me what you're working on and what you need help with."></textarea></div>
+<button type="submit" class="cta-button">Prepare enquiry email ↗</button>
+<p class="enquiry-note">This opens your email app with the details filled in. Review and press Send to submit your enquiry. No details are stored on this website.</p>
+<p id="enquiry-status" class="enquiry-note" role="status" aria-live="polite"></p>
+</form></div></section>
   </main>
   <footer class="site-footer" aria-label="Site footer">
     <div class="footer-top"><div><span class="eyebrow">ARAYAN LAMA / SILIGURI</span><p class="footer-title">MAKE<br><em>SOMETHING.</em></p></div><a class="footer-email" href="mailto:arayanlama19@gmail.com">EMAIL THE STUDIO <span aria-hidden="true">↗</span></a></div>
@@ -71,6 +85,21 @@ let region='';try{region=new Intl.Locale(navigator.language).region||'';}catch(e
 select.value=map[region.toUpperCase()]||'INR';
 select.addEventListener('change',()=>update(select.value));
 update(select.value);
+})();
+</script><script>
+(() => {
+const form=document.getElementById('project-enquiry');
+if(!form)return;
+form.addEventListener('submit',event=>{
+event.preventDefault();
+if(!form.reportValidity())return;
+const data=new FormData(form);
+const value=key=>String(data.get(key)||'').trim();
+const subject='Project enquiry — '+value('service');
+const body=['Hi Arayan,','','Name: '+value('name'),'Email: '+value('email'),'Service: '+value('service'),'Budget (INR): '+(value('budget')||'Not specified'),'Deadline: '+(value('deadline')||'Not specified'),'Audio / reference link: '+(value('audioLink')||'Not provided'),'','Project details:',value('details'),'','Thanks!'].join('\n');
+document.getElementById('enquiry-status').textContent='Your email app should open now. Please press Send there to complete your enquiry.';
+window.location.href='mailto:arayanlama19@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+});
 })();
 </script></body>
 </html>
