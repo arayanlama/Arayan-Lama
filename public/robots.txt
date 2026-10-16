@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /credits-editor.html
+Sitemap: https://arayan-lama.arayanlama19.workers.dev/sitemap.xml
