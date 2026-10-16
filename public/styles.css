@@ -389,3 +389,23 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .spotify-credits-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:20px}
 .spotify-credits-links a{color:inherit;font-size:13px;font-weight:700;text-underline-offset:4px}
 @media(max-width:480px){.spotify-library-credits>iframe{height:380px}}
+
+
+/* Shared alignment system for Spotify and discography */
+.spotify-library,.discography{box-sizing:border-box;width:100%;padding-inline:clamp(20px,5vw,88px)}
+.spotify-library *, .discography *{box-sizing:border-box}
+.spotify-library{grid-template-columns:minmax(0,1fr);gap:clamp(24px,4vw,48px)}
+.spotify-library-copy{position:static;display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,.55fr);column-gap:clamp(24px,5vw,80px);align-items:end}
+.spotify-library-copy>.eyebrow{grid-column:1/-1;margin:0 0 18px}
+.spotify-library-copy h2{grid-column:1;grid-row:2;font-size:clamp(58px,9vw,136px);margin:0;line-height:.9}
+.spotify-library-copy p{grid-column:2;grid-row:2;max-width:380px;margin:0;align-self:end}
+.spotify-library-copy>a{grid-column:2;grid-row:3;justify-self:start;margin-top:16px}
+.spotify-library-content{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.5vw,34px);align-items:stretch}
+.spotify-library-panel{display:flex;flex-direction:column;min-width:0;min-height:0}
+.spotify-library-panel iframe{width:100%;max-width:100%;display:block;border:0}
+.spotify-library-panel:not(.spotify-library-credits)>iframe{height:430px}
+.spotify-library-credits>iframe{height:430px;flex:1}
+.spotify-library-outro{grid-column:1;margin:0}
+.spotify-library-copy h2,.discography-intro h2{overflow-wrap:normal;word-break:normal}
+@media(max-width:850px){.spotify-library-copy{grid-template-columns:1fr;gap:16px}.spotify-library-copy>.eyebrow,.spotify-library-copy h2,.spotify-library-copy p,.spotify-library-copy>a{grid-column:1;grid-row:auto;margin:0}.spotify-library-copy>a{margin-top:2px}.spotify-library-content{grid-template-columns:1fr}.spotify-library-panel:not(.spotify-library-credits)>iframe,.spotify-library-credits>iframe{height:380px}.spotify-library-copy h2{font-size:clamp(54px,11vw,100px)}}
+@media(max-width:480px){.spotify-library,.discography{padding-inline:20px}.spotify-library-copy h2{font-size:clamp(49px,12vw,74px)}.spotify-library-panel:not(.spotify-library-credits)>iframe,.spotify-library-credits>iframe{height:352px}.spotify-library-panel{padding:18px}.spotify-library-content{gap:18px}}
