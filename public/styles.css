@@ -381,3 +381,11 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .spotify-library-credits .spotify-playlist-feature iframe{display:block;width:100%;height:352px;margin-bottom:14px}
 .spotify-playlist-feature>a{display:inline-block;font-size:13px;font-weight:700;color:inherit;text-underline-offset:4px}
 @media(max-width:480px){.spotify-library-credits .spotify-playlist-feature iframe{height:352px}}
+
+/* Unified selected songs panel */
+.spotify-credits-heading{font-size:clamp(32px,4vw,54px);line-height:1;letter-spacing:-.06em;margin:0 0 10px}
+.spotify-credits-description{font-size:14px;line-height:1.6;color:#526254;margin:0 0 20px}
+.spotify-library-credits>iframe{display:block;width:100%;height:430px;border:0;border-radius:10px}
+.spotify-credits-links{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:20px}
+.spotify-credits-links a{color:inherit;font-size:13px;font-weight:700;text-underline-offset:4px}
+@media(max-width:480px){.spotify-library-credits>iframe{height:380px}}
