@@ -351,3 +351,26 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 @media(max-width:850px){.discography-intro{grid-template-columns:1fr;gap:26px}.discography-intro h2{font-size:clamp(62px,13vw,112px)}.discography-intro>p{max-width:540px}.discography-additional{grid-template-columns:1fr}.discography-bottom{align-items:flex-start;flex-direction:column}}
 @media(max-width:600px){.discography{padding:62px 20px 75px}.discography .section-head{flex-direction:column;gap:7px}.discography-intro{padding:45px 0 55px}.discography-intro h2{font-size:clamp(53px,13.5vw,85px);line-height:.88}.discography-collection-head{align-items:flex-start}.discography-collection-head h3{font-size:27px}.discography-release{grid-template-columns:86px minmax(0,1fr);gap:14px;padding:22px 0;align-items:start}.discography-cover{width:86px}.discography-release-info h3{font-size:clamp(22px,6.5vw,31px);margin:7px 0 5px}.discography-release-info p{margin-bottom:12px}.discography-release-meta{font-size:9px;letter-spacing:.07em}.discography-credit-tags{gap:5px}.discography-credit-tags span{font-size:9px;padding:5px 8px}.discography-play{grid-column:2;justify-self:start;padding:0;gap:12px;font-size:12px}.discography-play span{font-size:20px}.discography-additional-track{padding:18px;flex-wrap:wrap}.discography-bottom>div{gap:18px}}
 @media(prefers-reduced-motion:reduce){.discography-cover img,.discography-play span{transition:none}.discography-release:hover .discography-cover img{transform:none}}
+
+
+/* Spotify artist library and selected engineering credits */
+.spotify-library{display:grid;grid-template-columns:minmax(0,.68fr) minmax(0,1.32fr);align-items:start;gap:clamp(26px,5vw,78px);padding:clamp(58px,7vw,105px) clamp(20px,5vw,88px);background:#e6ebdf;color:#263c32}
+.spotify-library-copy{position:sticky;top:35px;min-width:0}
+.spotify-library-copy h2{font-size:clamp(45px,6vw,100px);line-height:.89;overflow-wrap:anywhere}
+.spotify-library-copy h2 em{font-family:Georgia,serif;font-weight:400;color:#8c654f}
+.spotify-library-copy p{max-width:360px}
+.spotify-library-content{display:grid;grid-template-columns:1fr;gap:28px;min-width:0}
+.spotify-library-panel{min-width:0;padding:clamp(18px,2.5vw,30px);border:1px solid #acb9ab;background:#f0f2eb}
+.spotify-library-panel-heading{display:flex;justify-content:space-between;gap:15px;padding-bottom:17px;margin-bottom:18px;border-bottom:1px solid #b7c4b6}
+.spotify-library-panel-heading .eyebrow{font-size:10px;line-height:1.5}
+.spotify-library-panel iframe{height:352px;border-radius:10px}
+.spotify-library-credits iframe{height:152px}
+.spotify-library-credit-info{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:22px}
+.spotify-library-credit-info h3{font-size:clamp(27px,3vw,40px);letter-spacing:-.06em;line-height:1.05;margin:0 0 6px}
+.spotify-library-credit-info p{margin:0 0 12px}
+.spotify-library-credit-info span{display:inline-block;border:1px solid #9cae9e;border-radius:40px;font-size:11px;padding:6px 10px}
+.spotify-library-credit-info a{font-size:12px;color:inherit;font-weight:700;text-underline-offset:4px;white-space:nowrap}
+.spotify-library-outro{grid-column:2;margin:0;font-size:13px;color:#526254;line-height:1.5}
+.spotify-library-outro a{color:inherit;text-underline-offset:4px}
+@media(max-width:900px){.spotify-library{grid-template-columns:1fr}.spotify-library-copy{position:static}.spotify-library-outro{grid-column:1}.spotify-library-copy h2{font-size:clamp(48px,10vw,90px)}}
+@media(max-width:480px){.spotify-library-panel-heading{flex-direction:column;gap:4px}.spotify-library-credit-info{align-items:flex-start;flex-direction:column}.spotify-library-credit-info a{padding:4px 0}.spotify-library-panel iframe{height:352px}.spotify-library-credits iframe{height:152px}}
