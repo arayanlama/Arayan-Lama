@@ -494,3 +494,16 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .site-header{background:#edf5f0}
 .portfolio-social-links a{background:#edf8f0;color:#17372e;border-color:#b9d9c6}
 .portfolio-social-links a:hover,.portfolio-social-links a:focus-visible{background:#d5efdf}
+
+/* Blue × green hybrid: deep teal, cool cyan and forest green */
+:root{--bg:#edf5f3;--ink:#15353b;--muted:#5c7980;--line:#bed5d6;--accent:#c8e9e2;--deep:#174a4b;--rust:#288b92}
+body{background:var(--bg);color:var(--ink)}
+.site-header{background:#edf5f3;border-bottom-color:#bed5d6}
+.hero.hero-masthead{background:radial-gradient(ellipse at 88% 8%,#174f68 0%,#0d353d 42%,#081d1c 78%,#071817 100%);color:#f2fbf9;border-bottom-color:#315e62}
+.hero.hero-masthead h1,.hero.hero-masthead h1 em,.hero.hero-masthead .hero-masthead-links a{color:#f2fbf9}
+.hero.hero-masthead .hero-top .eyebrow,.hero.hero-masthead .hero-masthead-copy p{color:#b4d5d5}
+.hero.hero-masthead .hero-masthead-links a:hover,.hero.hero-masthead .hero-masthead-links a:focus-visible{color:#78d9e7}
+.discography{background:#e4f0ee}
+.services{background:#f2f8f7}
+.portfolio-social-links a{background:#edf8f7;color:#15353b;border-color:#bed5d6}
+.portfolio-social-links a:hover,.portfolio-social-links a:focus-visible{background:#d3edeb}
