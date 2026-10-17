@@ -479,3 +479,11 @@ a:focus-visible{outline:2px solid var(--rust);outline-offset:4px}
 .portfolio-social-links a:hover,.portfolio-social-links a:focus-visible{background:#d6e1d3;transform:translateY(-2px)}
 @media(max-width:600px){.portfolio-social-links{grid-template-columns:1fr;gap:8px}.portfolio-social-links a{padding:16px 18px}}
 @media(prefers-reduced-motion:reduce){.portfolio-social-links a{transition:none}.portfolio-social-links a:hover{transform:none}}
+
+/* Charcoal masthead with high-contrast editorial typography */
+.hero.hero-masthead{background:#222323;color:#f6f3ec;border-bottom-color:#3e4140}
+.hero.hero-masthead .hero-top .eyebrow{color:#c7c7c0}
+.hero.hero-masthead .hero-masthead-copy p{color:#c7c7c0}
+.hero.hero-masthead h1,.hero.hero-masthead h1 em{color:#f6f3ec}
+.hero.hero-masthead .hero-masthead-links a{color:#f6f3ec}
+.hero.hero-masthead .hero-masthead-links a:hover,.hero.hero-masthead .hero-masthead-links a:focus-visible{color:#d3b49d}
