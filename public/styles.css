@@ -520,3 +520,71 @@ body{background:var(--bg);color:var(--ink)}
 .services{background:#f3f4f6}
 .portfolio-social-links a{background:#f3f4f6;color:#16181b;border-color:#c6c9d0}
 .portfolio-social-links a:hover,.portfolio-social-links a:focus-visible{background:#e3e5e9}
+
+
+/* Discography: compact vertical release rows */
+.discography .discography-release-list{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  overflow:visible;
+  padding:0;
+  border-top:1px solid #a5a8af;
+  scroll-snap-type:none;
+  scrollbar-width:auto;
+}
+.discography .discography-release{
+  display:grid;
+  grid-template-columns:clamp(76px,10vw,112px) minmax(0,1fr) auto;
+  flex-direction:initial;
+  align-items:center;
+  gap:clamp(16px,2.4vw,30px);
+  padding:16px 0;
+  border-bottom:1px solid #a5a8af;
+  scroll-snap-align:none;
+  transition:background .2s ease,padding .2s ease;
+}
+.discography .discography-release:hover{
+  padding-left:10px;
+  padding-right:10px;
+  background:rgba(227,229,233,.045);
+}
+.discography .discography-cover{
+  width:100%;
+  aspect-ratio:1;
+}
+.discography .discography-release-info h3{
+  margin:5px 0;
+  font-size:clamp(20px,2.4vw,32px);
+  line-height:1.1;
+}
+.discography .discography-release-info p{margin-bottom:9px}
+.discography .discography-play{
+  grid-column:auto;
+  grid-row:auto;
+  justify-self:auto;
+  align-self:center;
+  padding:10px 0 10px 10px;
+}
+@media(max-width:600px){
+  .discography .discography-release{
+    grid-template-columns:76px minmax(0,1fr);
+    gap:12px;
+    padding:16px 0;
+    align-items:center;
+  }
+  .discography .discography-cover{width:76px;aspect-ratio:1}
+  .discography .discography-release-info h3{font-size:clamp(19px,5.4vw,25px);line-height:1.12}
+  .discography .discography-release-info p{font-size:13px;margin-bottom:8px}
+  .discography .discography-play{
+    grid-column:2;
+    justify-self:start;
+    padding:0;
+    margin-top:-2px;
+  }
+  .discography .discography-credit-tags{gap:5px}
+  .discography .discography-credit-tags span{font-size:9px;padding:4px 7px}
+}
+@media(prefers-reduced-motion:reduce){
+  .discography .discography-release{transition:none}
+}
