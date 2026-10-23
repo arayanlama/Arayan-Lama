@@ -588,3 +588,15 @@ body{background:var(--bg);color:var(--ink)}
 @media(prefers-reduced-motion:reduce){
   .discography .discography-release{transition:none}
 }
+
+/* Scrollable discography collection */
+.discography-release-list{max-height:690px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#8d927f #e8e3d7;scroll-padding:12px;border-bottom:1px solid #a5a8af}
+.discography-release-list:focus-visible{outline:2px solid #8b654b;outline-offset:4px}
+.discography-release-list::-webkit-scrollbar{width:8px}
+.discography-release-list::-webkit-scrollbar-track{background:#e8e3d7}
+.discography-release-list::-webkit-scrollbar-thumb{background:#8d927f;border:2px solid #e8e3d7}
+.discography-cover-placeholder{display:flex;align-items:center;justify-content:center;color:#f5f0e7;background:#465747;font-family:'DM Serif Display',Georgia,serif;font-size:48px;font-style:italic}
+.discography-release:nth-child(5n) .discography-cover-placeholder{background:#9a644b}
+.discography-release:nth-child(6n) .discography-cover-placeholder{background:#74785c}
+.discography-credit-note{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#50535a;white-space:nowrap}
+@media(max-width:600px){.discography-release-list{max-height:620px}.discography-credit-note{grid-column:2;justify-self:start;margin-top:-2px}}
