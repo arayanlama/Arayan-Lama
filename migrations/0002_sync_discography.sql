@@ -1,5 +1,6 @@
 -- Migration: add category and sync the current portfolio master data into D1.
--- Safe to re-run: rows are inserted or updated by id; existing published flags are preserved.
+-- Run once, after 0001_discography.sql. The ALTER TABLE statement is not repeatable.
+-- The INSERT below upserts by id; existing published flags are preserved.
 ALTER TABLE discography_releases ADD COLUMN category TEXT NOT NULL DEFAULT 'Music';
 
 INSERT INTO discography_releases
