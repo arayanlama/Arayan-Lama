@@ -150,14 +150,15 @@
       "year": 2021,
       "label": "Cool School Productions",
       "recordingLocation": null,
-      "youtubeUrl": null,
-      "artworkUrl": null,
-      "notes": "Track appears on the EP 'broken pieces of you'; exact track URL and artwork URL still to be confirmed.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Fwh7mNnAlLo",
+      "artworkUrl": "https://i.ytimg.com/vi/Fwh7mNnAlLo/hqdefault.jpg",
+      "notes": "Track appears on the EP 'broken pieces of you'.",
       "verifiedFields": [
         "title",
         "artist",
         "credits",
-        "year"
+        "year",
+        "youtubeUrl"
       ]
     },
     {
