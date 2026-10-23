@@ -163,7 +163,7 @@
     },
     {
       "id": "palau-documentary",
-      "position": 8,
+      "position": 10,
       "title": "Palau Documentary",
       "artist": null,
       "credits": [
@@ -181,6 +181,42 @@
         "category",
         "credits",
         "youtubeUrl"
+      ]
+    },
+    {
+      "id": "audio-project-08",
+      "position": 8,
+      "title": "Audio Project 08",
+      "artist": null,
+      "credits": [],
+      "category": "Audio",
+      "year": null,
+      "label": null,
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=Dikzf6vtGEY",
+      "artworkUrl": "https://i.ytimg.com/vi/Dikzf6vtGEY/hqdefault.jpg",
+      "notes": "Title, artist, credits, and year not yet confirmed; placeholder metadata based on supplied YouTube link.",
+      "verifiedFields": [
+        "youtubeUrl",
+        "category"
+      ]
+    },
+    {
+      "id": "audio-project-09",
+      "position": 9,
+      "title": "Audio Project 09",
+      "artist": null,
+      "credits": [],
+      "category": "Audio",
+      "year": null,
+      "label": null,
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=TJ6XyQVCmeU",
+      "artworkUrl": "https://i.ytimg.com/vi/TJ6XyQVCmeU/hqdefault.jpg",
+      "notes": "Title, artist, credits, and year not yet confirmed; placeholder metadata based on supplied YouTube link.",
+      "verifiedFields": [
+        "youtubeUrl",
+        "category"
       ]
     }
   ]
