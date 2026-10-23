@@ -159,6 +159,28 @@
         "credits",
         "year"
       ]
+    },
+    {
+      "id": "palau-documentary",
+      "position": 8,
+      "title": "Palau Documentary",
+      "artist": null,
+      "credits": [
+        "Audio Editing"
+      ],
+      "category": "Documentary",
+      "year": null,
+      "label": null,
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=Al4JKn-ggBs",
+      "artworkUrl": "https://i.ytimg.com/vi/Al4JKn-ggBs/hqdefault.jpg",
+      "notes": "Documentary project. Client/creator, year, and other production details not yet confirmed.",
+      "verifiedFields": [
+        "title",
+        "category",
+        "credits",
+        "youtubeUrl"
+      ]
     }
   ]
 }
