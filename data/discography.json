@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "description": "Master source for Arayan Lama portfolio discography. Unknown facts are null or explicitly marked unconfirmed; verify before publishing.",
+  "releases": [
+    {
+      "id": "dancing-with-a-stranger-cover",
+      "position": 1,
+      "title": "Dancing with a Stranger (Cover)",
+      "artist": "Madhura Naik",
+      "credits": [
+        "Recording Engineer"
+      ],
+      "year": null,
+      "label": null,
+      "recordingLocation": "Home studio, Mumbai",
+      "youtubeUrl": "https://www.youtube.com/watch?v=-DFW8CKMvQo",
+      "artworkUrl": "https://i.ytimg.com/vi/-DFW8CKMvQo/hqdefault.jpg",
+      "notes": "Year unconfirmed.",
+      "verifiedFields": [
+        "title",
+        "artist",
+        "credits",
+        "recordingLocation",
+        "youtubeUrl"
+      ]
+    },
+    {
+      "id": "papi",
+      "position": 2,
+      "title": "Papi",
+      "artist": "Ryhaan Giri",
+      "credits": [
+        "Producer",
+        "Mixing Engineer",
+        "Mastering Engineer"
+      ],
+      "year": null,
+      "label": "Cool School Productions",
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=rxdvPtSi1rs",
+      "artworkUrl": "https://i.ytimg.com/vi/rxdvPtSi1rs/hqdefault.jpg",
+      "notes": "Ryhaan is Arayan's friend. Year and recording location unconfirmed.",
+      "verifiedFields": [
+        "title",
+        "artist",
+        "credits",
+        "youtubeUrl"
+      ]
+    },
+    {
+      "id": "huwa-kya",
+      "position": 3,
+      "title": "Huwa Kya",
+      "artist": "Boka",
+      "credits": [
+        "Producer",
+        "Mixing Engineer",
+        "Mastering Engineer"
+      ],
+      "year": null,
+      "label": null,
+      "recordingLocation": "Home studio, Mumbai",
+      "youtubeUrl": "https://www.youtube.com/watch?v=y7Yft2SFBBQ",
+      "artworkUrl": "https://i.ytimg.com/vi/y7Yft2SFBBQ/hqdefault.jpg",
+      "notes": "Year unconfirmed.",
+      "verifiedFields": [
+        "title",
+        "artist",
+        "credits",
+        "recordingLocation",
+        "youtubeUrl"
+      ]
+    },
+    {
+      "id": "udayera-laijau",
+      "position": 4,
+      "title": "Udayera Laijau",
+      "artist": "Nabin Newar",
+      "credits": [
+        "Producer",
+        "Recording Engineer",
+        "Mixing Engineer",
+        "Mastering Engineer"
+      ],
+      "year": null,
+      "label": "Cool School Productions",
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=2chtg67eJ6k",
+      "artworkUrl": "https://i.ytimg.com/vi/2chtg67eJ6k/hqdefault.jpg",
+      "notes": "Title follows the previously saved discography spelling; confirm exact release title if needed.",
+      "verifiedFields": [
+        "title",
+        "artist",
+        "credits",
+        "youtubeUrl"
+      ]
+    },
+    {
+      "id": "kiki-soso",
+      "position": 5,
+      "title": "Kiki Soso",
+      "artist": "Mellow Gyatso",
+      "credits": [
+        "Producer",
+        "Mixing Engineer",
+        "Mastering Engineer"
+      ],
+      "year": null,
+      "label": "Cool School Productions",
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=oHMU5AneTAg",
+      "artworkUrl": "https://i.ytimg.com/vi/oHMU5AneTAg/hqdefault.jpg",
+      "notes": "Festival-related track; do not make broader event claims without confirmation.",
+      "verifiedFields": [
+        "title",
+        "artist",
+        "credits",
+        "youtubeUrl"
+      ]
+    },
+    {
+      "id": "kisan-andolan-kisan-union",
+      "position": 6,
+      "title": "KISAN ANDOLAN - KISAN UNION",
+      "artist": "TARAN",
+      "credits": [
+        "Mixing Engineer",
+        "Mastering Engineer"
+      ],
+      "year": null,
+      "label": null,
+      "recordingLocation": null,
+      "youtubeUrl": null,
+      "artworkUrl": null,
+      "notes": "Source wording had a duplicate 'Mixing Engineer'; normalized to one mixing credit. Link and year unconfirmed.",
+      "verifiedFields": [
+        "title",
+        "artist",
+        "credits"
+      ]
+    },
+    {
+      "id": "its-alright-to-be-sad",
+      "position": 7,
+      "title": "it’s alright to be sad",
+      "artist": "Kjash",
+      "credits": [
+        "Mastering Engineer"
+      ],
+      "year": 2021,
+      "label": "Cool School Productions",
+      "recordingLocation": null,
+      "youtubeUrl": null,
+      "artworkUrl": null,
+      "notes": "Track appears on the EP 'broken pieces of you'; exact track URL and artwork URL still to be confirmed.",
+      "verifiedFields": [
+        "title",
+        "artist",
+        "credits",
+        "year"
+      ]
+    }
+  ]
+}
