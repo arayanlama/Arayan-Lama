@@ -184,12 +184,12 @@
       ]
     },
     {
-      "id": "audio-project-08",
+      "id": "podcast-01",
       "position": 8,
-      "title": "Audio Project 08",
+      "title": "Podcast 01",
       "artist": null,
       "credits": [],
-      "category": "Audio",
+      "category": "Podcast",
       "year": null,
       "label": null,
       "recordingLocation": null,
@@ -202,12 +202,12 @@
       ]
     },
     {
-      "id": "audio-project-09",
+      "id": "podcast-02",
       "position": 9,
-      "title": "Audio Project 09",
+      "title": "Podcast 02",
       "artist": null,
       "credits": [],
-      "category": "Audio",
+      "category": "Podcast",
       "year": null,
       "label": null,
       "recordingLocation": null,
