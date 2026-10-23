@@ -103,7 +103,7 @@ document.querySelectorAll('.records-filter').forEach(button => button.addEventLi
     item.classList.toggle('is-active', active);
     item.setAttribute('aria-pressed', String(active));
   });
-  document.querySelectorAll('[data-music-panel]').forEach(panel => { panel.hidden = filter === 'audio' || filter === 'films'; });
+  document.querySelectorAll('[data-music-panel]').forEach(panel => { panel.hidden = filter !== 'all'; });
   document.querySelectorAll('.discography-collection-head[data-group]').forEach(heading => {
     heading.hidden = filter !== 'all' && heading.dataset.group !== filter;
   });
