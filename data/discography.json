@@ -163,7 +163,7 @@
     },
     {
       "id": "palau-documentary",
-      "position": 10,
+      "position": 11,
       "title": "Palau Documentary",
       "artist": null,
       "credits": [
@@ -215,6 +215,26 @@
       "artworkUrl": "https://i.ytimg.com/vi/TJ6XyQVCmeU/hqdefault.jpg",
       "notes": "Title, artist, credits, and year not yet confirmed; placeholder metadata based on supplied YouTube link.",
       "verifiedFields": [
+        "youtubeUrl",
+        "category"
+      ]
+    },
+    {
+      "id": "podcast-03",
+      "position": 10,
+      "title": "Podcast 03",
+      "artist": "What's Up Wandsworth",
+      "credits": [],
+      "category": "Podcast",
+      "year": null,
+      "label": null,
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=soT5UXQ7YPc&list=PLgYrp0wthkNZenpCR7LvXQjLZPHl22D_-&index=2",
+      "artworkUrl": "https://i.ytimg.com/vi/soT5UXQ7YPc/hqdefault.jpg",
+      "notes": "Podcast title provided by Arayan; individual episode title and production credits unconfirmed.",
+      "verifiedFields": [
+        "title",
+        "artist",
         "youtubeUrl",
         "category"
       ]
