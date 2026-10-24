@@ -812,3 +812,62 @@ body{background:var(--portfolio-paper);color:var(--portfolio-ink)}
 .tuck-studios-map iframe{display:block;width:100%;height:clamp(250px,28vw,380px);border:0;border-radius:4px;filter:grayscale(.25) contrast(.96)}
 .tuck-studios-map>p{margin:10px 5px 4px;color:#aeb1b8;font-size:10px;line-height:1.5}
 @media(max-width:760px){.tuck-studios-layout{grid-template-columns:1fr;gap:28px}.tuck-studios-copy h2{font-size:clamp(48px,13vw,78px)}.tuck-studios-map iframe{height:290px}.tuck-studios-details{gap:22px}}
+
+
+/* Indie editorial refinement — restrained, tactile, artist-led */
+:root{
+  --portfolio-paper:#f3f1eb;
+  --portfolio-ink:#20231f;
+  --portfolio-line:#d0cec5;
+  --portfolio-highlight:#aab7a0;
+}
+body{background:var(--portfolio-paper);color:var(--portfolio-ink)}
+.site-header{background:rgba(243,241,235,.96);border-bottom:1px solid var(--portfolio-line);backdrop-filter:blur(10px)}
+.site-header nav a:last-child{border-bottom-color:#aab7a0}
+.hero.hero-masthead{
+  min-height:0;
+  background:#20231f;
+  border-bottom:1px solid #454941;
+  padding-top:24px;
+  padding-bottom:clamp(34px,5vw,62px);
+}
+.hero.hero-masthead:after{content:none}
+.hero.hero-masthead .hero-top .eyebrow:last-child{border-color:#555a50}
+.hero.hero-masthead h1{
+  font-size:clamp(52px,9vw,124px);
+  line-height:.91;
+  letter-spacing:-.085em;
+  text-transform:none;
+}
+.hero.hero-masthead h1 em{color:#c3cdbb;font-family:'DM Serif Display',Georgia,serif;font-style:italic}
+.hero.hero-masthead .hero-title-period{color:#c3cdbb}
+.hero.hero-masthead .hero-masthead-copy p{border-left:1px solid #aab7a0;color:#d0d1c9}
+.discography{background:#e9e7df}
+.discography .discography-intro h2{font-size:clamp(46px,7.5vw,96px);letter-spacing:-.075em}
+.discography .discography-intro h2 em{color:#788270}
+.records-filter{border-color:#b7b8ae}
+.records-filter:hover{transform:none}
+.records-filter.is-active,.records-filter[aria-pressed="true"]{background:#343b31;border-color:#343b31;color:#f3f1eb}
+.discography .discography-collection-head{border-top-color:#c4c2b8}
+.discography .discography-release-list{border-color:#c4c2b8}
+.discography .discography-release{border-color:#c4c2b8}
+.discography .discography-release:hover{padding-left:8px;padding-right:8px;background:rgba(255,255,255,.45)}
+.discography .discography-cover{border-radius:2px}
+.discography .discography-cover img{filter:saturate(.82)}
+.discography .discography-release:hover .discography-cover img{transform:scale(1.02)}
+.spotify-music-panel{border-radius:3px!important;box-shadow:none}
+.services{background:var(--portfolio-paper)}
+.services .services-heading h2{font-size:clamp(46px,7.5vw,96px);letter-spacing:-.075em}
+.services .service:hover{padding-left:8px;background:rgba(221,222,211,.25)}
+.tuck-studios{background:#30382f!important}
+.tuck-studios:after{content:none}
+.tuck-studios-copy h2 em{color:#c3cdbb}
+.tuck-studios-map-link{color:#c3cdbb;border-bottom-color:#c3cdbb}
+.map-live-dot{background:#aab7a0;box-shadow:0 0 0 4px rgba(170,183,160,.12)}
+.site-footer{background:#20231f;color:#f3f1eb}
+.site-footer a:hover{color:#c3cdbb}
+@media(max-width:700px){
+ .hero.hero-masthead{min-height:0}
+ .hero.hero-masthead h1{font-size:clamp(48px,12.5vw,82px);line-height:.94}
+ .discography .discography-release:hover{padding-left:0;padding-right:0}
+}
