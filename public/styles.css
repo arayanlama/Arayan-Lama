@@ -789,3 +789,26 @@ body{background:var(--portfolio-paper);color:var(--portfolio-ink)}
   .site-header nav a,.records-filter,.discography .discography-cover img,.services .service,.site-footer a{transition:none}
   .records-filter:hover,.discography .discography-release:hover .discography-cover img{transform:none}
 }
+
+
+
+/* TUCK STUDIOS: richer studio feature and embedded location */
+.tuck-studios{padding:clamp(48px,7vw,88px) 6%!important;background:#151619!important;color:#f4f2ed}
+.tuck-studios-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.92fr);gap:clamp(28px,5vw,72px);align-items:stretch;margin-top:clamp(28px,4vw,48px)}
+.tuck-studios-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.tuck-studios-copy h2{margin:18px 0;font-size:clamp(48px,8vw,104px);letter-spacing:-.09em;line-height:.88}
+.tuck-studios-copy h2 em{font-family:'DM Serif Display',Georgia,serif;font-weight:400;color:#d5ff55}
+.tuck-studios-copy>p{max-width:470px;margin:0;color:#d0d1d4;font-size:clamp(16px,1.7vw,20px);line-height:1.7}
+.tuck-studios-details{display:flex;gap:clamp(24px,4vw,48px);flex-wrap:wrap;margin-top:28px}
+.tuck-studios-details>div{display:grid;gap:8px}
+.tuck-studios-details .eyebrow{color:#aeb1b8;font-size:10px}
+.tuck-studios-details strong{font-size:13px;font-weight:600}
+.tuck-studios-map-link{display:inline-block;margin-top:30px;color:#d5ff55;text-decoration:none;border-bottom:1px solid #d5ff55;padding-bottom:7px;font-size:11px;font-weight:750;letter-spacing:.08em}
+.tuck-studios-map-link:hover{opacity:.72}
+.tuck-studios-map{align-self:stretch;min-width:0;border:1px solid #44464d;border-radius:8px;padding:10px;background:#1d1f23}
+.tuck-studios-map-label{display:flex;align-items:center;justify-content:space-between;padding:7px 5px 12px}
+.tuck-studios-map-label .eyebrow{color:#bfc1c6;font-size:10px;letter-spacing:.13em}
+.map-live-dot{width:7px;height:7px;border-radius:50%;background:#d5ff55;box-shadow:0 0 0 4px rgba(213,255,85,.12)}
+.tuck-studios-map iframe{display:block;width:100%;height:clamp(250px,28vw,380px);border:0;border-radius:4px;filter:grayscale(.25) contrast(.96)}
+.tuck-studios-map>p{margin:10px 5px 4px;color:#aeb1b8;font-size:10px;line-height:1.5}
+@media(max-width:760px){.tuck-studios-layout{grid-template-columns:1fr;gap:28px}.tuck-studios-copy h2{font-size:clamp(48px,13vw,78px)}.tuck-studios-map iframe{height:290px}.tuck-studios-details{gap:22px}}
