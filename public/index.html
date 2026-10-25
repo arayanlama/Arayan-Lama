@@ -39,9 +39,9 @@
     <section class="wallpaper-hero section" id="home" aria-labelledby="hero-title">
 <div class="wallpaper-top"><a class="wallpaper-wordmark" href="#home">ARAYAN LAMA<span>.</span></a><nav aria-label="Portfolio navigation"><a href="#discography">All Work</a><a href="#discography">Music</a><a href="#discography">Films</a><a href="#discography">Podcasts</a><a href="#services">Services</a><a href="#tuck-studios">Tuck Studios</a></nav></div>
 <div class="wallpaper-grid">
-<a class="wallpaper-tile wallpaper-music" href="#discography" aria-label="Explore music"><img src="https://i.ytimg.com/vi/y7Yft2SFBBQ/hqdefault.jpg" alt=""><span class="wallpaper-tile-label"><small>01</small>MUSIC</span></a>
-<a class="wallpaper-tile wallpaper-films" href="#discography" aria-label="Explore films"><img src="https://i.ytimg.com/vi/eNBL3RA2nes/hqdefault.jpg" alt=""><span class="wallpaper-tile-label"><small>02</small>FILMS</span></a>
-<a class="wallpaper-tile wallpaper-podcasts" href="#discography" aria-label="Explore podcasts"><img src="https://i.ytimg.com/vi/soT5UXQ7YPc/hqdefault.jpg" alt=""><span class="wallpaper-tile-label"><small>03</small>PODCASTS</span></a>
+<a class="wallpaper-tile wallpaper-music" href="#discography" data-wallpaper-filter="music" aria-label="Explore music"><img src="https://i.ytimg.com/vi/y7Yft2SFBBQ/hqdefault.jpg" alt=""><span class="wallpaper-tile-label"><small>01</small>MUSIC</span></a>
+<a class="wallpaper-tile wallpaper-films" href="#discography" data-wallpaper-filter="films" aria-label="Explore films"><img src="https://i.ytimg.com/vi/eNBL3RA2nes/hqdefault.jpg" alt=""><span class="wallpaper-tile-label"><small>02</small>FILMS</span></a>
+<a class="wallpaper-tile wallpaper-podcasts" href="#discography" data-wallpaper-filter="audio" aria-label="Explore podcasts"><img src="https://i.ytimg.com/vi/soT5UXQ7YPc/hqdefault.jpg" alt=""><span class="wallpaper-tile-label"><small>03</small>PODCASTS</span></a>
 <a class="wallpaper-tile wallpaper-blog" href="#press-credits" aria-label="Explore stories and credits"><img src="https://i.ytimg.com/vi/Al4JKn-ggBs/hqdefault.jpg" alt=""><span class="wallpaper-tile-label"><small>04</small>STORIES</span></a>
 <div class="wallpaper-center"><span class="wallpaper-center-kicker">INDEPENDENT CREATIVE / SILIGURI, INDIA</span><h1 id="hero-title">Arayan <em>Lama</em><span>.</span></h1><p>MUSIC PRODUCER / SOUND ENGINEER / STORYTELLER</p><a href="#discography" class="wallpaper-scroll">EXPLORE THE WORK ↓</a></div>
 <a class="wallpaper-tile wallpaper-studio" href="#tuck-studios" aria-label="Explore Tuck Studios"><img src="https://i.ytimg.com/vi/2chtg67eJ6k/hqdefault.jpg" alt=""><span class="wallpaper-tile-label"><small>05</small>TUCK STUDIOS</span></a>
@@ -129,6 +129,12 @@
   </footer>
   <script>
 document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-wallpaper-filter]').forEach(tile => tile.addEventListener('click', () => {
+  const filter = tile.dataset.wallpaperFilter;
+  const button = document.querySelector('.records-filter[data-filter="' + filter + '"]');
+  if (button) button.click();
+}));
+
 document.querySelectorAll('.records-filter').forEach(button => button.addEventListener('click', () => {
   const filter = button.dataset.filter;
   document.querySelectorAll('.records-filter').forEach(item => {
