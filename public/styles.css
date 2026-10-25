@@ -944,3 +944,29 @@ body{background:var(--portfolio-paper);color:var(--portfolio-ink)}
 .wallpaper-tile-label{left:14px;bottom:15px}
 .wallpaper-bio{padding:14px 20px 20px}
 }
+
+
+/* Final composition: six calm, balanced cells — no overlays */
+.wallpaper-hero{min-height:100svh;padding-bottom:0!important}
+.wallpaper-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(280px,1fr));min-height:620px;padding:0 20px;gap:8px}
+.wallpaper-music{grid-column:1;grid-row:1}
+.wallpaper-films{grid-column:2;grid-row:1}
+.wallpaper-podcasts{grid-column:3;grid-row:1}
+.wallpaper-blog{grid-column:1;grid-row:2}
+.wallpaper-center{grid-column:2;grid-row:2;min-height:0;position:relative;left:auto;top:auto;transform:none;width:auto;align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 22px;background:#202720;border:1px solid rgba(244,242,237,.1);box-shadow:none;backdrop-filter:none}
+.wallpaper-center h1{font-size:clamp(42px,4.2vw,68px);margin:20px 0 14px}
+.wallpaper-studio{display:block;grid-column:3;grid-row:2}
+.wallpaper-tile,.wallpaper-tile img{min-height:280px}
+.wallpaper-tile-label{left:24px;bottom:24px}
+.wallpaper-bio{padding:18px 24px 22px}
+@media(max-width:700px){
+.wallpaper-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(170px,22vh)) auto;min-height:0;padding:0 8px;gap:6px}
+.wallpaper-music{grid-column:1;grid-row:1}
+.wallpaper-films{grid-column:2;grid-row:1}
+.wallpaper-podcasts{grid-column:1;grid-row:2}
+.wallpaper-blog{grid-column:2;grid-row:2}
+.wallpaper-studio{grid-column:1 / span 2;grid-row:3}
+.wallpaper-center{grid-column:1 / span 2;grid-row:4;min-height:260px;padding:34px 20px;margin-top:2px}
+.wallpaper-center h1{font-size:clamp(52px,12vw,76px);margin:18px 0 14px}
+.wallpaper-tile,.wallpaper-tile img{min-height:170px}
+}
