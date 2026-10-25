@@ -970,3 +970,36 @@ body{background:var(--portfolio-paper);color:var(--portfolio-ink)}
 .wallpaper-center h1{font-size:clamp(52px,12vw,76px);margin:18px 0 14px}
 .wallpaper-tile,.wallpaper-tile img{min-height:170px}
 }
+
+
+/* Hero cleanup: quiet editorial header, clean image wall */
+.wallpaper-hero{background:#f3f1e9;color:#202720;min-height:auto}
+.wallpaper-top{padding:24px clamp(22px,5vw,72px);align-items:center}
+.wallpaper-wordmark{color:#202720;letter-spacing:.16em}
+.wallpaper-wordmark span{color:#6d8069}
+.wallpaper-top nav a{color:#424940;letter-spacing:.12em}
+.wallpaper-top nav a:hover{color:#71866b}
+.wallpaper-grid{padding:0 clamp(10px,2vw,24px);gap:7px;grid-template-rows:repeat(2,minmax(240px, min(34vw,390px)));min-height:0}
+.wallpaper-tile,.wallpaper-tile img{min-height:240px}
+.wallpaper-tile img{filter:saturate(.68) contrast(.98);transition:transform .5s ease,filter .5s ease}
+.wallpaper-tile:after{background:linear-gradient(0deg,rgba(9,14,10,.58),rgba(9,14,10,.02) 65%)}
+.wallpaper-tile-label{left:22px;bottom:22px;gap:7px;font-size:11px;letter-spacing:.16em}
+.wallpaper-tile-label small{font-size:8px;color:rgba(255,255,255,.78)}
+.wallpaper-center{background:#dfe4d8;color:#202720;border:0;padding:30px 22px}
+.wallpaper-center-kicker{color:#66745f;letter-spacing:.15em;line-height:1.7}
+.wallpaper-center h1{font-size:clamp(42px,4.1vw,66px);letter-spacing:-.07em;margin:18px 0 13px}
+.wallpaper-center h1 em,.wallpaper-center h1 span{color:#6b8065}
+.wallpaper-center p{font-size:9px;letter-spacing:.13em;line-height:2;color:#4d574a}
+.wallpaper-scroll{margin-top:15px;color:#344332;border-color:#9ba993;letter-spacing:.15em}
+.wallpaper-bio{background:#f3f1e9;color:#73796e;padding:14px 24px 18px;font-size:10px}
+@media(max-width:700px){
+.wallpaper-top{padding:20px 18px;gap:15px}
+.wallpaper-top nav{gap:10px 16px}
+.wallpaper-top nav a{font-size:8px}
+.wallpaper-grid{padding:0 7px;gap:6px;grid-template-rows:repeat(3,minmax(155px,21vh)) auto}
+.wallpaper-tile,.wallpaper-tile img{min-height:155px}
+.wallpaper-tile-label{left:13px;bottom:13px;font-size:9px}
+.wallpaper-center{min-height:230px;padding:30px 18px}
+.wallpaper-center h1{font-size:clamp(48px,11vw,70px);margin:16px 0 12px}
+.wallpaper-bio{padding:12px 18px 16px}
+}
