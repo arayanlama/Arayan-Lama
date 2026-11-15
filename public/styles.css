@@ -1336,3 +1336,127 @@ html,body{background:#f6f4ed!important;color:#17191c!important}
 @media(max-width:760px){
  .enquiry-form{box-shadow:5px 5px 0 #d7ff45!important}
 }
+
+
+/* Future Green comic-book art direction — high contrast, halftone, kinetic shapes */
+:root{
+  --bg:#f3f7ef;
+  --ink:#14211a;
+  --muted:#5d6d61;
+  --line:#d3dfd0;
+  --accent:#c5f45b;
+  --deep:#142820;
+  --rust:#547b57;
+  --future-sage:#a8bfa5;
+  --future-sage-soft:#edf2eb;
+  --future-sage-dark:#294b35;
+}
+html,body{background:#f3f7ef!important;color:#14211a!important}
+::selection{background:#c5f45b;color:#14211a}
+.site-header{background:rgba(243,247,239,.95)!important;color:#14211a!important;border-color:#d3dfd0!important}
+.site-header nav a:hover,.footer-links a:hover,.site-footer a:hover{color:#547b57!important}
+.dot,.period{color:#547b57!important}
+
+/* Hero poster: Future Green halftone, radial burst and offset ink */
+.client-hero{
+ background:
+  radial-gradient(circle at 84% 19%,rgba(41,75,53,.24) 0 1.7px,transparent 2.5px) 0 0/11px 11px,
+  linear-gradient(132deg,#f7faf4 0%,#edf4e9 54%,#dcebd8 100%)!important;
+ border:2px solid #14211a!important;color:#14211a!important;
+}
+.client-hero:before{
+ background:repeating-conic-gradient(from -8deg,rgba(84,123,87,.42) 0deg 6deg,rgba(197,244,91,.34) 6deg 12deg)!important;
+}
+.client-hero:after{
+ border:3px solid #14211a!important;
+ box-shadow:10px 10px 0 #a8bfa5,20px 20px 0 rgba(20,40,32,.2)!important;
+}
+.client-hero-top .eyebrow,.client-hero-bottom{color:#405b46!important}
+.client-hero-kicker{
+ background:#14211a!important;color:#c5f45b!important;
+ box-shadow:5px 5px 0 #a8bfa5!important;border:1px solid #14211a;
+}
+.client-hero h1{
+ color:#14211a!important;
+ text-shadow:3px 3px 0 #a8bfa5,6px 6px 0 rgba(20,33,26,.18)!important;
+}
+.client-hero h1 em{
+ color:#547b57!important;-webkit-text-stroke:1.5px #14211a;
+ text-shadow:4px 4px 0 #c5f45b,7px 7px 0 rgba(20,33,26,.16)!important;
+}
+.client-hero-intro{border-color:#547b57!important;color:#405344!important}
+.client-hero-bio{color:#5d6d61!important}
+.client-hero .cta-button{
+ background:#c5f45b!important;color:#14211a!important;
+ border:2px solid #14211a!important;box-shadow:5px 5px 0 #14211a!important;
+}
+.client-hero .cta-button:hover{background:#a8bfa5!important}
+.client-hero-secondary{color:#14211a!important}
+.client-hero-bottom{border-color:#a8bfa5!important}
+
+/* Keep the whole site in the same green universe, with distinct chapter moods */
+#work,.discography,.discography.section{
+ background:#142820!important;color:#f3f7ef!important;
+}
+#work .section-head,.discography .section-head{border-color:rgba(243,247,239,.25)!important}
+#work .discography-intro p,.discography .discography-intro p{color:#c4d3c4!important}
+#work .discography-intro h2 em,.discography .discography-intro h2 em{color:#c5f45b!important}
+.discography .discography-release-list,.discography .discography-release{border-color:rgba(243,247,239,.22)!important}
+.discography .discography-release:hover{background:#234333!important}
+.discography .discography-release-meta,.discography .discography-details .eyebrow{color:#c5f45b!important}
+.discography .discography-credit-tags span{background:#c5f45b!important;color:#142820!important}
+
+.shortfilm-work{background:#e5eee1!important;color:#14211a!important}
+.shortfilm-work .section-head{border-color:#c5d5c0!important}
+.shortfilm-work .discography-intro h2 em{color:#547b57!important}
+.shortfilm-work .discography-intro p{color:#5d6d61!important}
+.shortfilm-thumb{background:#d7e5d2!important;border-color:#c5d5c0!important}
+.shortfilm-play{background:#c5f45b!important;color:#14211a!important}
+.shortfilm-card-meta .eyebrow,.shortfilm-card-meta a{color:#405b46!important}
+
+.edits-work{background:#f3f7ef!important;color:#14211a!important}
+.edits-work .section-head,.edits-note{border-color:#d3dfd0!important}
+.edits-work .discography-intro h2 em{color:#547b57!important}
+.edits-work .discography-intro p,.edits-note p{color:#5d6d61!important}
+.edits-note .discography-play{color:#294b35!important}
+
+#tuck-studios,.tuck-studios{background:#dcebd8!important;color:#142820!important}
+.tuck-studios .section-head{border-color:#bfd2ba!important}
+.tuck-studios-copy h2 em{color:#547b57!important}
+.tuck-studios-copy>p,.tuck-studios-map>p{color:#506453!important}
+.tuck-studios-map{background:#f3f7ef!important;border-color:#bfd2ba!important}
+.tuck-studios-map-link{color:#294b35!important;border-color:#547b57!important}
+.map-live-dot{background:#c5f45b!important;box-shadow:0 0 0 4px rgba(197,244,91,.28)!important}
+
+.client-contact{background:#f3f7ef!important;color:#14211a!important}
+.client-contact .section-head{border-color:#d3dfd0!important}
+.client-contact h2 em{color:#547b57!important}
+.client-contact p,.client-response-points{color:#5d6d61!important}
+.enquiry-form{background:#e5eee1!important;border:2px solid #14211a!important;box-shadow:8px 8px 0 #a8bfa5!important}
+.enquiry-field input,.enquiry-field select,.enquiry-field textarea{background:#f9fbf7!important;color:#14211a!important;border-color:#bfd2ba!important}
+.enquiry-field input:focus-visible,.enquiry-field select:focus-visible,.enquiry-field textarea:focus-visible{outline-color:#547b57!important}
+.enquiry-form .cta-button,#services .cta-button,.cta-button{
+ background:#c5f45b!important;color:#14211a!important;border:2px solid #14211a!important;
+ box-shadow:5px 5px 0 #14211a!important;
+}
+.enquiry-form .cta-button:hover,#services .cta-button:hover,.cta-button:hover{background:#a8bfa5!important;color:#14211a!important}
+
+.follow-cta{background:#a8bfa5!important;color:#14211a!important;border-color:#14211a!important}
+.follow-cta .eyebrow,.follow-cta h2 em{color:#294b35!important}
+.follow-cta p{color:#354b3a!important}
+.follow-link{background:#f3f7ef!important;border:1px solid #294b35!important;color:#14211a!important}
+.follow-link:hover{background:#dcebd8!important;border-color:#14211a!important}
+.follow-link.follow-primary{background:#142820!important;border-color:#142820!important;color:#c5f45b!important}
+.follow-link.follow-primary:hover{background:#294b35!important;color:#fff!important}
+
+.site-footer{background:#142820!important;color:#f3f7ef!important;border-color:#142820!important}
+.site-footer .footer-bottom{border-color:rgba(243,247,239,.25)!important}
+.site-footer .eyebrow,.site-footer .footer-bottom{color:#c4d3c4!important}
+.site-footer .footer-title em{color:#c5f45b!important}
+.spotify-strip,.spotify-library{background:#e5eee1!important;color:#14211a!important;border-color:#bfd2ba!important}
+.spotify-strip a,.spotify-library-copy a{color:#294b35!important}
+
+@media(max-width:760px){
+ .enquiry-form{box-shadow:5px 5px 0 #a8bfa5!important}
+ .client-hero:before{opacity:.8}
+}
