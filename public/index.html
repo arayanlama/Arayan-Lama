@@ -35,40 +35,13 @@
     .enquiry-form .cta-button:focus-visible{outline:3px solid #d5ff55;outline-offset:4px}
     @media(max-width:760px){.client-contact-layout{grid-template-columns:1fr}}
   </style>
-  <style>
-    .client-process{background:#f0f1ed;color:#17191a}
-    .client-process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:42px}
-    .client-process-grid article{border-top:1px solid #b8bbb5;padding:22px 0}
-    .client-process-grid h3{font-size:clamp(21px,2.5vw,32px);letter-spacing:-.05em;margin:18px 0 10px}
-    .client-process-grid p{max-width:34ch;color:#555a56;line-height:1.7}
-    .client-contact{background:#151719;color:#f4f2ed}
-    .client-contact .eyebrow{color:#aeb3ad}
-    .client-contact-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,8vw,110px);align-items:end;padding:48px 0 24px}
-    .client-contact h2{font-size:clamp(64px,11vw,150px);line-height:.82;letter-spacing:-.1em;margin:24px 0}
-    .client-contact h2 em{color:#d5ff55}
-    .client-contact-layout>div:first-child p{max-width:38ch;color:#d1d3cf;font-size:clamp(18px,2vw,23px);line-height:1.65}
-    .client-contact-action{border-top:1px solid #464a45;padding-top:22px}
-    .client-contact-action ul{padding-left:18px;color:#d1d3cf;line-height:2;margin:16px 0 26px}
-    .client-contact-action .cta-button{display:inline-flex;margin-bottom:12px}
-    @media(max-width:700px){.client-process-grid{grid-template-columns:1fr;gap:8px}.client-contact-layout{grid-template-columns:1fr;gap:28px}.client-contact h2{font-size:clamp(58px,16vw,92px)}}
-  </style>
-  <style>
-    .client-packages{background:#f0f1ed;color:#17191a}
-    .client-package-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid #b8bbb5;border-left:1px solid #b8bbb5}
-    .client-package-grid article{padding:26px;border-right:1px solid #b8bbb5;border-bottom:1px solid #b8bbb5;min-width:0}
-    .client-package-grid .eyebrow{color:#626760;font-size:10px}
-    .client-package-grid h3{font-size:clamp(24px,2.8vw,38px);line-height:1;letter-spacing:-.055em;margin:34px 0 14px}
-    .client-package-grid p{font-size:14px;line-height:1.7;color:#555a56;min-height:96px}
-    .client-package-grid a{display:inline-block;margin-top:18px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;text-underline-offset:4px}
-    @media(max-width:760px){.client-package-grid{grid-template-columns:1fr}.client-package-grid p{min-height:0}.client-package-grid h3{margin-top:20px}}
-  </style>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="site-header">
     <a class="wordmark" href="#home" aria-label="Arayan Lama home">AL<span class="dot">.</span></a>
     <nav aria-label="Main navigation">
-      <a href="#services">Services</a><a href="#packages">Packages</a><a href="#process">Process</a><a href="#discography">Selected work</a><a href="#tuck-studios">Studio</a><a class="nav-contact" href="#contact">Start a project ↗</a>
+      <a href="#services">Services</a><a href="#work">Selected work</a><a href="#tuck-studios">Studio</a><a class="nav-contact" href="#contact">Contact ↗</a>
     </nav>
   </header>
   <main>
@@ -99,63 +72,17 @@
 
 
 
-<section class="client-packages section" id="packages" aria-labelledby="packages-title">
-  <div class="section-head"><span class="eyebrow">02 / WAYS TO WORK TOGETHER</span><span class="eyebrow">PROJECTS BUILT AROUND YOUR BRIEF</span></div>
-  <div class="services-heading"><h2 id="packages-title">CHOOSE YOUR<br><em>STARTING POINT.</em></h2><p>Not sure which service fits? Start with the outcome you need. I’ll shape the scope and send a written estimate.</p></div>
-  <div class="client-package-grid">
-    <article><span class="eyebrow">FOR ARTISTS</span><h3>Release-ready music</h3><p>From developing a song idea to polishing recorded stems for release. Production, mixing and mastering can be scoped together or separately.</p><a href="#contact">Enquire about a release ↗</a></article>
-    <article><span class="eyebrow">FOR PODCASTERS</span><h3>Consistent episodes</h3><p>Dialogue cleanup, editing, pacing and final audio delivery for a more professional listening experience.</p><a href="#contact">Enquire about podcast editing ↗</a></article>
-    <article><span class="eyebrow">FOR BRANDS &amp; FILMMAKERS</span><h3>Stories with purpose</h3><p>Concept-led visual storytelling and post-production, scoped around your message, production needs and final deliverables.</p><a href="#contact">Enquire about a film ↗</a></article>
-  </div>
-</section>
-<section class="client-process section" id="process" aria-labelledby="process-title">
-  <div class="section-head"><span class="eyebrow">02 / THE PROCESS</span><span class="eyebrow">SIMPLE FROM FIRST MESSAGE TO FINAL FILE</span></div>
-  <div class="services-heading"><h2 id="process-title">A CLEAR WAY<br><em>TO GET THERE.</em></h2><p>No guesswork. You know what’s included, what it costs and what happens next.</p></div>
-  <div class="client-process-grid">
-    <article><span class="service-no">01</span><h3>Tell me what you need</h3><p>Share the project, your references, deadline and budget range.</p></article>
-    <article><span class="service-no">02</span><h3>Get a clear quote</h3><p>I’ll confirm the scope, deliverables, timeline and price before work begins.</p></article>
-    <article><span class="service-no">03</span><h3>Make it together</h3><p>We collaborate through agreed checkpoints and revisions, then deliver the finished work.</p></article>
+<section class="discography section" id="work" aria-labelledby="work-title">
+  <div class="section-head"><span class="eyebrow">SELECTED WORK</span><span class="eyebrow">MUSIC / PRODUCTION</span></div>
+  <div class="discography-intro"><div><h2 id="work-title">A FEW <em>RECORDS.</em></h2></div><p>A small selection of projects. Open a track to listen.</p></div>
+  <div class="discography-release-list" aria-label="Selected music projects">
+    <article class="discography-release"><a class="discography-cover" href="https://www.youtube.com/watch?v=rxdvPtSi1rs" target="_blank" rel="noopener noreferrer" aria-label="Listen to Papi by Ryhaan Giri"><img src="https://i.ytimg.com/vi/rxdvPtSi1rs/hqdefault.jpg" alt="Papi artwork" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">MUSIC / PRODUCTION</span><h3>Papi</h3><p>Ryhaan Giri</p><div class="discography-credit-tags"><span>Production</span><span>Mixing</span><span>Mastering</span></div></div><a class="discography-play" href="https://www.youtube.com/watch?v=rxdvPtSi1rs" target="_blank" rel="noopener noreferrer">Listen ↗</a></article>
+    <article class="discography-release"><a class="discography-cover" href="https://www.youtube.com/watch?v=y7Yft2SFBBQ" target="_blank" rel="noopener noreferrer" aria-label="Listen to Huwa Kya by Boka"><img src="https://i.ytimg.com/vi/y7Yft2SFBBQ/hqdefault.jpg" alt="Huwa Kya artwork" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">MUSIC / PRODUCTION</span><h3>Huwa Kya</h3><p>Boka</p><div class="discography-credit-tags"><span>Production</span><span>Mixing</span><span>Mastering</span></div></div><a class="discography-play" href="https://www.youtube.com/watch?v=y7Yft2SFBBQ" target="_blank" rel="noopener noreferrer">Listen ↗</a></article>
+    <article class="discography-release"><a class="discography-cover" href="https://www.youtube.com/watch?v=2chtg67eJ6k" target="_blank" rel="noopener noreferrer" aria-label="Listen to Udayera Laijau by Nabin Newar"><img src="https://i.ytimg.com/vi/2chtg67eJ6k/hqdefault.jpg" alt="Udayera Laijau artwork" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">MUSIC / PRODUCTION</span><h3>Udayera Laijau</h3><p>Nabin Newar</p><div class="discography-credit-tags"><span>Production</span><span>Recording</span><span>Mixing</span><span>Mastering</span></div></div><a class="discography-play" href="https://www.youtube.com/watch?v=2chtg67eJ6k" target="_blank" rel="noopener noreferrer">Listen ↗</a></article>
   </div>
 </section>
 
-<section class="discography section" id="discography" aria-labelledby="discography-title">
-  <div class="section-head"><span class="eyebrow">SELECTED DISCOGRAPHY / ARAYAN LAMA</span><span class="eyebrow">PRODUCTION · RECORDING · MIXING · MASTERING</span></div>
-  <div class="discography-intro"><div><span class="discography-kicker">SELECTED WORK / A MIX OF FORMATS</span><h2 id="discography-title">THE <em>RECORDS.</em></h2></div><p>A curated mix of music, podcasts and film. Choose a format to explore the full collection.</p></div>
-  <div class="records-filters" role="group" aria-label="Filter portfolio work">
-    <button class="records-filter is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
-    <button class="records-filter" type="button" data-filter="music" aria-pressed="false">Music</button>
-    <button class="records-filter" type="button" data-filter="audio" aria-pressed="false">Podcasts</button>
-    <button class="records-filter" type="button" data-filter="films" aria-pressed="false">Films</button>
-  </div>
-  <section class="spotify-music-panel" data-music-panel aria-label="Listen on Spotify" style="margin:0 0 28px;padding:24px;background:#17181b;border-radius:8px">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:14px"><div><span class="discography-release-meta">STREAM / SPOTIFY</span><h3 style="margin:5px 0 0;font-size:clamp(22px,3vw,34px);letter-spacing:-.04em">Listen on Spotify</h3></div><a href="https://open.spotify.com/artist/5Lxkv06fEr2q5EHzOMXZ8C" target="_blank" rel="noopener noreferrer" style="font-size:13px;font-weight:700;text-underline-offset:4px">OPEN ARTIST PAGE ↗</a></div>
-    <iframe title="Arayan Lama on Spotify" style="display:block;width:100%;height:352px;border:0;border-radius:8px" src="https://open.spotify.com/embed/artist/5Lxkv06fEr2q5EHzOMXZ8C?utm_source=generator" width="100%" height="352" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
-  </section>
-  <div class="discography-collection-head" data-group="music"><div><span class="discography-collection-number">01 / MUSIC</span><h3>Music Releases &amp; Credits</h3></div><span class="discography-count">07 PROJECTS</span></div>
-  <div class="discography-release-list" role="region" aria-label="Portfolio projects grouped by music, podcasts and film" tabindex="0">
-<article class="discography-release" data-categories="music" data-featured="true"><a class="discography-cover" href="https://www.youtube.com/watch?v=-DFW8CKMvQo" target="_blank" rel="noopener noreferrer" aria-label="Listen to Madhura Naik — Dancing with a Stranger (Cover)"><img src="https://i.ytimg.com/vi/-DFW8CKMvQo/hqdefault.jpg" alt="" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">01 / SELECTED WORK</span><h3>Dancing with a Stranger (Cover)</h3><p>Madhura Naik</p><div class="discography-credit-tags"><span>Recording</span></div></div><a class="discography-play spotify-release-link" href="https://open.spotify.com/search/Dancing%20with%20a%20Stranger%20(Cover)%20Madhura%20Naik" target="_blank" rel="noopener noreferrer" aria-label="Find Dancing with a Stranger (Cover) by Madhura Naik on Spotify">Spotify ↗</a><a class="discography-play" href="https://www.youtube.com/watch?v=-DFW8CKMvQo" target="_blank" rel="noopener noreferrer" aria-label="Listen to Madhura Naik — Dancing with a Stranger (Cover) on YouTube">Listen <span aria-hidden="true">↗</span></a></article>
-<article class="discography-release" data-categories="music" data-featured="true"><a class="discography-cover" href="https://www.youtube.com/watch?v=rxdvPtSi1rs" target="_blank" rel="noopener noreferrer" aria-label="Listen to Ryhaan Giri — Papi"><img src="https://i.ytimg.com/vi/rxdvPtSi1rs/hqdefault.jpg" alt="" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">02 / SELECTED WORK</span><h3>Papi</h3><p>Ryhaan Giri</p><div class="discography-credit-tags"><span>Production</span><span>Mixing</span><span>Mastering</span></div></div><a class="discography-play spotify-release-link" href="https://open.spotify.com/search/Papi%20Ryhaan%20Giri" target="_blank" rel="noopener noreferrer" aria-label="Find Papi by Ryhaan Giri on Spotify">Spotify ↗</a><a class="discography-play" href="https://www.youtube.com/watch?v=rxdvPtSi1rs" target="_blank" rel="noopener noreferrer" aria-label="Listen to Ryhaan Giri — Papi on YouTube">Listen <span aria-hidden="true">↗</span></a></article>
-<article class="discography-release" data-categories="music" data-featured="true"><a class="discography-cover" href="https://www.youtube.com/watch?v=y7Yft2SFBBQ" target="_blank" rel="noopener noreferrer" aria-label="Listen to Boka — Huwa Kya"><img src="https://i.ytimg.com/vi/y7Yft2SFBBQ/hqdefault.jpg" alt="" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">03 / SELECTED WORK</span><h3>Huwa Kya</h3><p>Boka</p><div class="discography-credit-tags"><span>Production</span><span>Mixing</span><span>Mastering</span></div></div><a class="discography-play spotify-release-link" href="https://open.spotify.com/search/Huwa%20Kya%20Boka" target="_blank" rel="noopener noreferrer" aria-label="Find Huwa Kya by Boka on Spotify">Spotify ↗</a><a class="discography-play" href="https://www.youtube.com/watch?v=y7Yft2SFBBQ" target="_blank" rel="noopener noreferrer" aria-label="Listen to Boka — Huwa Kya on YouTube">Listen <span aria-hidden="true">↗</span></a></article>
-<article class="discography-release" data-categories="music"><a class="discography-cover" href="https://www.youtube.com/watch?v=2chtg67eJ6k" target="_blank" rel="noopener noreferrer" aria-label="Watch Udayera Laijau on YouTube"><img src="https://i.ytimg.com/vi/2chtg67eJ6k/hqdefault.jpg" alt="Udayera Laijau — YouTube thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">04 / SELECTED WORK</span><h3>Udayera Laijau</h3><p>Nabin Newar</p><div class="discography-credit-tags"><span>Production</span><span>Recording</span><span>Mixing</span><span>Mastering</span></div></div><a class="discography-play spotify-release-link" href="https://open.spotify.com/search/Udayera%20Laijau%20Nabin%20Newar" target="_blank" rel="noopener noreferrer" aria-label="Find Udayera Laijau by Nabin Newar on Spotify">Spotify ↗</a><span class="discography-credit-note">Credits</span></article>
-<article class="discography-release" data-categories="music"><a class="discography-cover" href="https://www.youtube.com/watch?v=oHMU5AneTAg" target="_blank" rel="noopener noreferrer" aria-label="Watch Kiki Soso on YouTube"><img src="https://i.ytimg.com/vi/oHMU5AneTAg/hqdefault.jpg" alt="Kiki Soso — YouTube thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">05 / SELECTED WORK</span><h3>Kiki Soso</h3><p>Mellow Gyatso</p><div class="discography-credit-tags"><span>Production</span><span>Mixing</span><span>Mastering</span></div></div><a class="discography-play spotify-release-link" href="https://open.spotify.com/search/Kiki%20Soso%20Mellow%20Gyatso" target="_blank" rel="noopener noreferrer" aria-label="Find Kiki Soso by Mellow Gyatso on Spotify">Spotify ↗</a><span class="discography-credit-note">Credits</span></article>
-<article class="discography-release" data-categories="music"><a class="discography-cover" href="https://www.youtube.com/watch?v=Ow1mx4BULDg" target="_blank" rel="noopener noreferrer" aria-label="Watch KISAN ANDOLAN - KISAN UNION on YouTube"><img src="https://i.ytimg.com/vi/Ow1mx4BULDg/hqdefault.jpg" alt="KISAN ANDOLAN - KISAN UNION — YouTube thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">06 / SELECTED WORK</span><h3>KISAN ANDOLAN - KISAN UNION</h3><p>TARAN</p><div class="discography-credit-tags"><span>Mixing</span><span>Mastering</span></div></div><a class="discography-play spotify-release-link" href="https://open.spotify.com/search/KISAN%20ANDOLAN%20-%20KISAN%20UNION%20TARAN" target="_blank" rel="noopener noreferrer" aria-label="Find KISAN ANDOLAN - KISAN UNION by TARAN on Spotify">Spotify ↗</a><span class="discography-credit-note">Credits</span></article>
-<article class="discography-release" data-categories="music"><a class="discography-cover" href="https://www.youtube.com/watch?v=Fwh7mNnAlLo" target="_blank" rel="noopener noreferrer" aria-label="Listen to it’s alright to be sad on YouTube"><img src="https://i.ytimg.com/vi/Fwh7mNnAlLo/hqdefault.jpg" alt="it’s alright to be sad — YouTube thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">07 / SELECTED WORK · 2021</span><h3>it’s alright to be sad</h3><p>Kjash</p><div class="discography-credit-tags"><span>Mastering</span></div></div><a class="discography-play spotify-release-link" href="https://open.spotify.com/search/it%E2%80%99s%20alright%20to%20be%20sad%20Kjash" target="_blank" rel="noopener noreferrer" aria-label="Find it’s alright to be sad by Kjash on Spotify">Spotify ↗</a><span class="discography-credit-note">Credits</span></article>
-  <div class="discography-collection-head" data-group="audio"><div><span class="discography-collection-number">02 / SPOKEN WORD</span><h3>Podcasts</h3></div><span class="discography-count">03 PROJECTS</span></div>
-  <article class="discography-release" data-categories="audio"><a class="discography-cover" href="https://www.youtube.com/watch?v=Dikzf6vtGEY" target="_blank" rel="noopener noreferrer" aria-label="Listen to Podcast 01 on YouTube"><img src="https://i.ytimg.com/vi/Dikzf6vtGEY/hqdefault.jpg" alt="Podcast 01 — YouTube thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">01 / PODCAST</span><h3>Podcast 01</h3><p>Audio project</p><div class="discography-credit-tags"><span>Podcast</span></div></div><a class="discography-play" href="https://www.youtube.com/watch?v=Dikzf6vtGEY" target="_blank" rel="noopener noreferrer" aria-label="Listen to Podcast 01 on YouTube">Listen <span aria-hidden="true">↗</span></a></article>
-  <article class="discography-release" data-categories="audio"><a class="discography-cover" href="https://www.youtube.com/watch?v=TJ6XyQVCmeU" target="_blank" rel="noopener noreferrer" aria-label="Listen to Podcast 02 on YouTube"><img src="https://i.ytimg.com/vi/TJ6XyQVCmeU/hqdefault.jpg" alt="Podcast 02 — YouTube thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">02 / PODCAST</span><h3>Podcast 02</h3><p>Audio project</p><div class="discography-credit-tags"><span>Podcast</span></div></div><a class="discography-play" href="https://www.youtube.com/watch?v=TJ6XyQVCmeU" target="_blank" rel="noopener noreferrer" aria-label="Listen to Podcast 02 on YouTube">Listen <span aria-hidden="true">↗</span></a></article>
-  <article class="discography-release" data-categories="audio" data-featured="true"><a class="discography-cover" href="https://www.youtube.com/watch?v=soT5UXQ7YPc&amp;list=PLgYrp0wthkNZenpCR7LvXQjLZPHl22D_-&amp;index=2" target="_blank" rel="noopener noreferrer" aria-label="Listen to Podcast 03 — What's Up Wandsworth"><img src="https://i.ytimg.com/vi/soT5UXQ7YPc/hqdefault.jpg" alt="Podcast 03 — What's Up Wandsworth thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">03 / PODCAST</span><h3>Podcast 03</h3><p>What's Up Wandsworth</p><div class="discography-credit-tags"><span>Podcast</span></div></div><a class="discography-play" href="https://www.youtube.com/watch?v=soT5UXQ7YPc&amp;list=PLgYrp0wthkNZenpCR7LvXQjLZPHl22D_-&amp;index=2" target="_blank" rel="noopener noreferrer" aria-label="Listen to Podcast 03 on YouTube">Listen <span aria-hidden="true">↗</span></a></article>
-  <div class="discography-collection-head" data-group="films"><div><span class="discography-collection-number">03 / FILM</span><h3>Film &amp; Documentary</h3></div><span class="discography-count">03 PROJECTS</span></div>
-  <article class="discography-release" data-categories="films" data-featured="true"><a class="discography-cover" href="https://youtu.be/eNBL3RA2nes?si=dmHPs4SHuz1v7g1D" target="_blank" rel="noopener noreferrer" aria-label="Watch Belief - Title on YouTube"><img src="https://i.ytimg.com/vi/eNBL3RA2nes/hqdefault.jpg" alt="Belief - Title — film thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">01 / FILM</span><h3>Belief - Title</h3><p>Film</p><div class="discography-credit-tags"><span>Film</span></div></div><a class="discography-play" href="https://youtu.be/eNBL3RA2nes?si=dmHPs4SHuz1v7g1D" target="_blank" rel="noopener noreferrer" aria-label="Watch Belief - Title on YouTube">Watch <span aria-hidden="true">↗</span></a></article>
-  <article class="discography-release" data-categories="films" data-featured="true"><a class="discography-cover" href="https://youtu.be/MDRCj9q_BF8?si=BM2471GQs14itmIG" target="_blank" rel="noopener noreferrer" aria-label="Watch Addicted on YouTube"><img src="https://i.ytimg.com/vi/MDRCj9q_BF8/hqdefault.jpg" alt="Addicted — film thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">02 / FILM</span><h3>Addicted</h3><p>Film</p><div class="discography-credit-tags"><span>Film</span></div></div><a class="discography-play" href="https://youtu.be/MDRCj9q_BF8?si=BM2471GQs14itmIG" target="_blank" rel="noopener noreferrer" aria-label="Watch Addicted on YouTube">Watch <span aria-hidden="true">↗</span></a></article>
-  <article class="discography-release" data-categories="films"><a class="discography-cover" href="https://www.youtube.com/watch?v=Al4JKn-ggBs" target="_blank" rel="noopener noreferrer" aria-label="Watch Palau Documentary on YouTube"><img src="https://i.ytimg.com/vi/Al4JKn-ggBs/hqdefault.jpg" alt="Palau Documentary — YouTube thumbnail" loading="lazy"></a><div class="discography-release-info"><span class="discography-release-meta">01 / DOCUMENTARY</span><h3>Palau Documentary</h3><p>Documentary</p><div class="discography-credit-tags"><span>Audio Editing</span></div></div><a class="discography-play" href="https://www.youtube.com/watch?v=Al4JKn-ggBs" target="_blank" rel="noopener noreferrer" aria-label="Watch Palau Documentary on YouTube">Watch <span aria-hidden="true">↗</span></a></article>
-
-  \n
- </div>
-</section>
-
-
-
-  </main>
+</main>
   <section class="tuck-studios section" id="tuck-studios" aria-labelledby="tuck-studios-title">
     <div class="section-head"><span class="eyebrow">AUDIO / PRODUCTION</span><span class="eyebrow">INDEPENDENT CREATIVE STUDIO · SILIGURI</span></div>
     <div class="tuck-studios-layout">
@@ -203,63 +130,29 @@
     <div class="footer-top"><div><span class="eyebrow">ARAYAN LAMA / SILIGURI</span><p class="footer-title">ARAYAN<br><em>LAMA.</em></p></div></div>
     <div class="footer-bottom"><span>© <span id="year">2026</span> ARAYAN LAMA</span><div class="footer-links"><a href="https://www.instagram.com/arayan_lama_/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a href="https://www.youtube.com/@arayanlama" target="_blank" rel="noopener noreferrer">YOUTUBE ↗</a><a href="https://open.spotify.com/artist/5Lxkv06fEr2q5EHzOMXZ8C" target="_blank" rel="noopener noreferrer">SPOTIFY ↗</a><a href="https://www.facebook.com/profile.php?id=61576289625064" target="_blank" rel="noopener noreferrer">FACEBOOK ↗</a></div></div>
   </footer>
-  <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
+  <script>document.getElementById('year').textContent = new Date().getFullYear();
 const enquiryForm = document.getElementById('project-enquiry');
 if (enquiryForm) {
   enquiryForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!enquiryForm.reportValidity()) return;
     const data = new FormData(enquiryForm);
-    const brief = [
-      'PROJECT ENQUIRY — ARAYAN LAMA',
-      '',
-      'Name: ' + data.get('name'),
-      'Email: ' + data.get('email'),
-      'Service: ' + data.get('service'),
-      'Budget: ' + (data.get('budget') || 'Not specified'),
-      'Deadline: ' + (data.get('deadline') || 'Not specified'),
-      '',
-      'Project brief:',
-      data.get('brief'),
-      '',
-      'References: ' + (data.get('references') || 'None provided')
-    ].join('\n');
+    const brief = ['PROJECT ENQUIRY — ARAYAN LAMA','',
+      'Name: ' + data.get('name'),'Email: ' + data.get('email'),
+      'Service: ' + data.get('service'),'Budget: ' + (data.get('budget') || 'Not specified'),
+      'Deadline: ' + (data.get('deadline') || 'Not specified'),'',
+      'Project brief:',data.get('brief'),'',
+      'References: ' + (data.get('references') || 'None provided')].join('\\n');
     const status = document.getElementById('enquiry-status');
     try {
       await navigator.clipboard.writeText(brief);
-      status.textContent = 'Your project brief has been copied. Paste it into the Instagram message that just opened.';
+      status.textContent = 'Your project brief has been copied. Paste it into the Instagram message that opens.';
     } catch (error) {
       status.textContent = 'Instagram is opening. Please copy your project details from the form and paste them into your message.';
     }
     window.open('https://www.instagram.com/arayan_lama_/', '_blank', 'noopener,noreferrer');
   });
 }
-document.querySelectorAll('[data-wallpaper-filter]').forEach(tile => tile.addEventListener('click', () => {
-  const filter = tile.dataset.wallpaperFilter;
-  const button = document.querySelector('.records-filter[data-filter="' + filter + '"]');
-  if (button) button.click();
-}));
-
-document.querySelectorAll('.records-filter').forEach(button => button.addEventListener('click', () => {
-  const filter = button.dataset.filter;
-  document.querySelectorAll('.records-filter').forEach(item => {
-    const active = item === button;
-    item.classList.toggle('is-active', active);
-    item.setAttribute('aria-pressed', String(active));
-  });
-  document.querySelectorAll('[data-music-panel]').forEach(panel => { panel.hidden = filter !== 'all'; });
-  document.querySelectorAll('.discography-collection-head[data-group]').forEach(heading => {
-    heading.hidden = filter === 'all' || heading.dataset.group !== filter;
-  });
-  document.querySelectorAll('.discography-release').forEach(record => {
-    const categories = (record.dataset.categories || 'music').split(/\s+/);
-    record.hidden = filter === 'all' ? record.dataset.featured !== 'true' : !categories.includes(filter);
-  });
-  const list = document.querySelector('.discography-release-list');
-  if (list) list.scrollTop = 0;
-}));
 </script>
 </body>
 </html>
