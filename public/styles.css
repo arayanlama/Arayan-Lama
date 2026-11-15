@@ -1232,3 +1232,107 @@ html,body{background:#ffffff!important;color:#1f2a22!important}
  .client-hero-bottom{font-size:8px;letter-spacing:.07em}
  .client-hero-bio{font-size:10px}
 }
+
+
+/* Electric creator palette — warm paper, ink, cobalt and acid lime */
+:root{
+  --bg:#f6f4ed;
+  --ink:#17191c;
+  --muted:#656970;
+  --line:#dedbd1;
+  --accent:#d7ff45;
+  --deep:#172d2b;
+  --rust:#3557ff;
+  --future-sage:#d7ff45;
+  --future-sage-soft:#eff2df;
+  --future-sage-dark:#263c35;
+}
+html,body{background:#f6f4ed!important;color:#17191c!important}
+::selection{background:#d7ff45;color:#17191c}
+.site-header{background:rgba(246,244,237,.94)!important;color:#17191c!important;border-color:#dedbd1!important}
+.site-header nav a:hover,.footer-links a:hover,.site-footer a:hover{color:#3557ff!important}
+.dot,.period{color:#3557ff!important}
+
+/* Poster hero: cobalt energy with a sharp lime accent */
+.client-hero{
+ background:
+  radial-gradient(circle at 84% 20%,rgba(53,87,255,.12) 0 2px,transparent 2.8px) 0 0/12px 12px,
+  linear-gradient(132deg,#f6f4ed 0%,#f1efff 58%,#e7eaff 100%)!important;
+ border-color:#d8d6e8!important;color:#17191c!important;
+}
+.client-hero:before{
+ background:repeating-conic-gradient(from -8deg,rgba(53,87,255,.25) 0deg 7deg,rgba(215,255,69,.28) 7deg 14deg)!important;
+}
+.client-hero:after{border-color:#17191c!important;box-shadow:10px 10px 0 #d7ff45,20px 20px 0 rgba(53,87,255,.16)!important}
+.client-hero-top .eyebrow,.client-hero-bottom{color:#424b67!important}
+.client-hero-kicker{background:#17191c!important;color:#d7ff45!important;box-shadow:4px 4px 0 #3557ff!important}
+.client-hero h1{color:#17191c!important;text-shadow:3px 3px 0 #d7ff45,6px 6px 0 rgba(23,25,28,.12)!important}
+.client-hero h1 em{color:#3557ff!important;-webkit-text-stroke:1px #17191c;text-shadow:4px 4px 0 #d7ff45,7px 7px 0 rgba(23,25,28,.13)!important}
+.client-hero-intro{border-color:#3557ff!important;color:#454b5b!important}
+.client-hero-bio{color:#656970!important}
+.cta-button,.client-hero .cta-button,#services .cta-button,.enquiry-form .cta-button{
+ background:#d7ff45!important;color:#17191c!important;border:1px solid #17191c!important;
+ box-shadow:5px 5px 0 #3557ff!important;
+}
+.cta-button:hover,.client-hero .cta-button:hover,#services .cta-button:hover,.enquiry-form .cta-button:hover{background:#c6f02e!important;color:#17191c!important}
+
+/* Alternate the portfolio chapters instead of tinting every section alike */
+#work,.discography,.discography.section{
+ background:#172d2b!important;color:#f6f4ed!important;
+}
+#work .section-head,.discography .section-head{border-color:rgba(246,244,237,.24)!important}
+#work .discography-intro p,.discography .discography-intro p{color:#c7d0c7!important}
+#work .discography-intro h2 em,.discography .discography-intro h2 em{color:#d7ff45!important}
+.discography .discography-release-list,.discography .discography-release{border-color:rgba(246,244,237,.22)!important}
+.discography .discography-release:hover{background:#23413c!important}
+.discography .discography-release-meta,.discography .discography-details .eyebrow{color:#d7ff45!important}
+.discography .discography-credit-tags span{background:#d7ff45!important;color:#172d2b!important}
+
+.shortfilm-work{background:#e9eaff!important;color:#17191c!important}
+.shortfilm-work .section-head{border-color:#c9cbea!important}
+.shortfilm-work .discography-intro h2 em{color:#3557ff!important}
+.shortfilm-work .discography-intro p{color:#5e6170!important}
+.shortfilm-thumb{background:#d9dcff!important;border-color:#c9cbea!important}
+.shortfilm-play{background:#d7ff45!important;color:#17191c!important}
+.shortfilm-card-meta .eyebrow,.shortfilm-card-meta a{color:#3557ff!important}
+
+.edits-work{background:#f6f4ed!important;color:#17191c!important}
+.edits-work .section-head,.edits-note{border-color:#dedbd1!important}
+.edits-work .discography-intro h2 em{color:#3557ff!important}
+.edits-work .discography-intro p,.edits-note p{color:#656970!important}
+.edits-note .discography-play{color:#3557ff!important}
+
+#tuck-studios,.tuck-studios{background:#e7efe7!important;color:#172d2b!important}
+.tuck-studios .section-head{border-color:#cbd8cb!important}
+.tuck-studios-copy h2 em{color:#3557ff!important}
+.tuck-studios-copy>p,.tuck-studios-map>p{color:#53645b!important}
+.tuck-studios-map{background:#f6f4ed!important;border-color:#cbd8cb!important}
+.tuck-studios-map-link{color:#172d2b!important;border-color:#3557ff!important}
+.map-live-dot{background:#d7ff45!important;box-shadow:0 0 0 4px rgba(215,255,69,.28)!important}
+
+.client-contact{background:#f6f4ed!important;color:#17191c!important}
+.client-contact .section-head{border-color:#dedbd1!important}
+.client-contact h2 em{color:#3557ff!important}
+.client-contact p,.client-response-points{color:#656970!important}
+.enquiry-form{background:#e9eaff!important;border-color:#17191c!important;box-shadow:8px 8px 0 #d7ff45!important}
+.enquiry-field input,.enquiry-field select,.enquiry-field textarea{background:#f6f4ed!important;color:#17191c!important;border-color:#c9cbea!important}
+.enquiry-field input:focus-visible,.enquiry-field select:focus-visible,.enquiry-field textarea:focus-visible{outline-color:#3557ff!important}
+
+.follow-cta{background:#d7ff45!important;color:#17191c!important;border-color:#17191c!important}
+.follow-cta .eyebrow,.follow-cta h2 em{color:#3557ff!important}
+.follow-cta p{color:#41483a!important}
+.follow-link{background:#f6f4ed!important;border-color:#17191c!important;color:#17191c!important}
+.follow-link:hover{background:#e9eaff!important;border-color:#3557ff!important}
+.follow-link.follow-primary{background:#17191c!important;border-color:#17191c!important;color:#d7ff45!important}
+.follow-link.follow-primary:hover{background:#3557ff!important;color:#fff!important}
+
+.site-footer{background:#172d2b!important;color:#f6f4ed!important;border-color:#172d2b!important}
+.site-footer .footer-bottom{border-color:rgba(246,244,237,.25)!important}
+.site-footer .eyebrow,.site-footer .footer-bottom{color:#c7d0c7!important}
+.site-footer .footer-title em{color:#d7ff45!important}
+.spotify-strip,.spotify-library{background:#e9eaff!important;color:#17191c!important;border-color:#c9cbea!important}
+.spotify-strip a,.spotify-library-copy a{color:#3557ff!important}
+
+@media(max-width:760px){
+ .enquiry-form{box-shadow:5px 5px 0 #d7ff45!important}
+}
