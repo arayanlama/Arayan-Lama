@@ -1054,3 +1054,88 @@ body{background:var(--portfolio-paper);color:var(--portfolio-ink)}
  .client-hero-intro{font-size:17px}
  .client-hero-bottom{font-size:8px}
 }
+
+
+/* Final brand palette: white + Future Sage Green */
+:root{
+  --bg:#ffffff;
+  --ink:#1f2a22;
+  --muted:#68766a;
+  --line:#dce4da;
+  --accent:#a8bfa5;
+  --deep:#334b38;
+  --rust:#789477;
+  --future-sage:#a8bfa5;
+  --future-sage-soft:#edf2eb;
+  --future-sage-dark:#405a43;
+}
+html,body{background:#ffffff!important;color:#1f2a22!important}
+.site-header{background:rgba(255,255,255,.96)!important;color:#1f2a22!important;border-color:#dce4da!important}
+.site-header nav a:hover,.footer-links a:hover,.site-footer a:hover{color:#789477!important}
+.dot,.period{color:#789477!important}
+.client-hero{background:linear-gradient(135deg,#ffffff 0%,#f7faf6 72%,#edf2eb 100%)!important;color:#1f2a22!important}
+.client-hero-top .eyebrow,.client-hero-bottom,.client-hero-kicker{color:#627c61!important}
+.client-hero h1 em{color:#789477!important}
+.client-hero-intro,.client-hero-bio{color:#68766a!important}
+.cta-button,.client-hero .cta-button,#services .cta-button{
+  background:#a8bfa5!important;color:#1f2a22!important;
+  box-shadow:4px 4px 0 #dce8d9!important;border:1px solid #8eaa8b!important
+}
+.cta-button:hover,.client-hero .cta-button:hover,#services .cta-button:hover{
+  background:#93ad90!important;color:#17251a!important
+}
+#services,.services{background:#ffffff!important;color:#1f2a22!important}
+#services .section-head,.services .section-head{border-color:#dce4da!important}
+#services .services-heading p,.services .services-heading p{color:#68766a!important}
+#services .services-heading h2 em,.services .services-heading h2 em{color:#789477!important}
+#services .service-list,.services .service-list{border-color:#dce4da!important}
+#services .service,.services .service{background:#ffffff!important;border-color:#dce4da!important}
+#services .service:hover,.services .service:hover{background:#edf2eb!important}
+#services .service-no,.services .service-no{color:#789477!important}
+#services .service p,.services .service p{color:#68766a!important}
+#services .service .service-price,.services .service .service-price{background:#edf2eb!important;color:#405a43!important}
+#services .services-note,.services .services-note{color:#68766a!important}
+#services .contact-row,.services .contact-row{border-color:#dce4da!important}
+#services .contact-row .eyebrow,.services .contact-row .eyebrow{color:#789477!important}
+#services .contact-row p,.services .contact-row p{color:#1f2a22!important}
+#services .contact-subtext,.services .contact-subtext{color:#68766a!important}
+.discography,.discography.section,#work{background:#ffffff!important;color:#1f2a22!important}
+.discography .section-head{border-color:#dce4da!important}
+.discography .discography-intro p{color:#68766a!important}
+.discography .discography-intro h2 em{color:#789477!important}
+.discography .discography-release-list,.discography .discography-release{border-color:#dce4da!important}
+.discography .discography-release:hover{background:#edf2eb!important}
+.discography .discography-release-meta,.discography .discography-details .eyebrow{color:#789477!important}
+.discography .discography-credit-tags span{background:#edf2eb!important;color:#405a43!important}
+.podcast-work,.podcast-work.section{background:#ffffff!important;color:#1f2a22!important}
+.podcast-work .section-head{border-color:#dce4da!important}
+.podcast-work .discography-intro p,.podcast-work .podcast-work-card p{color:#68766a!important}
+.podcast-work .discography-intro h2 em{color:#789477!important}
+.podcast-work .podcast-work-card{background:#ffffff!important;border:1px solid #dce4da!important;padding:12px!important}
+.podcast-work .podcast-work-card h3{color:#1f2a22!important}
+.podcast-work .podcast-work-card a{color:#405a43!important}
+.tuck-studios,#tuck-studios{background:#edf2eb!important;color:#1f2a22!important}
+.tuck-studios .section-head{border-color:#dce4da!important}
+.tuck-studios-copy h2 em{color:#789477!important}
+.tuck-studios-copy>p,.tuck-studios-map>p{color:#68766a!important}
+.tuck-studios-details .eyebrow,.tuck-studios-map-label .eyebrow{color:#68766a!important}
+.tuck-studios-map{background:#ffffff!important;border-color:#dce4da!important}
+.tuck-studios-map-link{color:#405a43!important;border-color:#789477!important}
+.map-live-dot{background:#a8bfa5!important;box-shadow:0 0 0 4px rgba(168,191,165,.2)!important}
+.client-contact{background:#ffffff!important;color:#1f2a22!important}
+.client-contact .section-head{border-color:#dce4da!important}
+.client-contact h2 em{color:#789477!important}
+.client-contact p,.client-response-points{color:#68766a!important}
+.enquiry-form{background:#edf2eb!important;border-color:#dce4da!important;box-shadow:8px 8px 0 #dce8d9!important}
+.enquiry-field input,.enquiry-field select,.enquiry-field textarea{background:#ffffff!important;color:#1f2a22!important;border-color:#cbd8c9!important}
+.enquiry-field input:focus-visible,.enquiry-field select:focus-visible,.enquiry-field textarea:focus-visible{outline-color:#789477!important}
+.enquiry-form .cta-button{background:#a8bfa5!important;color:#1f2a22!important}
+.site-footer{background:#ffffff!important;color:#1f2a22!important;border-top:1px solid #dce4da!important}
+.site-footer .footer-bottom{border-color:#dce4da!important}
+.site-footer .eyebrow,.site-footer .footer-bottom{color:#68766a!important}
+.site-footer .footer-title em{color:#789477!important}
+.spotify-strip,.spotify-library{background:#edf2eb!important;color:#1f2a22!important;border-color:#dce4da!important}
+.spotify-strip a,.spotify-library-copy a{color:#405a43!important}
+@media(max-width:760px){
+  .enquiry-form{box-shadow:5px 5px 0 #dce8d9!important}
+}
