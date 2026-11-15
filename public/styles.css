@@ -187,3 +187,49 @@ h1,h2,h3,.footer-title,.wordmark{font-family:Arial,Helvetica,sans-serif;font-wei
 .timeline-cta p{margin:0;color:var(--ink);font-size:15px;font-weight:600}
 .timeline-cta .cta-button{flex:0 0 auto}
 @media(max-width:650px){.timeline-cta{align-items:flex-start;flex-direction:column;gap:14px}}
+
+
+/* Integrated, quieter one-page rhythm */
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+.site-header{padding-inline:clamp(20px,5vw,72px)}
+.site-header nav{gap:clamp(12px,2.2vw,28px)}
+.site-header nav a{white-space:nowrap}
+.site-header nav .nav-contact{font-weight:600}
+.intro-hero{padding-top:clamp(64px,9vw,112px);padding-bottom:clamp(58px,8vw,96px)}
+.intro-hero h1{margin-top:20px;margin-bottom:16px}
+.intro-actions{margin-top:22px}
+.intro-secondary-link{font-size:11px;text-transform:uppercase;letter-spacing:.07em;text-decoration:underline;text-decoration-color:var(--sage);text-underline-offset:5px}
+.section{padding-inline:clamp(22px,6vw,84px)}
+.section-head{align-items:center}
+.services-heading{gap:clamp(22px,5vw,70px)}
+.service{min-height:0;padding:25px 18px}
+.service p{max-width:590px}
+.services-note{margin-top:22px}
+.discography-release{padding-block:18px}
+.shortfilm-grid,.podcast-grid{margin-top:18px}
+.career-timeline{background:var(--paper-2)}
+.timeline-intro{padding-top:24px;padding-bottom:34px}
+.timeline-entry{padding-block:25px}
+.timeline-proof h3{font-weight:500}
+.project-process{border-top:1px solid var(--line)}
+.process-grid{margin-top:22px}
+.process-grid article{padding:18px 14px}
+.client-contact{border-top:1px solid var(--line)}
+.client-contact-layout{gap:clamp(28px,6vw,84px)}
+.client-contact h2{font-size:clamp(42px,7vw,82px)}
+.enquiry-form{padding:clamp(18px,3vw,30px)}
+.enquiry-form .cta-button{font-size:10px}
+.tuck-studios{border-top:1px solid var(--line)}
+.site-footer{padding-inline:clamp(22px,6vw,84px)}
+@media(max-width:760px){
+ .site-header{padding-inline:18px}
+ .site-header nav{gap:10px;font-size:9px}
+ .site-header nav .nav-contact{padding:8px 9px}
+ .section{padding-inline:22px}
+}
+@media(max-width:430px){
+ .site-header nav{gap:8px}
+ .site-header nav a{font-size:8px}
+ .site-header nav .nav-contact{padding:7px 8px}
+ .wordmark{font-size:22px}
+}
