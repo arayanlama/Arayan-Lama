@@ -52,13 +52,23 @@
     .client-contact-action .cta-button{display:inline-flex;margin-bottom:12px}
     @media(max-width:700px){.client-process-grid{grid-template-columns:1fr;gap:8px}.client-contact-layout{grid-template-columns:1fr;gap:28px}.client-contact h2{font-size:clamp(58px,16vw,92px)}}
   </style>
+  <style>
+    .client-packages{background:#f0f1ed;color:#17191a}
+    .client-package-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid #b8bbb5;border-left:1px solid #b8bbb5}
+    .client-package-grid article{padding:26px;border-right:1px solid #b8bbb5;border-bottom:1px solid #b8bbb5;min-width:0}
+    .client-package-grid .eyebrow{color:#626760;font-size:10px}
+    .client-package-grid h3{font-size:clamp(24px,2.8vw,38px);line-height:1;letter-spacing:-.055em;margin:34px 0 14px}
+    .client-package-grid p{font-size:14px;line-height:1.7;color:#555a56;min-height:96px}
+    .client-package-grid a{display:inline-block;margin-top:18px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;text-underline-offset:4px}
+    @media(max-width:760px){.client-package-grid{grid-template-columns:1fr}.client-package-grid p{min-height:0}.client-package-grid h3{margin-top:20px}}
+  </style>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="site-header">
     <a class="wordmark" href="#home" aria-label="Arayan Lama home">AL<span class="dot">.</span></a>
     <nav aria-label="Main navigation">
-      <a href="#services">Services</a><a href="#process">How it works</a><a href="#discography">Selected work</a><a href="#tuck-studios">Studio</a><a class="nav-contact" href="#contact">Start a project ↗</a>
+      <a href="#services">Services</a><a href="#packages">Packages</a><a href="#process">Process</a><a href="#discography">Selected work</a><a href="#tuck-studios">Studio</a><a class="nav-contact" href="#contact">Start a project ↗</a>
     </nav>
   </header>
   <main>
@@ -88,6 +98,16 @@
     </section>
 
 
+
+<section class="client-packages section" id="packages" aria-labelledby="packages-title">
+  <div class="section-head"><span class="eyebrow">02 / WAYS TO WORK TOGETHER</span><span class="eyebrow">PROJECTS BUILT AROUND YOUR BRIEF</span></div>
+  <div class="services-heading"><h2 id="packages-title">CHOOSE YOUR<br><em>STARTING POINT.</em></h2><p>Not sure which service fits? Start with the outcome you need. I’ll shape the scope and send a written estimate.</p></div>
+  <div class="client-package-grid">
+    <article><span class="eyebrow">FOR ARTISTS</span><h3>Release-ready music</h3><p>From developing a song idea to polishing recorded stems for release. Production, mixing and mastering can be scoped together or separately.</p><a href="#contact">Enquire about a release ↗</a></article>
+    <article><span class="eyebrow">FOR PODCASTERS</span><h3>Consistent episodes</h3><p>Dialogue cleanup, editing, pacing and final audio delivery for a more professional listening experience.</p><a href="#contact">Enquire about podcast editing ↗</a></article>
+    <article><span class="eyebrow">FOR BRANDS &amp; FILMMAKERS</span><h3>Stories with purpose</h3><p>Concept-led visual storytelling and post-production, scoped around your message, production needs and final deliverables.</p><a href="#contact">Enquire about a film ↗</a></article>
+  </div>
+</section>
 <section class="client-process section" id="process" aria-labelledby="process-title">
   <div class="section-head"><span class="eyebrow">02 / THE PROCESS</span><span class="eyebrow">SIMPLE FROM FIRST MESSAGE TO FINAL FILE</span></div>
   <div class="services-heading"><h2 id="process-title">A CLEAR WAY<br><em>TO GET THERE.</em></h2><p>No guesswork. You know what’s included, what it costs and what happens next.</p></div>
