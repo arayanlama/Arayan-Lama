@@ -233,3 +233,13 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
  .site-header nav .nav-contact{padding:7px 8px}
  .wordmark{font-size:22px}
 }
+
+
+/* Direct contact details */
+.direct-contact{display:grid;gap:12px;margin-top:30px;max-width:460px}
+.direct-contact a{display:grid;grid-template-columns:1fr auto;gap:5px 14px;align-items:center;padding:14px 0;border-top:1px solid var(--line);color:inherit;text-decoration:none}
+.direct-contact a .eyebrow{grid-column:1/-1}
+.direct-contact a strong{font-size:clamp(14px,1.5vw,17px);font-weight:500;overflow-wrap:anywhere}
+.direct-contact a>span:last-child{grid-column:2;grid-row:2;color:var(--sage)}
+.direct-contact a:hover strong{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:650px){.direct-contact{max-width:none}.direct-contact a{padding:12px 0}}
