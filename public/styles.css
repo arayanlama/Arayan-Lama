@@ -1003,3 +1003,54 @@ body{background:var(--portfolio-paper);color:var(--portfolio-ink)}
 .wallpaper-center h1{font-size:clamp(48px,11vw,70px);margin:16px 0 12px}
 .wallpaper-bio{padding:12px 18px 16px}
 }
+
+
+/* Services-first conversion layout */
+:root{--bg:#f4f7f4;--ink:#172321;--muted:#64736f;--line:#d5dfda;--rust:#167d78;--accent:#bfe8dc;--deep:#123b38}
+.site-header{position:sticky;top:0;z-index:20;min-height:72px;background:rgba(244,247,244,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.site-header nav a{font-size:11px}
+.site-header nav .nav-contact{padding:10px 15px;background:#163f3b;color:#f4f7f4;border-radius:2px}
+.site-header nav .nav-contact:hover{color:#fff;background:#167d78}
+.client-hero{min-height:560px;padding-top:28px;padding-bottom:22px;background:radial-gradient(circle at 82% 28%,rgba(119,202,180,.28),transparent 30%),linear-gradient(135deg,#f4f7f4 0%,#e4f0eb 100%);display:flex;flex-direction:column;justify-content:space-between}
+.client-hero-top,.client-hero-bottom{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.client-hero-top .eyebrow,.client-hero-bottom{color:#55716b;font-size:10px;letter-spacing:.13em;font-weight:700}
+.client-hero-main{max-width:1080px;padding:clamp(65px,9vw,120px) 0 70px}
+.client-hero-kicker{margin:0 0 22px;color:#167d78;font-size:11px;font-weight:700;letter-spacing:.15em}
+.client-hero h1{max-width:1000px;margin:0;font-size:clamp(54px,9.5vw,130px);line-height:.91;letter-spacing:-.085em}
+.client-hero h1 em{font-family:'DM Serif Display',Georgia,serif;font-weight:400;color:#167d78;letter-spacing:-.07em}
+.client-hero-intro{max-width:650px;margin:28px 0 26px;color:#52635e;font-size:clamp(17px,2vw,22px);line-height:1.65}
+.client-hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.client-hero .cta-button{background:#163f3b;box-shadow:4px 4px 0 #a9cfc2}
+.client-hero-secondary{font-size:12px;font-weight:700;text-underline-offset:5px;text-decoration:underline}
+.client-hero-bio{margin:18px 0 0;max-width:560px;color:#71817b;font-size:11px;line-height:1.6}
+#services{background:#f4f7f4!important;color:#172321!important}
+#services .section-head{border-color:#d5dfda}
+#services .services-heading{padding-top:40px}
+#services .services-heading p{color:#64736f}
+#services .services-heading h2 em{color:#167d78}
+#services .service-list{border-color:#d5dfda}
+#services .service{border-color:#d5dfda;background:rgba(255,255,255,.42)}
+#services .service:hover{background:#e6f2ed}
+#services .service-no{color:#167d78}
+#services .service p{color:#64736f}
+#services .service .service-price{background:#d8eee6;color:#164c45}
+#services .contact-row{border-color:#d5dfda}
+#services .contact-row .eyebrow{color:#167d78}
+#services .contact-row p{color:#172321}
+#services .contact-subtext{color:#64736f}
+#services .cta-button{background:#163f3b;box-shadow:4px 4px 0 #a9cfc2}
+#discography{background:#183b38!important;color:#f4f7f4!important}
+#discography .section-head{border-color:rgba(255,255,255,.2)}
+#discography .discography-intro p{color:#c4d5ce}
+#tuck-studios{background:#e6f0eb!important;color:#172321!important}
+@media(max-width:700px){
+ .site-header{align-items:center;min-height:64px}
+ .site-header nav{gap:10px}
+ .site-header nav a{font-size:9px}
+ .site-header nav .nav-contact{padding:8px 9px}
+ .client-hero{min-height:0;padding-top:22px;padding-bottom:20px}
+ .client-hero-main{padding:75px 0 60px}
+ .client-hero h1{font-size:clamp(48px,13vw,82px);line-height:.95}
+ .client-hero-intro{font-size:17px}
+ .client-hero-bottom{font-size:8px}
+}
