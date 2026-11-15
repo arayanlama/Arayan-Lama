@@ -1139,3 +1139,20 @@ html,body{background:#ffffff!important;color:#1f2a22!important}
 @media(max-width:760px){
   .enquiry-form{box-shadow:5px 5px 0 #dce8d9!important}
 }
+
+/* Short films — editorial video gallery */
+.shortfilm-work{background:#ffffff!important;color:#1f2a22!important}
+.shortfilm-work .section-head{border-color:#dce4da!important}
+.shortfilm-work .discography-intro p{color:#68766a!important}
+.shortfilm-work .discography-intro h2 em{color:#789477!important}
+.shortfilm-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.5vw,32px);margin-top:28px}
+.shortfilm-card{min-width:0}
+.shortfilm-thumb{position:relative;display:block;overflow:hidden;aspect-ratio:16/9;background:#edf2eb;border:1px solid #dce4da}
+.shortfilm-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.shortfilm-thumb:hover img{transform:scale(1.035)}
+.shortfilm-play{position:absolute;right:16px;bottom:16px;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#a8bfa5;color:#1f2a22;font-size:20px}
+.shortfilm-card-meta{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:14px}
+.shortfilm-card-meta .eyebrow{color:#789477}
+.shortfilm-card-meta a{color:#405a43;font-size:12px;font-weight:700;text-underline-offset:4px;text-decoration:underline}
+@media(max-width:700px){.shortfilm-grid{grid-template-columns:1fr;gap:24px}.shortfilm-card-meta{padding-top:11px}}
+@media(prefers-reduced-motion:reduce){.shortfilm-thumb img{transition:none}}
