@@ -1156,3 +1156,14 @@ html,body{background:#ffffff!important;color:#1f2a22!important}
 .shortfilm-card-meta a{color:#405a43;font-size:12px;font-weight:700;text-underline-offset:4px;text-decoration:underline}
 @media(max-width:700px){.shortfilm-grid{grid-template-columns:1fr;gap:24px}.shortfilm-card-meta{padding-top:11px}}
 @media(prefers-reduced-motion:reduce){.shortfilm-thumb img{transition:none}}
+
+
+/* Three-part work portfolio: Songs, Films, Edits */
+.edits-work{background:#ffffff!important;color:#1f2a22!important}
+.edits-work .section-head{border-color:#dce4da!important}
+.edits-work .discography-intro p{color:#68766a!important}
+.edits-work .discography-intro h2 em{color:#789477!important}
+.edits-note{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:28px;padding:24px 0;border-top:1px solid #dce4da;border-bottom:1px solid #dce4da}
+.edits-note p{margin:0;color:#68766a;max-width:560px;font-size:clamp(16px,2vw,20px);line-height:1.55}
+.edits-note .discography-play{white-space:nowrap;color:#405a43}
+@media(max-width:600px){.edits-note{align-items:flex-start;flex-direction:column;gap:14px}}
