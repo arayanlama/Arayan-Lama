@@ -162,28 +162,6 @@
       ]
     },
     {
-      "id": "palau-documentary",
-      "position": 11,
-      "title": "Palau Documentary",
-      "artist": null,
-      "credits": [
-        "Audio Editing"
-      ],
-      "category": "Documentary",
-      "year": null,
-      "label": null,
-      "recordingLocation": null,
-      "youtubeUrl": "https://www.youtube.com/watch?v=Al4JKn-ggBs",
-      "artworkUrl": "https://i.ytimg.com/vi/Al4JKn-ggBs/hqdefault.jpg",
-      "notes": "Documentary project. Client/creator, year, and other production details not yet confirmed.",
-      "verifiedFields": [
-        "title",
-        "category",
-        "credits",
-        "youtubeUrl"
-      ]
-    },
-    {
       "id": "podcast-01",
       "position": 8,
       "title": "Podcast 01",
@@ -235,6 +213,64 @@
       "verifiedFields": [
         "title",
         "artist",
+        "youtubeUrl",
+        "category"
+      ]
+    },
+    {
+      "id": "palau-documentary",
+      "position": 11,
+      "title": "Palau Documentary",
+      "artist": null,
+      "credits": [
+        "Audio Editing"
+      ],
+      "category": "Documentary",
+      "year": null,
+      "label": null,
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=Al4JKn-ggBs",
+      "artworkUrl": "https://i.ytimg.com/vi/Al4JKn-ggBs/hqdefault.jpg",
+      "notes": "Documentary project. Client/creator, year, and other production details not yet confirmed.",
+      "verifiedFields": [
+        "title",
+        "category",
+        "credits",
+        "youtubeUrl"
+      ]
+    },
+    {
+      "id": "podcast-04",
+      "position": 12,
+      "title": "Podcast appearance",
+      "artist": null,
+      "credits": [],
+      "category": "Podcast",
+      "year": 2026,
+      "label": null,
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=UGxMvS9XwDc",
+      "artworkUrl": "https://i.ytimg.com/vi/UGxMvS9XwDc/hqdefault.jpg",
+      "notes": "Podcast appearance shared by Arayan in November 2026; episode title and role/credits to be confirmed.",
+      "verifiedFields": [
+        "youtubeUrl",
+        "category"
+      ]
+    },
+    {
+      "id": "podcast-05",
+      "position": 13,
+      "title": "Podcast appearance",
+      "artist": null,
+      "credits": [],
+      "category": "Podcast",
+      "year": 2026,
+      "label": null,
+      "recordingLocation": null,
+      "youtubeUrl": "https://www.youtube.com/watch?v=-MzZJJTNJ_0",
+      "artworkUrl": "https://i.ytimg.com/vi/-MzZJJTNJ_0/hqdefault.jpg",
+      "notes": "Podcast appearance shared by Arayan in November 2026; episode title and role/credits to be confirmed.",
+      "verifiedFields": [
         "youtubeUrl",
         "category"
       ]
