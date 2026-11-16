@@ -124,7 +124,18 @@
 <section class="career-timeline section" id="timeline" aria-labelledby="timeline-title">
   <div class="section-head"><span class="eyebrow">PROOF OF WORK</span><span class="eyebrow">A CREATIVE PRACTICE · 2017—2026</span></div>
   <div class="timeline-intro"><div><h2 id="timeline-title">A CREATIVE<br><em>JOURNEY.</em></h2></div><p>A timeline of things made, learned and released — from early music experiments to production, engineering and visual storytelling. The work is the best introduction.</p></div>
-  <div class="timeline-list" aria-hidden="true"></div>
+  <div class="timeline-list" aria-label="Interactive life timeline">
+    <button class="timeline-point is-active" type="button" data-timeline="tsm" aria-expanded="true" aria-controls="timeline-detail">
+      <span class="timeline-point-year">2018–2020</span><span class="timeline-point-dot" aria-hidden="true"></span><span class="timeline-point-label">True School Of Music</span><span class="timeline-point-arrow" aria-hidden="true">↗</span>
+    </button>
+    <button class="timeline-point" type="button" data-timeline="clients" aria-expanded="false" aria-controls="timeline-detail">
+      <span class="timeline-point-year">2020</span><span class="timeline-point-dot" aria-hidden="true"></span><span class="timeline-point-label">Client projects</span><span class="timeline-point-arrow" aria-hidden="true">↗</span>
+    </button>
+  </div>
+  <section class="timeline-detail" id="timeline-detail" aria-live="polite" aria-label="Selected timeline chapter">
+    <div class="timeline-detail-copy"><span class="eyebrow" id="timeline-detail-kicker">EDUCATION · 2018–2020</span><h3 id="timeline-detail-title">True School Of Music</h3><p id="timeline-detail-description">A chapter in my creative journey.</p></div>
+    <div class="timeline-detail-media" id="timeline-detail-media"><span class="timeline-media-placeholder">CHAPTER 01 <span>MORE TO COME</span></span></div>
+  </section>
   
 </section>
 
@@ -204,6 +215,36 @@
     <div class="footer-bottom"><span>© <span id="year">2026</span> ARAYAN LAMA</span><a class="footer-back-top" href="#home">BACK TO TOP ↑</a></div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();
+const timelineChapters = {
+  tsm: {
+    kicker: 'EDUCATION · 2018–2020',
+    title: 'True School Of Music',
+    description: 'A chapter in my creative journey.',
+    media: '<div class="timeline-media-placeholder">CHAPTER 01 <span>DOCUMENTS & MEMORIES CAN BE ADDED HERE</span></div>'
+  },
+  clients: {
+    kicker: 'CLIENTS · 2020',
+    title: 'Dancing with a Stranger',
+    description: 'Madhura Naik · Cover project',
+    media: '<div class="timeline-video"><iframe src="https://www.youtube-nocookie.com/embed/-DFW8CKMvQo" title="Dancing with a Stranger — Madhura Naik" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=-DFW8CKMvQo" target="_blank" rel="noopener noreferrer">Open on YouTube ↗</a></div>'
+  }
+};
+const timelineButtons = document.querySelectorAll('.timeline-point');
+timelineButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const chapter = timelineChapters[button.dataset.timeline];
+    if (!chapter) return;
+    timelineButtons.forEach((item) => {
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-expanded', String(active));
+    });
+    document.getElementById('timeline-detail-kicker').textContent = chapter.kicker;
+    document.getElementById('timeline-detail-title').textContent = chapter.title;
+    document.getElementById('timeline-detail-description').textContent = chapter.description;
+    document.getElementById('timeline-detail-media').innerHTML = chapter.media;
+  });
+});
 const enquiryForm = document.getElementById('project-enquiry');
 if (enquiryForm) {
   enquiryForm.addEventListener('submit', async (event) => {
