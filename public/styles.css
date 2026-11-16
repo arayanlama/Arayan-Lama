@@ -1031,3 +1031,22 @@ a::after,button::after{content:none!important}
  .timeline-entry-year{font-size:9px;letter-spacing:.04em}
  .timeline-entry p{font-size:13px}
 }
+
+
+/* Navigation consistency — Contact is a regular text link, not a highlighted button */
+.site-header nav .nav-contact{
+  background:transparent!important;
+  border:0!important;
+  border-color:transparent!important;
+  color:inherit!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  padding:0!important;
+}
+@media(max-width:540px){
+  .site-header nav .nav-contact{padding:8px 0!important;box-shadow:none!important}
+}
+@media(max-width:360px){
+  .site-header nav .nav-contact{padding:7px 0!important}
+}
+.site-header nav a[aria-current="page"]{color:inherit!important}
