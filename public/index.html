@@ -124,17 +124,16 @@
 <section class="career-timeline section" id="timeline" aria-labelledby="timeline-title">
   <div class="section-head"><span class="eyebrow">PROOF OF WORK</span><span class="eyebrow">A CREATIVE PRACTICE · 2017—2026</span></div>
   <div class="timeline-intro"><div><h2 id="timeline-title">A CREATIVE<br><em>JOURNEY.</em></h2></div><p>A timeline of things made, learned and released — from early music experiments to production, engineering and visual storytelling. The work is the best introduction.</p></div>
-  <div class="timeline-list" aria-label="Interactive life timeline">
-    <button class="timeline-point is-active" type="button" data-timeline="tsm" aria-expanded="true" aria-controls="timeline-detail">
-      <span class="timeline-point-year">2018–2020</span><span class="timeline-point-dot" aria-hidden="true"></span><span class="timeline-point-label">True School Of Music</span><span class="timeline-point-arrow" aria-hidden="true">↗</span>
-    </button>
-    <button class="timeline-point" type="button" data-timeline="clients" aria-expanded="false" aria-controls="timeline-detail">
-      <span class="timeline-point-year">2020</span><span class="timeline-point-dot" aria-hidden="true"></span><span class="timeline-point-label">Client projects</span><span class="timeline-point-arrow" aria-hidden="true">↗</span>
-    </button>
+  <div class="timeline-list" aria-label="Interactive creative timeline">
+    <button class="timeline-point is-active" type="button" data-timeline="education" aria-expanded="true" aria-controls="timeline-detail"><span class="timeline-point-year">2018–2020</span><span class="timeline-point-dot" aria-hidden="true"></span><span class="timeline-point-label">True School Of Music</span><span class="timeline-point-arrow" aria-hidden="true">↗</span></button>
+    <button class="timeline-point" type="button" data-timeline="clients2020" aria-expanded="false" aria-controls="timeline-detail"><span class="timeline-point-year">2020</span><span class="timeline-point-dot" aria-hidden="true"></span><span class="timeline-point-label">Client work · Madhura Naik</span><span class="timeline-point-arrow" aria-hidden="true">↗</span></button>
+    <button class="timeline-point" type="button" data-timeline="kjash2021" aria-expanded="false" aria-controls="timeline-detail"><span class="timeline-point-year">2021</span><span class="timeline-point-dot" aria-hidden="true"></span><span class="timeline-point-label">Mastering · Kjash</span><span class="timeline-point-arrow" aria-hidden="true">↗</span></button>
+    <button class="timeline-point" type="button" data-timeline="undatedMusic" aria-expanded="false" aria-controls="timeline-detail"><span class="timeline-point-year">YEAR UNCONFIRMED</span><span class="timeline-point-dot" aria-hidden="true"></span><span class="timeline-point-label">Music releases & credits</span><span class="timeline-point-arrow" aria-hidden="true">↗</span></button>
+    <button class="timeline-point" type="button" data-timeline="filmPodcast" aria-expanded="false" aria-controls="timeline-detail"><span class="timeline-point-year">YEAR UNCONFIRMED</span><span class="timeline-point-dot" aria-hidden="true"></span><span class="timeline-point-label">Films & conversations</span><span class="timeline-point-arrow" aria-hidden="true">↗</span></button>
   </div>
   <section class="timeline-detail" id="timeline-detail" aria-live="polite" aria-label="Selected timeline chapter">
     <div class="timeline-detail-copy"><span class="eyebrow" id="timeline-detail-kicker">EDUCATION · 2018–2020</span><h3 id="timeline-detail-title">True School Of Music</h3><p id="timeline-detail-description">A chapter in my creative journey.</p></div>
-    <div class="timeline-detail-media" id="timeline-detail-media"><span class="timeline-media-placeholder">CHAPTER 01 <span>MORE TO COME</span></span></div>
+    <div class="timeline-detail-media" id="timeline-detail-media"><div class="timeline-media-placeholder">CHAPTER 01 <span>DOCUMENTS & MEMORIES CAN BE ADDED HERE</span></div></div>
   </section>
   
 </section>
@@ -216,17 +215,35 @@
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();
 const timelineChapters = {
-  tsm: {
+  education: {
     kicker: 'EDUCATION · 2018–2020',
     title: 'True School Of Music',
-    description: 'A chapter in my creative journey.',
-    media: '<div class="timeline-media-placeholder">CHAPTER 01 <span>DOCUMENTS & MEMORIES CAN BE ADDED HERE</span></div>'
+    description: 'A chapter in my creative journey. No documents or photographs have been attached yet.',
+    media: '<div class="timeline-media-placeholder">TRUE SCHOOL OF MUSIC <span>DOCUMENTS & PHOTOGRAPHS TO BE ADDED</span></div>'
   },
-  clients: {
-    kicker: 'CLIENTS · 2020',
+  clients2020: {
+    kicker: 'CLIENT PROJECT · 2020',
     title: 'Dancing with a Stranger',
-    description: 'Madhura Naik · Cover project',
-    media: '<div class="timeline-video"><iframe src="https://www.youtube-nocookie.com/embed/-DFW8CKMvQo" title="Dancing with a Stranger — Madhura Naik" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=-DFW8CKMvQo" target="_blank" rel="noopener noreferrer">Open on YouTube ↗</a></div>'
+    description: 'Madhura Naik · Cover · Credit: Recording Engineer. Recorded at a home studio in Mumbai.',
+    media: '<div class="timeline-video"><iframe src="https://www.youtube-nocookie.com/embed/-DFW8CKMvQo" title="Dancing with a Stranger — Madhura Naik" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=-DFW8CKMvQo" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div>'
+  },
+  kjash2021: {
+    kicker: 'RELEASE CREDIT · 2021',
+    title: 'It’s alright to be sad',
+    description: 'Kjash · Credit: Mastering Engineer · Released under Cool School Productions.',
+    media: '<div class="timeline-video"><iframe src="https://www.youtube-nocookie.com/embed/Fwh7mNnAlLo" title="It’s alright to be sad — Kjash" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a href="https://www.youtube.com/watch?v=Fwh7mNnAlLo" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div>'
+  },
+  undatedMusic: {
+    kicker: 'SELECTED RELEASES · YEARS UNCONFIRMED',
+    title: 'Music, from production to final master',
+    description: 'These projects were shared without confirmed release years, so they are grouped here rather than assigned invented dates.',
+    media: '<div class="timeline-media-grid"><article><iframe src="https://www.youtube-nocookie.com/embed/2chtg67eJ6k" title="Udayera Laijau — Nabin Newar" loading="lazy" allowfullscreen></iframe><strong>Udayera Laijau · Nabin Newar</strong><span>Music Producer · Recording · Mixing · Mastering</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/oHMU5AneTAg" title="Kiki Soso — Mellow Gyatso" loading="lazy" allowfullscreen></iframe><strong>Kiki Soso · Mellow Gyatso</strong><span>Music Producer · Mixing · Mastering</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/Ow1mx4BULDg" title="KISAN ANDOLAN — Taran" loading="lazy" allowfullscreen></iframe><strong>KISAN ANDOLAN · Taran</strong><span>Mixing · Mastering</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/y7Yft2SFBBQ" title="Huwa Kya — Boka" loading="lazy" allowfullscreen></iframe><strong>Huwa Kya · Boka</strong><span>Music Producer · Mixing · Mastering</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/rxdvPtSi1rs" title="Papi — Ryhaan Giri" loading="lazy" allowfullscreen></iframe><strong>Papi · Ryhaan Giri</strong><span>Music Producer · Mixing · Mastering</span></article></div>'
+  },
+  filmPodcast: {
+    kicker: 'VISUAL STORYTELLING · YEARS UNCONFIRMED',
+    title: 'Films & conversations',
+    description: 'Short films acted in and filmed by me, alongside podcast editing and conversations. Dates have not been confirmed.',
+    media: '<div class="timeline-media-grid"><article><iframe src="https://www.youtube-nocookie.com/embed/eNBL3RA2nes" title="Short film 01" loading="lazy" allowfullscreen></iframe><strong>Short film 01</strong><span>Acting · Filming</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/MDRCj9q_BF8" title="Short film 02" loading="lazy" allowfullscreen></iframe><strong>Short film 02</strong><span>Acting · Filming</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/UGxMvS9XwDc" title="A Tuck with Bansika" loading="lazy" allowfullscreen></iframe><strong>A Tuck with Bansika!!</strong><span>Podcast</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/-MzZJJTNJ_0" title="Podcast Conversation 02" loading="lazy" allowfullscreen></iframe><strong>Podcast Conversation 02</strong><span>Podcast</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/TJ6XyQVCmeU" title="Podcast Conversation 03" loading="lazy" allowfullscreen></iframe><strong>Podcast Conversation 03</strong><span>Podcast</span></article></div>'
   }
 };
 const timelineButtons = document.querySelectorAll('.timeline-point');
