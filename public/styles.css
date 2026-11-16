@@ -554,3 +554,31 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
   .site-header nav{gap:5px;font-size:8px;letter-spacing:.04em}
   .site-header nav .nav-contact{padding:7px 8px}
 }
+
+
+/* Hero actions — tactile editorial pill buttons */
+.intro-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hero-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  min-height:46px;
+  padding:0 17px;
+  border:1px solid var(--ink);
+  border-radius:999px;
+  color:var(--ink);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.055em;
+  text-decoration:none;
+  transition:background .22s ease,color .22s ease,transform .22s ease,box-shadow .22s ease;
+}
+.hero-pill i{font-size:15px;font-style:normal;transition:transform .22s ease}
+.hero-pill-primary{background:var(--ink);color:var(--paper);box-shadow:3px 3px 0 var(--sage)}
+.hero-pill-quiet{background:transparent}
+.hero-pill:hover,.hero-pill:focus-visible{transform:translateY(-2px);box-shadow:4px 5px 0 var(--sage);outline:none}
+.hero-pill-primary:hover,.hero-pill-primary:focus-visible{background:var(--forest-2);color:var(--paper)}
+.hero-pill-quiet:hover,.hero-pill-quiet:focus-visible{background:var(--ink);color:var(--paper)}
+.hero-pill:hover i{transform:translate(2px,2px)}
+@media(max-width:760px){.intro-actions{gap:9px}.hero-pill{min-height:44px;padding:0 15px;gap:20px}}
