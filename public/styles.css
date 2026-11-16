@@ -728,3 +728,24 @@ body,.intro-hero,.services,.career-timeline,.video-archive{background:#fff;color
 .archive-index a:hover{background:#edf5ef}
 :focus-visible{outline-color:#527b60}
 ::selection{background:#dcecdf;color:#294536}
+
+
+/* Professional finishing pass */
+.intro-actions{gap:0}
+.hero-pill-primary{min-height:46px;padding:13px 20px;border:1px solid #527b60;border-radius:3px;box-shadow:none;font-size:10px;letter-spacing:.04em}
+.hero-pill-primary:hover,.hero-pill-primary:focus-visible{transform:translateY(-1px);box-shadow:none}
+.hero-timeline-heading{display:flex;align-items:center;justify-content:flex-start}
+.service,.service:nth-child(2),.service:nth-child(3){transform:none;box-shadow:none;border-radius:2px;background:#fff;border-color:var(--line)}
+.service:hover{transform:none;background:#f7faf7}
+.service-no{background:#e8f2ea;color:#527b60}
+.discography-release:hover{background:#f7faf7;padding-left:0;padding-right:0}
+.discography-cover,.podcast-thumb,.shortfilm-thumb{border:1px solid var(--line)}
+.podcast-card-meta a,.shortfilm-card-meta a{display:none}
+.podcast-thumb>span,.shortfilm-play{display:none}
+.discography-play{display:none}
+.tuck-studios-map-link{font-size:10px;letter-spacing:.06em}
+.newsletter-input-row button{border-radius:3px;padding:12px 18px;font-size:10px;letter-spacing:.04em}
+.site-footer{border-top:1px solid var(--line)}
+.site-footer .footer-title{color:var(--ink)}
+.footer-links a{font-weight:500}
+@media(min-width:761px){.intro-hero-main{gap:clamp(40px,7vw,110px)}}
