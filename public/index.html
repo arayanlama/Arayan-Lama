@@ -41,6 +41,16 @@
     <p class="intro-bio">I’m an artist, and I believe in Christ. Always creating, always imagining.</p>
     <p class="intro-credits">Founder of TUCK · Music Producer · Content Creator</p>
     <div class="intro-actions"><a class="intro-secondary-link" href="#work">Explore selected work ↓</a><a class="intro-secondary-link" href="#contact">Get in touch ↗</a></div>
+    <div class="hero-timeline" aria-label="Explore my creative timeline">
+      <div class="hero-timeline-heading"><span class="eyebrow">THE JOURNEY SO FAR</span><a href="#timeline">Explore full timeline ↗</a></div>
+      <div class="hero-timeline-track">
+        <button type="button" data-hero-timeline="education"><span class="hero-timeline-year">2018–20</span><span class="hero-timeline-node"></span><span class="hero-timeline-name">True School</span></button>
+        <button type="button" data-hero-timeline="clients2020"><span class="hero-timeline-year">2020</span><span class="hero-timeline-node"></span><span class="hero-timeline-name">Client work</span></button>
+        <button type="button" data-hero-timeline="kjash2021"><span class="hero-timeline-year">2021</span><span class="hero-timeline-node"></span><span class="hero-timeline-name">Mastering</span></button>
+        <button type="button" data-hero-timeline="undatedMusic"><span class="hero-timeline-year">RELEASES</span><span class="hero-timeline-node"></span><span class="hero-timeline-name">Music</span></button>
+        <button type="button" data-hero-timeline="filmPodcast"><span class="hero-timeline-year">VISUALS</span><span class="hero-timeline-node"></span><span class="hero-timeline-name">Films & podcasts</span></button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -246,6 +256,14 @@ const timelineChapters = {
     media: '<div class="timeline-media-grid"><article><iframe src="https://www.youtube-nocookie.com/embed/eNBL3RA2nes" title="Short film 01" loading="lazy" allowfullscreen></iframe><strong>Short film 01</strong><span>Acting · Filming</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/MDRCj9q_BF8" title="Short film 02" loading="lazy" allowfullscreen></iframe><strong>Short film 02</strong><span>Acting · Filming</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/UGxMvS9XwDc" title="A Tuck with Bansika" loading="lazy" allowfullscreen></iframe><strong>A Tuck with Bansika!!</strong><span>Podcast</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/-MzZJJTNJ_0" title="Podcast Conversation 02" loading="lazy" allowfullscreen></iframe><strong>Podcast Conversation 02</strong><span>Podcast</span></article><article><iframe src="https://www.youtube-nocookie.com/embed/TJ6XyQVCmeU" title="Podcast Conversation 03" loading="lazy" allowfullscreen></iframe><strong>Podcast Conversation 03</strong><span>Podcast</span></article></div>'
   }
 };
+document.querySelectorAll('[data-hero-timeline]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const target = document.querySelector('.timeline-point[data-timeline="' + button.dataset.heroTimeline + '"]');
+    if (!target) return;
+    target.click();
+    document.getElementById('timeline').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 const timelineButtons = document.querySelectorAll('.timeline-point');
 timelineButtons.forEach((button) => {
   button.addEventListener('click', () => {
