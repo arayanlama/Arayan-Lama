@@ -266,3 +266,12 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
 .timeline-video iframe{display:block;width:100%;aspect-ratio:16/9;border:0}
 .timeline-video a{justify-self:start;color:var(--forest-2);font-size:11px;font-weight:700;text-underline-offset:4px}
 @media(max-width:650px){.timeline-list:before{left:82px}.timeline-point{grid-template-columns:82px 20px minmax(0,1fr) 18px;padding:19px 0}.timeline-point-label{padding-left:12px;font-size:18px}.timeline-detail{grid-template-columns:1fr;gap:18px}.timeline-detail-media{min-height:180px}}
+
+/* Video archive cards inside timeline chapters */
+.timeline-media-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;width:100%;padding:14px}
+.timeline-media-grid article{display:grid;gap:7px;align-content:start;min-width:0}
+.timeline-media-grid iframe{width:100%;aspect-ratio:16/9;border:0;background:#111}
+.timeline-media-grid strong{font-size:13px;font-weight:600}
+.timeline-media-grid span{font-size:11px;line-height:1.5;color:var(--muted)}
+.timeline-detail-media:has(.timeline-media-grid){display:block;min-height:0}
+@media(max-width:650px){.timeline-media-grid{grid-template-columns:1fr;padding:10px}}
