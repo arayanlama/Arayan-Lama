@@ -30,8 +30,8 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Arayan Lama home">AL<span class="dot">.</span></a>
-    <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#work">Work</a><a href="#timeline">Journey</a><a class="nav-contact" href="#contact">Say hello ↗</a></nav>
+    <a class="wordmark" href="index.html#home" aria-label="Arayan Lama home">AL<span class="dot">.</span></a>
+    <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#work">Work</a><a href="#timeline">Journey</a><a class="nav-contact" href="contact.html">Say hello ↗</a></nav>
   </header>
   <main>
 <section class="intro-hero" id="home" aria-labelledby="intro-title">
@@ -161,34 +161,6 @@
   </div>
 </section>
 </main>
-  <section class="client-contact section" id="contact" aria-labelledby="contact-title">
-    <div class="section-head"><span class="eyebrow">GET IN TOUCH</span><span class="eyebrow">SILIGURI · WORKING EVERYWHERE</span></div>
-    <div class="client-contact-layout">
-      <div><span class="discography-kicker">A NOTE IS ENOUGH TO START</span><h2 id="contact-title">HAVE SOMETHING<br><em>IN MIND?</em></h2><p>If something here connects with what you’re working on, tell me a little about it. We can take it from there.</p>
-        <div class="client-response-points"><span>Music · Sound · Visuals</span><span>Based in Siliguri, India</span><span>Open to projects and collaborations</span></div>
-        <div class="direct-contact">
-          <a href="mailto:arayanlama19@gmail.com"><span class="eyebrow">EMAIL</span><strong>arayanlama19@gmail.com</strong><span aria-hidden="true">↗</span></a>
-          <a href="https://wa.me/918928107521" target="_blank" rel="noopener noreferrer"><span class="eyebrow">PHONE / WHATSAPP</span><strong>+91 89281 07521</strong><span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-      <form class="enquiry-form" id="project-enquiry">
-        <div><span class="eyebrow">PROJECT ENQUIRY</span><h3>Tell me a little about it.</h3><p class="enquiry-note">Fill this in and copy your brief into an Instagram message. Your details are not sent automatically. Paste the copied brief into Instagram to send it to me.</p></div>
-        <div class="enquiry-pair">
-          <div class="enquiry-field"><label for="enquiry-name">Your name *</label><input id="enquiry-name" name="name" autocomplete="name" required placeholder="Name"></div>
-          <div class="enquiry-field"><label for="enquiry-email">Email *</label><input id="enquiry-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
-        </div>
-        <div class="enquiry-field"><label for="enquiry-service">What do you need? *</label><select id="enquiry-service" name="service" required><option value="">Choose a service</option><option>Music production</option><option>Mixing and mastering</option><option>Podcast editing</option><option>Visual storytelling / brand film</option><option>Video editing / social edits</option><option>Something else</option></select></div>
-        <div class="enquiry-pair">
-          <div class="enquiry-field"><label for="enquiry-budget">Approximate budget</label><select id="enquiry-budget" name="budget"><option value="">Choose a range</option><option>Under ₹5,000</option><option>₹5,000–₹10,000</option><option>₹10,000–₹20,000</option><option>₹20,000–₹50,000</option><option>₹50,000+</option><option>Not sure yet</option></select></div>
-          <div class="enquiry-field"><label for="enquiry-deadline">Ideal deadline</label><input id="enquiry-deadline" name="deadline" placeholder="e.g. 15 December"></div>
-        </div>
-        <div class="enquiry-field"><label for="enquiry-brief">Tell me about the project *</label><textarea id="enquiry-brief" name="brief" rows="4" required placeholder="What are you making? What do you need help with?"></textarea></div>
-        <div class="enquiry-field"><label for="enquiry-references">Reference links (optional)</label><input id="enquiry-references" name="references" type="url" placeholder="Drive, YouTube, Spotify, Instagram…"></div>
-        <button class="cta-button" type="submit">Copy brief &amp; continue to Instagram <span aria-hidden="true">↗</span></button>
-        <p class="enquiry-note" id="enquiry-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
   <section class="tuck-studios section" id="tuck-studios" aria-labelledby="tuck-studios-title">
     <div class="section-head"><span class="eyebrow">AUDIO / PRODUCTION</span><span class="eyebrow">INDEPENDENT CREATIVE STUDIO · SILIGURI</span></div>
     <div class="tuck-studios-layout">
@@ -283,28 +255,7 @@ timelineButtons.forEach((button) => {
     document.getElementById('timeline-detail-media').innerHTML = chapter.media;
   });
 });
-const enquiryForm = document.getElementById('project-enquiry');
-if (enquiryForm) {
-  enquiryForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    if (!enquiryForm.reportValidity()) return;
-    const data = new FormData(enquiryForm);
-    const brief = ['PROJECT ENQUIRY — ARAYAN LAMA','',
-      'Name: ' + data.get('name'),'Email: ' + data.get('email'),
-      'Service: ' + data.get('service'),'Budget: ' + (data.get('budget') || 'Not specified'),
-      'Deadline: ' + (data.get('deadline') || 'Not specified'),'',
-      'Project brief:',data.get('brief'),'',
-      'References: ' + (data.get('references') || 'None provided')].join('\\n');
-    const status = document.getElementById('enquiry-status');
-    try {
-      await navigator.clipboard.writeText(brief);
-      status.textContent = 'Your project brief has been copied. Paste it into the Instagram message that opens.';
-    } catch (error) {
-      status.textContent = 'Instagram is opening. Please copy your project details from the form and paste them into your message.';
-    }
-    window.open('https://www.instagram.com/arayan_lama_/', '_blank', 'noopener,noreferrer');
-  });
-}
+
 </script>
 </body>
 </html>
