@@ -1012,3 +1012,22 @@ a::after,button::after{content:none!important}
   .site-footer .footer-links{grid-template-columns:repeat(3,minmax(0,1fr))}
   .site-footer .footer-links a{font-size:10px!important;gap:5px}
 }
+
+
+/* Static timeline — clear chronology, no links or clickable media */
+.timeline-static{position:relative;display:grid;gap:0;margin:34px 0 0;padding:0}
+.timeline-static:before{content:"";position:absolute;left:112px;top:12px;bottom:12px;width:1px;background:var(--sage)}
+.timeline-entry{position:relative;display:grid;grid-template-columns:112px minmax(0,1fr);gap:30px;padding:0 0 30px}
+.timeline-entry:last-child{padding-bottom:0}
+.timeline-entry:before{content:"";position:absolute;left:108px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--forest-2);border:2px solid var(--paper)}
+.timeline-entry-year{font-size:11px;line-height:1.5;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-right:8px}
+.timeline-entry h3{font-size:clamp(17px,2vw,22px);line-height:1.2;margin:0 0 7px;color:var(--ink);font-weight:600}
+.timeline-entry p{font-size:14px;line-height:1.7;color:var(--muted);margin:0;max-width:760px}
+@media(max-width:640px){
+ .timeline-static{margin-top:26px}
+ .timeline-static:before{left:91px}
+ .timeline-entry{grid-template-columns:91px minmax(0,1fr);gap:22px;padding-bottom:25px}
+ .timeline-entry:before{left:87px}
+ .timeline-entry-year{font-size:9px;letter-spacing:.04em}
+ .timeline-entry p{font-size:13px}
+}
