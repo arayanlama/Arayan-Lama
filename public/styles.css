@@ -922,3 +922,8 @@ input,select,textarea,button{max-width:100%;font:inherit}
 /* Remove decorative directional indicators throughout the site */
 .timeline-point-arrow{display:none!important}
 a::after,button::after{content:none!important}
+
+/* Full discography call-to-action */
+.discography-full-link{display:flex;justify-content:center;margin-top:34px}
+.discography-full-link .hero-pill{min-width:190px;justify-content:center;text-align:center}
+@media(max-width:640px){.discography-full-link{margin-top:26px}}
