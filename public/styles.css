@@ -350,3 +350,22 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
 .contact-page .direct-contact{margin-top:34px}
 .contact-page .enquiry-form{box-shadow:8px 8px 0 var(--lime)}
 @media(max-width:760px){.contact-page .client-contact-layout{grid-template-columns:1fr;gap:34px}.contact-page h1{font-size:clamp(58px,16vw,94px)}}
+
+
+/* Legal and policy pages */
+.policy-page{min-height:calc(100vh - 150px);padding-top:clamp(34px,5vw,64px);padding-bottom:clamp(48px,7vw,90px)}
+.policy-heading{max-width:850px;padding:clamp(30px,5vw,62px) 0;border-bottom:1px solid var(--line)}
+.policy-heading h1{margin:16px 0;font-size:clamp(54px,9vw,108px);line-height:.86;letter-spacing:-.085em}
+.policy-heading h1 em{font-family:'DM Serif Display',Georgia,serif;font-weight:400;color:var(--forest-2)}
+.policy-heading>p{max-width:620px;color:var(--muted);font-size:16px;line-height:1.7}
+.policy-copy{max-width:780px;padding-top:20px}
+.policy-copy section{padding:22px 0;border-bottom:1px solid var(--line)}
+.policy-copy h2{margin:0 0 10px;font-size:clamp(18px,2vw,23px);letter-spacing:-.04em}
+.policy-copy p{margin:8px 0;color:var(--muted);font-size:14px;line-height:1.8}
+.policy-copy a,.privacy-consent a{color:var(--forest-2);text-decoration:underline;text-underline-offset:3px}
+.policy-disclaimer{margin-top:28px;padding:16px;border:1px solid var(--line);font-size:12px!important}
+.legal-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.legal-links a{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.privacy-consent{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:12px;line-height:1.55}
+.privacy-consent input{width:16px;height:16px;flex:0 0 auto;margin:2px 0 0;accent-color:var(--forest)}
+@media(max-width:650px){.legal-links{gap:12px}.legal-links a{font-size:9px}.policy-heading h1{font-size:clamp(50px,14vw,78px)}}
