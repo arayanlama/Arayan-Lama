@@ -275,3 +275,17 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
 .timeline-media-grid span{font-size:11px;line-height:1.5;color:var(--muted)}
 .timeline-detail-media:has(.timeline-media-grid){display:block;min-height:0}
 @media(max-width:650px){.timeline-media-grid{grid-template-columns:1fr;padding:10px}}
+
+/* Hero timeline navigator */
+.hero-timeline{margin-top:clamp(42px,7vw,86px);padding-top:18px;border-top:1px solid var(--line);max-width:100%}
+.hero-timeline-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.hero-timeline-heading a{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--forest-2);text-underline-offset:4px}
+.hero-timeline-track{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.hero-timeline-track:before{content:"";position:absolute;left:8px;right:8px;top:31px;height:1px;background:var(--sage)}
+.hero-timeline-track button{position:relative;display:grid;justify-items:start;gap:9px;padding:0 8px 6px 0;border:0;background:transparent;color:var(--ink);text-align:left;cursor:pointer}
+.hero-timeline-year{font-size:9px;letter-spacing:.08em;font-weight:700;color:var(--forest-2)}
+.hero-timeline-node{z-index:1;width:10px;height:10px;border:1px solid var(--forest-2);border-radius:50%;background:var(--paper-2);transition:transform .2s,background .2s}
+.hero-timeline-name{font-size:11px;color:var(--muted);line-height:1.35}
+.hero-timeline-track button:hover .hero-timeline-node,.hero-timeline-track button:focus-visible .hero-timeline-node{background:var(--forest-2);transform:scale(1.35)}
+.hero-timeline-track button:focus-visible{outline:2px solid var(--forest-2);outline-offset:4px}
+@media(max-width:600px){.hero-timeline-track{display:flex;overflow-x:auto;padding:0 0 12px;scroll-snap-type:x mandatory}.hero-timeline-track:before{right:0}.hero-timeline-track button{flex:0 0 112px;scroll-snap-align:start}.hero-timeline-heading{align-items:flex-start}.hero-timeline-name{font-size:10px}}
