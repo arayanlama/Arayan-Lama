@@ -582,3 +582,24 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
 .hero-pill-quiet:hover,.hero-pill-quiet:focus-visible{background:var(--ink);color:var(--paper)}
 .hero-pill:hover i{transform:translate(2px,2px)}
 @media(max-width:760px){.intro-actions{gap:9px}.hero-pill{min-height:44px;padding:0 15px;gap:20px}}
+
+
+/* Newsletter signup */
+.newsletter-section{padding-block:clamp(54px,8vw,100px);background:var(--paper-2);border-top:1px solid var(--line)}
+.newsletter-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.8fr);align-items:end;gap:clamp(30px,7vw,100px);max-width:1360px;margin:0 auto}
+.newsletter-copy h2{margin:18px 0;font-size:clamp(48px,7.5vw,90px);line-height:.86;letter-spacing:-.08em}
+.newsletter-copy h2 em{font-family:Georgia,serif;font-weight:400;color:var(--forest-2)}
+.newsletter-copy>p{max-width:430px;margin:0;color:var(--muted);font-size:14px;line-height:1.7}
+.newsletter-form{display:grid;gap:12px;padding-bottom:5px}
+.newsletter-form>label:first-of-type{font-size:9px;font-weight:700;letter-spacing:.12em;color:var(--forest-2)}
+.newsletter-input-row{display:flex;gap:8px;border-bottom:1px solid var(--ink);padding-bottom:9px}
+.newsletter-input-row input{width:100%;min-width:0;padding:12px 2px;border:0;background:transparent;color:var(--ink);font:inherit;font-size:15px;outline-offset:4px}
+.newsletter-input-row input::placeholder{color:var(--muted)}
+.newsletter-input-row button{flex:0 0 auto;display:inline-flex;align-items:center;gap:16px;padding:0 17px;border:1px solid var(--ink);border-radius:999px;background:var(--ink);color:var(--paper);font:inherit;font-size:10px;font-weight:700;cursor:pointer;transition:background .2s,transform .2s}
+.newsletter-input-row button:hover{background:var(--forest-2);transform:translateY(-2px)}
+.newsletter-consent{display:flex;align-items:flex-start;gap:9px;color:var(--muted);font-size:11px;line-height:1.5}
+.newsletter-consent input{width:15px;height:15px;flex:0 0 auto;margin:1px 0 0;accent-color:var(--forest-2)}
+.newsletter-privacy{margin:0;color:var(--muted);font-size:10px;line-height:1.6}
+.newsletter-privacy a{color:var(--forest-2);text-underline-offset:3px}
+@media(max-width:700px){.newsletter-inner{grid-template-columns:1fr;gap:28px}.newsletter-copy h2{font-size:clamp(48px,13vw,76px)}}
+@media(max-width:420px){.newsletter-input-row{align-items:stretch;flex-direction:column}.newsletter-input-row button{min-height:44px;justify-content:space-between}}
