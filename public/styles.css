@@ -289,3 +289,55 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
 .hero-timeline-track button:hover .hero-timeline-node,.hero-timeline-track button:focus-visible .hero-timeline-node{background:var(--forest-2);transform:scale(1.35)}
 .hero-timeline-track button:focus-visible{outline:2px solid var(--forest-2);outline-offset:4px}
 @media(max-width:600px){.hero-timeline-track{display:flex;overflow-x:auto;padding:0 0 12px;scroll-snap-type:x mandatory}.hero-timeline-track:before{right:0}.hero-timeline-track button{flex:0 0 112px;scroll-snap-align:start}.hero-timeline-heading{align-items:flex-start}.hero-timeline-name{font-size:10px}}
+
+
+/* Horizontal timeline with scrollable chapters */
+.timeline-horizontal{
+  display:flex;
+  align-items:stretch;
+  gap:0;
+  min-height:0;
+  padding:18px 0 22px;
+  overflow-x:auto;
+  overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:thin;
+  scrollbar-color:var(--sage) transparent;
+}
+.timeline-horizontal:before{
+  left:0;
+  right:0;
+  top:58px;
+  bottom:auto;
+  width:auto;
+  height:1px;
+}
+.timeline-horizontal .timeline-point{
+  flex:0 0 clamp(190px,22vw,270px);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:13px;
+  min-height:130px;
+  padding:8px 22px 16px 0;
+  scroll-snap-align:start;
+}
+.timeline-horizontal .timeline-point-year{order:0;white-space:nowrap}
+.timeline-horizontal .timeline-point-dot{order:1;margin-top:17px;margin-bottom:3px}
+.timeline-horizontal .timeline-point-label{order:2;padding:0;font-size:clamp(16px,1.7vw,21px);line-height:1.2}
+.timeline-horizontal .timeline-point-arrow{position:absolute;right:20px;bottom:18px}
+.timeline-horizontal .timeline-point.is-active .timeline-point-label{color:var(--forest-2)}
+.timeline-detail{scroll-margin-top:90px}
+.timeline-media-grid article>a{
+  justify-self:start;
+  color:var(--forest-2);
+  font-size:10px;
+  font-weight:700;
+  text-underline-offset:4px;
+}
+@media(max-width:650px){
+  .timeline-horizontal{margin-right:-22px;padding-right:22px}
+  .timeline-horizontal:before{top:57px;right:22px}
+  .timeline-horizontal .timeline-point{flex-basis:180px;min-height:125px;padding-right:18px}
+  .timeline-horizontal .timeline-point-label{font-size:16px}
+}
