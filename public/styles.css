@@ -603,3 +603,62 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
 .newsletter-privacy a{color:var(--forest-2);text-underline-offset:3px}
 @media(max-width:700px){.newsletter-inner{grid-template-columns:1fr;gap:28px}.newsletter-copy h2{font-size:clamp(48px,13vw,76px)}}
 @media(max-width:420px){.newsletter-input-row{align-items:stretch;flex-direction:column}.newsletter-input-row button{min-height:44px;justify-content:space-between}}
+
+
+
+/* Chronological discography and selected-work archive */
+.archive-page{overflow:hidden}
+.archive-hero{padding-top:clamp(48px,7vw,88px);padding-bottom:32px}
+.archive-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.55fr);align-items:end;gap:clamp(28px,7vw,100px);padding:clamp(38px,6vw,76px) 0}
+.archive-heading h1{margin:16px 0 0;font-size:clamp(76px,13vw,164px);line-height:.76;letter-spacing:-.1em}
+.archive-heading h1 em{font-family:Georgia,serif;font-weight:400;color:var(--forest-2)}
+.archive-heading>p{max-width:430px;margin:0 0 6px;color:var(--muted);font-size:15px;line-height:1.75}
+.archive-index{display:flex;gap:10px;flex-wrap:wrap;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.archive-index a{display:inline-flex;align-items:center;gap:16px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.archive-index a:hover{background:var(--paper-2)}
+.archive-index span{color:var(--forest-2)}
+.archive-era{padding-top:clamp(42px,6vw,72px);padding-bottom:clamp(42px,6vw,72px);scroll-margin-top:86px}
+.archive-era-head{display:flex;justify-content:space-between;gap:15px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.archive-feature{display:grid;grid-template-columns:minmax(90px,.25fr) minmax(0,1fr) auto;align-items:center;gap:25px;padding:36px 0 12px}
+.archive-feature-year{font-size:clamp(28px,5vw,58px);font-weight:700;letter-spacing:-.08em;color:var(--sage)}
+.archive-feature h2{margin:12px 0;font-size:clamp(38px,6vw,72px);line-height:.9;letter-spacing:-.07em}
+.archive-feature h2 em{font-family:Georgia,serif;font-weight:400;color:var(--forest-2)}
+.archive-feature p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+.archive-feature-note{align-self:end;padding-bottom:6px;color:var(--muted);font-size:10px;letter-spacing:.1em}
+.archive-era-dark{background:var(--forest);color:var(--paper)}
+.archive-era-dark .archive-era-head{border-color:rgba(243,247,239,.25)}
+.archive-era-dark .archive-release-copy>p:not(.archive-artist){color:#c4d3c4}
+.archive-era-dark .archive-release-year{color:var(--lime)}
+.archive-era-muted{background:var(--paper-2)}
+.archive-era-title{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:34px 0 26px}
+.archive-era-title h2{margin:0;font-size:clamp(40px,6.5vw,78px);line-height:.9;letter-spacing:-.08em}
+.archive-era-title h2 em{font-family:Georgia,serif;font-weight:400;color:var(--forest-2)}
+.archive-era-title>p{max-width:360px;margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+.archive-release-list{border-top:1px solid var(--line)}
+.archive-release{display:grid;grid-template-columns:116px minmax(0,1fr) auto;align-items:center;gap:22px;padding:22px 0;border-bottom:1px solid var(--line)}
+.archive-release-light .archive-release-year{color:var(--forest-2)}
+.archive-artwork{display:block;aspect-ratio:1;overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.archive-artwork img{width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.archive-artwork:hover img{transform:scale(1.06)}
+.archive-release-copy h2{margin:8px 0 4px;font-size:clamp(21px,3vw,34px);letter-spacing:-.055em}
+.archive-release-copy h2 em{font-family:Georgia,serif;font-weight:400}
+.archive-release-copy .eyebrow{font-size:8px;letter-spacing:.1em;color:var(--forest-2)}
+.archive-era-dark .archive-release-copy .eyebrow{color:var(--lime)}
+.archive-artist{margin:0 0 8px;color:var(--muted);font-size:13px}
+.archive-release-copy>p:not(.archive-artist){margin:0;color:var(--muted);font-size:12px;line-height:1.6}
+.archive-watch{display:inline-block;margin-top:12px;color:var(--forest-2);font-size:10px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.archive-era-dark .archive-watch{color:var(--lime)}
+.archive-release-year{align-self:start;padding-top:4px;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.1em;white-space:nowrap}
+.archive-media-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px;margin-top:30px}
+.archive-media-grid article{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(130px,.8fr);align-items:center;gap:16px;min-width:0}
+.archive-media-grid article>a{position:relative;display:block;overflow:hidden;aspect-ratio:16/9;background:var(--paper)}
+.archive-media-grid article>a img{width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.archive-media-grid article>a:hover img{transform:scale(1.05)}
+.archive-media-grid article>a span{position:absolute;right:10px;bottom:8px;color:white;text-shadow:0 1px 5px #000;font-size:18px}
+.archive-media-grid h3{margin:8px 0;font-size:clamp(16px,2vw,22px);line-height:1.1;letter-spacing:-.04em}
+.archive-media-grid p{margin:0;color:var(--muted);font-size:11px;line-height:1.5}
+.archive-media-grid .eyebrow{font-size:8px;color:var(--forest-2)}
+.archive-end{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--line)}
+.archive-end p{margin:0;font-size:clamp(18px,2.5vw,26px);letter-spacing:-.04em}
+@media(max-width:700px){.archive-heading{grid-template-columns:1fr;gap:24px}.archive-heading h1{font-size:clamp(72px,18vw,112px)}.archive-era-title{align-items:flex-start;flex-direction:column}.archive-media-grid{grid-template-columns:1fr}.archive-media-grid article{grid-template-columns:minmax(0,1fr) minmax(120px,.8fr)}}
+@media(max-width:520px){.archive-feature{grid-template-columns:1fr auto;gap:10px 16px}.archive-feature-year{grid-column:1/-1}.archive-feature-note{grid-column:2;grid-row:2}.archive-release{grid-template-columns:82px minmax(0,1fr);gap:14px}.archive-release-year{grid-column:2;grid-row:1;justify-self:start;padding-top:0;font-size:8px}.archive-release-copy h2{font-size:21px}.archive-artwork{grid-row:1 / span 2}.archive-media-grid article{grid-template-columns:1fr}.archive-index{gap:6px}.archive-index a{font-size:8px;padding:8px 10px}.archive-end{align-items:flex-start;flex-direction:column}}
