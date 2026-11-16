@@ -888,3 +888,33 @@ input,select,textarea,button{max-width:100%;font:inherit}
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* Minimal footer — quiet signature and compact legal row */
+.site-footer{padding:22px var(--page-gutter) 14px!important;background:#f7faf7!important;border-top:1px solid var(--line)!important}
+.site-footer .footer-top{display:flex!important;align-items:center;justify-content:space-between;gap:24px!important;padding:0!important}
+.site-footer .footer-top>div:first-child{display:flex;align-items:center;gap:10px}
+.site-footer .footer-top>div:first-child>.eyebrow{display:none}
+.site-footer .footer-title{margin:0!important;font-size:clamp(17px,2vw,22px)!important;line-height:1!important;letter-spacing:-.06em!important}
+.site-footer .footer-title br{display:none}
+.site-footer .footer-title em{font-style:normal}
+.site-footer .footer-social{display:flex;align-items:center;gap:14px}
+.site-footer .footer-social>.eyebrow{font-size:8px!important;white-space:nowrap}
+.site-footer .footer-links{display:flex;align-items:center;gap:14px!important}
+.site-footer .footer-links a{display:inline-flex;align-items:center;gap:5px;font-size:10px!important;color:var(--muted)}
+.site-footer .footer-icon{width:12px!important;height:12px!important}
+.site-footer .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px!important;margin-top:14px!important;border-top:1px solid var(--line)!important;font-size:9px!important;color:var(--muted)}
+.site-footer .legal-links{display:flex;align-items:center;flex-wrap:wrap;gap:14px!important}
+.site-footer .legal-links a{font-size:9px!important}
+.site-footer .footer-back-top{display:none!important}
+@media(max-width:640px){
+ .site-footer{padding:18px var(--page-gutter) 12px!important}
+ .site-footer .footer-top{align-items:flex-start;gap:12px!important}
+ .site-footer .footer-social{align-items:flex-end;flex-direction:column;gap:6px}
+ .site-footer .footer-social>.eyebrow{display:none}
+ .site-footer .footer-links{gap:10px!important}
+ .site-footer .footer-links a{font-size:0!important}
+ .site-footer .footer-icon{width:14px!important;height:14px!important}
+ .site-footer .footer-bottom{align-items:flex-start;flex-direction:column;gap:8px;padding-top:10px!important;margin-top:10px!important}
+ .site-footer .legal-links{gap:12px!important}
+}
