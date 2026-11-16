@@ -489,7 +489,7 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
 .hero-timeline-track button:hover .hero-timeline-name,
 .hero-timeline-track button:focus-visible .hero-timeline-name{color:var(--forest-2)}
 .hero-timeline-track button:after{
-  content:"↗";
+  content:"";
   position:absolute;
   right:16px;
   bottom:8px;
@@ -918,3 +918,7 @@ input,select,textarea,button{max-width:100%;font:inherit}
  .site-footer .footer-bottom{align-items:flex-start;flex-direction:column;gap:8px;padding-top:10px!important;margin-top:10px!important}
  .site-footer .legal-links{gap:12px!important}
 }
+
+/* Remove decorative directional indicators throughout the site */
+.timeline-point-arrow{display:none!important}
+a::after,button::after{content:none!important}
