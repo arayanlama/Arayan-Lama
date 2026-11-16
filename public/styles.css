@@ -927,3 +927,61 @@ a::after,button::after{content:none!important}
 .discography-full-link{display:flex;justify-content:center;margin-top:34px}
 .discography-full-link .hero-pill{min-width:190px;justify-content:center;text-align:center}
 @media(max-width:640px){.discography-full-link{margin-top:26px}}
+
+
+/* Mobile timeline — vertical, readable and easy to tap */
+@media(max-width:650px){
+  .timeline-horizontal{
+    display:grid;
+    grid-template-columns:1fr;
+    align-items:stretch;
+    overflow:visible;
+    overflow-x:visible;
+    overscroll-behavior:initial;
+    scroll-snap-type:none;
+    margin-right:0;
+    padding:12px 0 16px;
+    scrollbar-width:none;
+  }
+  .timeline-horizontal:before{
+    left:82px;
+    right:auto;
+    top:0;
+    bottom:0;
+    width:1px;
+    height:auto;
+  }
+  .timeline-horizontal .timeline-point{
+    display:grid;
+    grid-template-columns:82px 20px minmax(0,1fr);
+    flex:initial;
+    align-items:center;
+    gap:0;
+    width:100%;
+    min-height:76px;
+    padding:15px 0;
+    scroll-snap-align:none;
+  }
+  .timeline-horizontal .timeline-point-year{
+    order:0;
+    white-space:normal;
+    padding-right:8px;
+    font-size:9px;
+    line-height:1.35;
+  }
+  .timeline-horizontal .timeline-point-dot{
+    order:1;
+    margin:0;
+    justify-self:center;
+  }
+  .timeline-horizontal .timeline-point-label{
+    order:2;
+    padding:0 0 0 12px;
+    font-size:16px;
+    line-height:1.25;
+  }
+  .timeline-horizontal .timeline-point.is-active .timeline-point-label{
+    color:var(--forest-2);
+    font-weight:700;
+  }
+}
