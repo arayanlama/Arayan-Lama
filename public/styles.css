@@ -676,3 +676,55 @@ html{scroll-behavior:smooth;scroll-padding-top:82px}
 .video-only-item iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 @media(max-width:850px){.video-only-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.video-archive{padding:34px 16px 64px}.video-archive-heading{align-items:flex-start;flex-direction:column;gap:12px}.video-only-grid{grid-template-columns:1fr;gap:14px}}
+
+
+/* Light botanical palette — white-led with soft, complementary greens */
+:root{
+  color-scheme:light;
+  --paper:#ffffff;
+  --paper-2:#f5f9f6;
+  --ink:#294536;
+  --muted:#718477;
+  --forest:#edf5ef;
+  --forest-2:#527b60;
+  --sage:#b9d1bf;
+  --lime:#deeee1;
+  --line:#e1ebe3;
+  background:var(--paper);
+  color:var(--ink);
+}
+body,.intro-hero,.services,.career-timeline,.video-archive{background:#fff;color:var(--ink)}
+.site-header{background:rgba(255,255,255,.96);border-color:var(--line)}
+.site-header nav .nav-contact{background:#edf5ef;border-color:#c9ddce;color:var(--ink);box-shadow:none}
+.client-hero{background:linear-gradient(135deg,#fff 0%,#f4f9f5 62%,#eaf3ec 100%);border-color:#dce9df}
+.client-hero-kicker{background:#e8f2ea;color:#416b4f;box-shadow:4px 4px 0 #d3e5d7}
+.client-hero h1,.client-hero h1 em{color:var(--ink);-webkit-text-stroke:0;text-shadow:2px 2px 0 #dcebe0}
+.client-hero-intro{color:#617a68}
+.discography,.client-contact,.archive-era-dark,.site-footer{background:#f2f8f3;color:var(--ink)}
+.discography .section-head,.shortfilm-work .section-head,.edits-work .section-head,.client-contact .section-head{border-color:var(--line)}
+.discography-intro h2 em,.client-contact h2 em,.footer-title em{color:var(--forest-2)}
+.discography-intro>p,.discography-release-info p,.archive-era-dark .archive-release-copy>p:not(.archive-artist),.client-contact-layout>div>p,.client-response-points,.footer-social>.eyebrow,.footer-bottom{color:var(--muted)}
+.discography-release-list,.discography-release{border-color:var(--line)}
+.discography-release-meta,.discography-credit-tags span,.archive-era-dark .archive-release-copy .eyebrow,.archive-era-dark .archive-watch{color:var(--forest-2)}
+.discography-credit-tags span{background:#e4f0e6}
+.client-contact h2,.client-contact-layout,.client-response-points,.site-footer{color:var(--ink)}
+.client-response-points span,.footer-links a{border-color:var(--line)}
+.enquiry-form{background:#fff;border:1px solid var(--line);box-shadow:0 8px 28px rgba(55,91,65,.06)}
+.enquiry-form .cta-button,.cta-button,.newsletter-input-row button{background:#527b60;color:#fff;border:1px solid #527b60;box-shadow:none}
+.enquiry-form .cta-button:hover,.cta-button:hover,.newsletter-input-row button:hover{background:#41694e;color:#fff}
+.tuck-studios{background:#f2f8f3;color:var(--ink);border-color:var(--line)}
+.tuck-studios-copy>p{color:var(--muted)}
+.footer-links a span:last-child{color:var(--forest-2)}
+.footer-links a:hover{color:var(--forest-2);border-color:var(--sage)}
+.footer-back-top{color:var(--ink)}
+.hero-pill-primary{background:#527b60;color:#fff;box-shadow:3px 3px 0 #dcebe0}
+.hero-pill-primary:hover,.hero-pill-primary:focus-visible{background:#41694e;color:#fff}
+.hero-pill-quiet:hover,.hero-pill-quiet:focus-visible{background:#edf5ef;color:var(--ink)}
+.archive-era-dark .archive-era-head{border-color:var(--line)}
+.archive-era-dark .archive-release-year{color:var(--forest-2)}
+.archive-era-dark .archive-watch{color:var(--forest-2)}
+.archive-era-muted{background:#f7faf7}
+.archive-index a{border-color:var(--line)}
+.archive-index a:hover{background:#edf5ef}
+:focus-visible{outline-color:#527b60}
+::selection{background:#dcecdf;color:#294536}
