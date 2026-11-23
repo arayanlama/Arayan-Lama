@@ -161,3 +161,15 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   html { scroll-behavior: auto; }
   .record { transition: none; }
 }
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer-socials a { transition: color .2s ease; }
+.footer-socials a:hover { color: var(--accent); }
+@media (max-width: 640px) {
+  .site-footer { gap: 12px 18px; }
+  .footer-socials { width: 100%; flex-wrap: wrap; gap: 16px; }
+}
