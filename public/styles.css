@@ -246,3 +246,76 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   .merch-hero { min-height: 68vh; padding-top: 80px; padding-bottom: 50px; }
   .merch-hero h1 { font-size: clamp(62px, 17vw, 104px); }
 }
+
+/* Editorial refinements */
+.header-nav { gap: clamp(13px, 2.5vw, 30px); }
+.header-nav a { font-size: 11px; letter-spacing: .015em; }
+.header-nav .nav-enquiry {
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  border-radius: 2px;
+}
+.header-nav .nav-enquiry:hover { border-color: var(--accent); color: var(--accent); }
+.hero { min-height: min(76vh, 760px); padding-top: clamp(52px, 8vw, 100px); }
+.hero-kicker, .section-kicker {
+  margin: 0 0 22px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.hero-copy { max-width: 420px; }
+.hero-actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.hero-secondary, .text-link {
+  color: var(--muted);
+  font-size: 12px;
+  transition: color .2s ease;
+}
+.hero-secondary:hover, .text-link:hover { color: var(--accent); }
+.section-heading, .discography-intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+.section-heading .section-kicker, .discography-intro .section-kicker { margin-bottom: 12px; }
+.discography-intro { margin-bottom: 34px; }
+.discography-intro h2 { color: var(--text); }
+.record { padding-top: 20px; padding-bottom: 20px; }
+.record-main h3 { line-height: 1.25; }
+.record-main p { font-size: 12px; }
+.credit {
+  max-width: 190px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.site-footer { min-height: 84px; }
+.site-footer > a { color: var(--muted); }
+.site-footer > a:hover { color: var(--accent); }
+.merch-hero { min-height: min(72vh, 720px); }
+.merch-hero h1 { max-width: 800px; }
+.merch-note { max-width: 460px; }
+.merch-follow {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 25px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  font-size: 12px;
+}
+.merch-follow span { color: var(--accent); }
+.merch-follow:hover { color: var(--accent); }
+@media (max-width: 640px) {
+  .header-nav { gap: 11px; }
+  .header-nav .nav-enquiry { padding: 7px 9px; }
+  .hero { min-height: 72vh; }
+  .hero-actions { gap: 18px; }
+  .section-heading, .discography-intro { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .record { padding-top: 18px; padding-bottom: 18px; }
+}
