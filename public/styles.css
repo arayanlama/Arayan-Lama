@@ -33,7 +33,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   border-bottom: 1px solid var(--line);
 }
 .wordmark { font-size: 24px; font-weight: 700; letter-spacing: -.09em; }
-.wordmark span, .discography-intro h2 span { color: var(--accent); }
+.wordmark span, .discography-intro h2 span, .footer-wordmark span { color: var(--accent); }
 .spotify-nav {
   width: 38px; height: 38px; display: grid; place-items: center;
   border: 1px solid var(--line); border-radius: 50%;
@@ -200,17 +200,81 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   color: var(--muted);
   font-size: 11px;
 }
+
+/* Footer */
 .site-footer {
-  min-height: 84px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  color: var(--muted);
-  font-size: 11px;
+  padding-top: 54px;
+  padding-bottom: 22px;
   border-top: 1px solid var(--line);
+  background: #060707;
 }
-.site-footer a:hover { color: var(--accent); }
+.footer-main {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.5fr) 1fr 1fr auto;
+  gap: 38px;
+  align-items: start;
+  padding-bottom: 48px;
+}
+.footer-wordmark {
+  display: inline-block;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -.1em;
+}
+.footer-identity p {
+  margin: 18px 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.footer-location {
+  color: var(--text);
+  font-size: 11px;
+  letter-spacing: .04em;
+}
+.footer-nav, .footer-listen {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+.footer-label {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .15em;
+}
+.footer-nav a, .footer-listen a, .back-top {
+  font-size: 12px;
+  transition: color .2s ease;
+}
+.footer-nav a:hover, .footer-listen a:hover, .back-top:hover { color: var(--accent); }
+.footer-listen a span { margin-left: 6px; color: var(--accent); }
+.back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+.back-top span { color: var(--accent); font-size: 17px; }
+.footer-bottom {
+  min-height: 48px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .025em;
+}
+@media (max-width: 800px) {
+  .footer-main { grid-template-columns: 1.3fr 1fr 1fr; }
+  .back-top { grid-column: 1 / -1; }
+}
 @media (max-width: 640px) {
   .site-header { height: 68px; }
   .hero { min-height: 500px; padding-top: 30px; }
@@ -219,10 +283,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   .section-heading { display: block; margin-bottom: 24px; }
   .section-heading h2 { margin-top: 12px; }
   .discography { padding-top: 58px; padding-bottom: 68px; }
-  .discography-intro {
-    display: block;
-    margin-bottom: 46px;
-  }
+  .discography-intro { display: block; margin-bottom: 46px; }
   .discography-intro h2 { margin-top: 14px; font-size: clamp(48px, 12vw, 72px); }
   .discography-note { margin-top: 15px; }
   .discography-group + .discography-group { margin-top: 42px; }
@@ -241,9 +302,14 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
     margin-top: -2px;
   }
   .credit-tag { padding: 5px 8px; font-size: 9px; }
-  .site-footer { min-height: 74px; font-size: 10px; }
+  .site-footer { padding-top: 40px; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 32px 24px; padding-bottom: 34px; }
+  .footer-identity { grid-column: 1 / -1; }
+  .footer-nav, .footer-listen { gap: 11px; }
+  .back-top { grid-column: 1 / -1; margin-top: 4px; }
+  .footer-bottom { align-items: flex-start; flex-direction: column; gap: 9px; padding-top: 15px; font-size: 9px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .spotify-nav, .record { transition: none; }
+  .spotify-nav, .record, .footer-nav a, .footer-listen a, .back-top { transition: none; }
 }
