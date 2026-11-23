@@ -33,11 +33,13 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   border-bottom: 1px solid var(--line);
 }
 .wordmark { font-size: 24px; font-weight: 700; letter-spacing: -.09em; }
-.wordmark span { color: var(--accent); }
+.wordmark span, .discography-intro h2 span { color: var(--accent); }
 .spotify-nav {
   width: 38px; height: 38px; display: grid; place-items: center;
   border: 1px solid var(--line); border-radius: 50%;
+  transition: border-color .2s ease, background .2s ease;
 }
+.spotify-nav:hover { border-color: var(--accent); background: #17221c; }
 .spotify-nav svg { width: 20px; height: 20px; fill: var(--accent); }
 .hero {
   min-height: 570px;
@@ -108,34 +110,96 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   background: #050606;
 }
 .spotify-player iframe { display: block; border: 0; }
-.record-list { border-top: 1px solid var(--line); }
-.record {
-  min-height: 92px;
+.discography { padding-top: 86px; padding-bottom: 100px; }
+.discography-intro {
   display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) minmax(140px, 220px);
-  align-items: center;
-  gap: 22px;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 18px 30px;
+  margin-bottom: 66px;
 }
-.record-number, .record-credit {
-  color: var(--muted);
-  font-size: 10px;
-  letter-spacing: .08em;
-}
-.record-main h3 {
+.discography-intro .eyebrow { grid-column: 1 / -1; }
+.discography-intro h2 {
   margin: 0;
-  font-size: clamp(18px, 2.2vw, 25px);
+  font-size: clamp(48px, 8vw, 104px);
+  line-height: .95;
+  font-weight: 500;
+  letter-spacing: -.075em;
+}
+.discography-note {
+  max-width: 230px;
+  margin: 0 0 7px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.discography-group + .discography-group { margin-top: 58px; }
+.group-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+.group-heading h3 {
+  margin: 0;
+  font-size: 19px;
   font-weight: 500;
   letter-spacing: -.035em;
 }
-.record-main h3 a:hover { color: var(--accent); }
-.record-main h3 a span { color: var(--accent); font-size: .7em; }
+.group-heading > span {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .14em;
+}
+.record-table { border-top: 1px solid var(--line); }
+.record {
+  min-height: 86px;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) minmax(150px, 210px);
+  align-items: center;
+  gap: 22px;
+  border-bottom: 1px solid var(--line);
+  transition: background .2s ease;
+}
+.record:not(.record-labels):hover { background: rgba(185,242,210,.035); }
+.record-labels {
+  min-height: 38px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .13em;
+}
+.record-number { color: var(--muted); font-size: 10px; }
+.record-main h4 {
+  margin: 0;
+  font-size: clamp(17px, 2vw, 23px);
+  font-weight: 500;
+  letter-spacing: -.035em;
+}
+.record-main h4 a:hover { color: var(--accent); }
+.record-main h4 a span { color: var(--accent); font-size: .7em; }
 .record-main p {
+  display: flex;
+  gap: 12px;
   margin: 7px 0 0;
   color: var(--muted);
   font-size: 12px;
 }
-.record-credit { text-align: right; }
+.record-year { padding-left: 12px; border-left: 1px solid var(--line); }
+.credit-tag {
+  justify-self: end;
+  padding: 7px 10px;
+  border: 1px solid rgba(185,242,210,.25);
+  border-radius: 2px;
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: .035em;
+}
+.record-credit {
+  justify-self: end;
+  color: var(--muted);
+  font-size: 11px;
+}
 .site-footer {
   min-height: 84px;
   display: flex;
@@ -144,6 +208,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   gap: 20px;
   color: var(--muted);
   font-size: 11px;
+  border-top: 1px solid var(--line);
 }
 .site-footer a:hover { color: var(--accent); }
 @media (max-width: 640px) {
@@ -153,15 +218,32 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   .section { padding-top: 48px; padding-bottom: 54px; }
   .section-heading { display: block; margin-bottom: 24px; }
   .section-heading h2 { margin-top: 12px; }
-  .record {
-    grid-template-columns: 28px minmax(0, 1fr);
-    gap: 10px;
-    padding: 17px 0;
+  .discography { padding-top: 58px; padding-bottom: 68px; }
+  .discography-intro {
+    display: block;
+    margin-bottom: 46px;
   }
-  .record-credit { grid-column: 2; text-align: left; margin-top: -4px; }
-  .record-main h3 { font-size: 19px; }
+  .discography-intro h2 { margin-top: 14px; font-size: clamp(48px, 12vw, 72px); }
+  .discography-note { margin-top: 15px; }
+  .discography-group + .discography-group { margin-top: 42px; }
+  .group-heading h3 { font-size: 17px; }
+  .record {
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: 9px;
+    padding: 15px 0;
+  }
+  .record-labels { display: none; }
+  .record-main h4 { font-size: 18px; }
+  .record-main p { font-size: 11px; }
+  .credit-tag, .record-credit {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: -2px;
+  }
+  .credit-tag { padding: 5px 8px; font-size: 9px; }
   .site-footer { min-height: 74px; font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .spotify-nav, .record { transition: none; }
 }
